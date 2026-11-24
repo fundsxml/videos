@@ -214,7 +214,12 @@
           "chapters_vtt": "en/05-biz-project-chapters.vtt",
           "poster": "posters/05-biz-project.jpg"
         }
-      ]
+      ],
+      "full": {
+        "title": "FundsXML for business (all films)",
+        "duration": 1939.4,
+        "url": "https://github.com/fundsxml/videos/releases/download/v1/fundsxml-business-en.mp4"
+      }
     },
     {
       "id": "fundsxml-developers",
@@ -451,6 +456,47 @@
           "poster": "posters/11-dev-regulatory.jpg"
         },
         {
+          "id": "dev-validate",
+          "number": 12,
+          "title": "Validate and check data quality",
+          "description": "Validate a FundsXML delivery in two stages: against the XSD 1.1 schema, reading and fixing its error messages, and against business rules with the FundsXML data-quality checks of FreeXmlToolkit. With the data-quality report, a catalogue of typical schema errors, Schematron rules, and validation on the command line and in build pipelines.",
+          "duration": 303.7,
+          "chapters": [
+            {
+              "t": 0,
+              "title": "Intro"
+            },
+            {
+              "t": 13,
+              "title": "Two stages"
+            },
+            {
+              "t": 40,
+              "title": "Stage one: the schema"
+            },
+            {
+              "t": 90,
+              "title": "Reading error messages"
+            },
+            {
+              "t": 142,
+              "title": "Stage two: business rules"
+            },
+            {
+              "t": 237,
+              "title": "Rules of your own"
+            },
+            {
+              "t": 268,
+              "title": "Automate it"
+            }
+          ],
+          "mp4": "en/12-dev-validate.mp4",
+          "subtitles": "en/12-dev-validate.vtt",
+          "chapters_vtt": "en/12-dev-validate-chapters.vtt",
+          "poster": "posters/12-dev-validate.jpg"
+        },
+        {
           "id": "dev-query",
           "number": 13,
           "title": "Query, transform and integrate",
@@ -483,7 +529,12 @@
           "chapters_vtt": "en/13-dev-query-chapters.vtt",
           "poster": "posters/13-dev-query.jpg"
         }
-      ]
+      ],
+      "full": {
+        "title": "FundsXML for developers (all films)",
+        "duration": 2248.0,
+        "url": "https://github.com/fundsxml/videos/releases/download/v1/fundsxml-developers-en.mp4"
+      }
     }
   ],
   "release": "https://github.com/fundsxml/videos/releases/tag/v1",

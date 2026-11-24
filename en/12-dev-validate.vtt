@@ -1,0 +1,261 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:07.708
+In this film you check a FundsXML delivery in two stages: against the schema, and against the rules of the business.
+
+2
+00:00:07.758 --> 00:00:10.774
+And you learn to read the typical error messages.
+
+3
+00:00:10.824 --> 00:00:12.463
+It takes about six minutes.
+
+4
+00:00:13.713 --> 00:00:15.698
+Validation runs in two stages.
+
+5
+00:00:15.748 --> 00:00:20.378
+Stage one is the schema: structure, data types, code lists and links.
+
+6
+00:00:20.428 --> 00:00:26.414
+It is fast, standard, and every tool can do it, as long as it supports XSD one point one.
+
+7
+00:00:26.464 --> 00:00:31.298
+Stage two are business rules: sums, check digits, dates and consistency.
+
+8
+00:00:31.348 --> 00:00:36.453
+They are written in a rule language such as Schematron, or built into tools.
+
+9
+00:00:36.503 --> 00:00:39.776
+A file should pass both stages before it is sent.
+
+10
+00:00:40.730 --> 00:00:47.439
+A fund administrator has sent this file: the month-end data of a fictional global equity fund.
+
+11
+00:00:47.489 --> 00:00:53.335
+The root element is FundsXML4, and the first lines name the schema, FundsXML4.xsd.
+
+12
+00:00:53.385 --> 00:00:56.570
+So FreeXmlToolkit can validate it right away.
+
+13
+00:00:57.221 --> 00:00:57.708
+Press F8.
+
+14
+00:00:57.758 --> 00:01:01.764
+The schema checks the structure and the data types of every element.
+
+15
+00:01:01.814 --> 00:01:04.807
+The Problems panel below the editor lists an error.
+
+16
+00:01:05.457 --> 00:01:06.457
+Click the problem.
+
+17
+00:01:06.507 --> 00:01:09.840
+The caret jumps to the market value of the first position.
+
+18
+00:01:09.890 --> 00:01:14.273
+An amount must be a decimal number, but someone has written it out in words.
+
+19
+00:01:14.924 --> 00:01:18.257
+Type the exact number instead, and press F8 again.
+
+20
+00:01:18.307 --> 00:01:21.302
+The error is gone, and the document is valid.
+
+21
+00:01:21.352 --> 00:01:27.257
+Other deliveries may also show hints, in blue: suggestions for data that could be added.
+
+22
+00:01:27.307 --> 00:01:29.694
+Hints are suggestions, not mistakes.
+
+23
+00:01:30.843 --> 00:01:34.647
+Schema errors come in a few typical forms, and their codes help.
+
+24
+00:01:34.697 --> 00:01:42.837
+Complex type two point four means an element is missing, unexpected, or in the wrong order; the message lists what was expected instead.
+
+25
+00:01:42.887 --> 00:01:48.076
+Datatype errors mean a value has the wrong type, like the amount in words you just saw.
+
+26
+00:01:48.126 --> 00:01:51.087
+Enumeration errors mean a code is not in its list.
+
+27
+00:01:51.137 --> 00:01:55.724
+And an IDREF error means a position points to a security that does not exist.
+
+28
+00:01:57.074 --> 00:01:59.365
+A message tells you more than its code.
+
+29
+00:01:59.415 --> 00:02:03.747
+It names the line and the column, and the element where the check failed.
+
+30
+00:02:03.797 --> 00:02:10.110
+Often it lists what the schema expected instead, for example the names of the elements that may come next.
+
+31
+00:02:10.160 --> 00:02:15.332
+Read that list first: it usually points directly to a missing element or a wrong order.
+
+32
+00:02:15.382 --> 00:02:20.794
+And fix the first error first, because one mistake can cause several messages further down.
+
+33
+00:02:22.044 --> 00:02:24.417
+Now a second delivery of the same fund.
+
+34
+00:02:24.467 --> 00:02:27.150
+It passes the schema without a single error.
+
+35
+00:02:27.200 --> 00:02:30.628
+Every element is in its place, every number is a number.
+
+36
+00:02:31.280 --> 00:02:33.656
+But the Problems panel shows two warnings.
+
+37
+00:02:33.706 --> 00:02:40.528
+They come from the FundsXML data-quality checks: the weights of the positions add up to one hundred and twenty percent.
+
+38
+00:02:41.180 --> 00:02:43.650
+Click the warning about the first position.
+
+39
+00:02:43.700 --> 00:02:50.273
+It claims twenty point four percent, but its value is only zero point four percent of the fund's net asset value.
+
+40
+00:02:50.323 --> 00:02:52.500
+Correct the weight and validate again.
+
+41
+00:02:52.550 --> 00:02:53.849
+Both warnings are gone.
+
+42
+00:02:54.500 --> 00:02:59.446
+The green FundsXML mark in the status bar shows that the document was recognised.
+
+43
+00:02:59.496 --> 00:03:08.451
+With it come more than fifty checks: ISIN and LEI check digits, currency codes, dates, position values against the net asset value, and many more.
+
+44
+00:03:08.501 --> 00:03:11.474
+A schema tells you whether a file is well formed.
+
+45
+00:03:11.524 --> 00:03:14.681
+These checks tell you whether its data can be right.
+
+46
+00:03:15.831 --> 00:03:17.510
+The checks have three levels.
+
+47
+00:03:17.560 --> 00:03:21.863
+An error means the data cannot be right, for example a wrong check digit.
+
+48
+00:03:21.913 --> 00:03:26.692
+A warning means it is probably wrong, like weights far above one hundred percent.
+
+49
+00:03:26.742 --> 00:03:31.760
+And an info is a hint, for example that derivatives could also report their exposure.
+
+50
+00:03:31.810 --> 00:03:37.960
+Agree with your partners which levels stop a delivery: usually errors always, and warnings after a look.
+
+51
+00:03:39.210 --> 00:03:41.435
+For a full overview, use the report.
+
+52
+00:03:41.485 --> 00:03:44.785
+In the FundsXML panel, click Run Data Quality Checks.
+
+53
+00:03:44.835 --> 00:03:50.284
+A report opens next to the document: every check, whether it passed, and what it found.
+
+54
+00:03:50.334 --> 00:03:56.477
+Save it with the delivery, or send it to your partner, so both sides talk about the same findings.
+
+55
+00:03:57.627 --> 00:04:04.892
+The checks in FreeXmlToolkit are queries in XQuery, and you can open each of them as a snippet in the Query Console.
+
+56
+00:04:04.942 --> 00:04:14.226
+For rules of your own, Schematron is the standard language: rules on XML, readable and testable, and they run in tools, scripts and pipelines alike.
+
+57
+00:04:14.276 --> 00:04:18.704
+Add the fields a particular partner requires, or your house tolerances.
+
+58
+00:04:18.754 --> 00:04:27.281
+FreeXmlToolkit runs Schematron too, and offers the quick fixes a Schematron file defines, so a common error is corrected with one click.
+
+59
+00:04:28.631 --> 00:04:29.833
+Finally, automate it.
+
+60
+00:04:29.883 --> 00:04:35.977
+On the command line, Saxon or Xerces validate files against the schema; both support XSD one point one.
+
+61
+00:04:36.027 --> 00:04:43.730
+Run the schema check and your Schematron rules in every build and before every delivery, and stop the pipeline when a check fails.
+
+62
+00:04:43.780 --> 00:04:50.530
+Keep a folder of test files, good and bad ones, and run them with every change of your mapping or of the standard.
+
+63
+00:04:51.880 --> 00:04:53.964
+That was validation in two stages.
+
+64
+00:04:54.014 --> 00:05:00.428
+In the next film, you query a FundsXML file, transform it, and see how it fits into a system landscape.
+
+65
+00:05:00.478 --> 00:05:01.683
+Thanks for watching.
