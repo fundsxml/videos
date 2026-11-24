@@ -1,0 +1,229 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:07.945
+In this film you read the portfolio of a fund, follow a position to its master data, and see how the schema protects that link.
+
+2
+00:00:07.995 --> 00:00:09.539
+It takes about six minutes.
+
+3
+00:00:10.392 --> 00:00:13.677
+The portfolio is part of the fund's dynamic data.
+
+4
+00:00:13.727 --> 00:00:20.824
+Portfolios can hold several portfolios, each with a NAV date, the valuation day, and a list of positions.
+
+5
+00:00:21.476 --> 00:00:25.581
+Each position starts with a UniqueID, and identifiers like the ISIN.
+
+6
+00:00:25.631 --> 00:00:34.562
+Then come its currency, here the US dollar, its total value in the fund currency, and its weight: one point two one percent of the net asset value.
+
+7
+00:00:34.612 --> 00:00:39.328
+For a position in a foreign currency, the exchange rate used is given as well.
+
+8
+00:00:39.378 --> 00:00:42.322
+The last block depends on the kind of instrument.
+
+9
+00:00:42.372 --> 00:00:48.737
+For a share, it holds the number of units, the price in dollars, and the market value in both currencies.
+
+10
+00:00:49.892 --> 00:00:52.051
+Every position has the same shape.
+
+11
+00:00:52.101 --> 00:00:57.575
+A common head: the link to the asset, its value in the fund currency, and its weight.
+
+12
+00:00:57.625 --> 00:01:08.948
+Then exactly one block for the kind of instrument, chosen from about twenty: equity, bond, fund units, options, futures, currency forwards, swaps, deposits, accounts and more.
+
+13
+00:01:08.998 --> 00:01:15.576
+The quantity sits inside that block: units for a share, a nominal for a bond, contracts for an option.
+
+14
+00:01:16.826 --> 00:01:20.722
+A bond has a nominal value and a price in percent instead.
+
+15
+00:01:20.772 --> 00:01:23.239
+A fund unit holds a number of shares.
+
+16
+00:01:23.289 --> 00:01:25.007
+An option holds contracts.
+
+17
+00:01:25.057 --> 00:01:29.089
+And cash, here call money, needs hardly more than its value.
+
+18
+00:01:30.204 --> 00:01:33.744
+What a security is, is not repeated in every position.
+
+19
+00:01:33.794 --> 00:01:37.600
+The UniqueID points to the asset master data further down.
+
+20
+00:01:37.650 --> 00:01:47.705
+There, asset ID_0002 is described once: Driftwood Engineering, a fictional share from the United States, listed in New York, with the LEI of its issuer.
+
+21
+00:01:47.755 --> 00:01:53.821
+If several funds or portfolios hold the same share, its master data still appears only once.
+
+22
+00:01:54.970 --> 00:01:57.059
+An asset has its own fixed shape.
+
+23
+00:01:57.109 --> 00:01:58.809
+The UniqueID is the anchor.
+
+24
+00:01:58.859 --> 00:02:12.418
+Then come its identifiers and its name, its currency, and the asset type, a two-letter code: E Q for equity, B O for bond, S C for a fund's share class, O P for an option, F X for a currency forward, and so on.
+
+25
+00:02:12.468 --> 00:02:22.268
+Asset details hold what is specific to the kind: the issuer of a share, the coupon of a bond, the strike of an option, or the counterparty of a forward.
+
+26
+00:02:23.518 --> 00:02:26.022
+Now a bond, from the position to its asset.
+
+27
+00:02:26.072 --> 00:02:32.851
+The position holds a nominal of six point two million euro, at a price of one hundred five point three six percent.
+
+28
+00:02:32.901 --> 00:02:39.206
+Nominal times price gives the market value, and the interest accrued since the last coupon is added on top.
+
+29
+00:02:39.256 --> 00:02:52.627
+On the asset side, the bond is described once: a government bond of a fictional state, with its issuer and the issuer's LEI, the maturity date in October twenty forty-five, and a fixed coupon of three point seven five percent.
+
+30
+00:02:53.279 --> 00:02:55.914
+And a fund unit, here an exchange-traded fund.
+
+31
+00:02:55.964 --> 00:03:00.524
+The position holds about forty-one thousand shares at eighty-three euro eighty.
+
+32
+00:03:00.574 --> 00:03:07.061
+The asset is of type S C, a share class of another fund, with the management company of that fund as its issuer.
+
+33
+00:03:07.111 --> 00:03:14.005
+This is the starting point for look-through: the target fund can be delivered in the same file, with its own portfolio.
+
+34
+00:03:14.657 --> 00:03:16.224
+Here is a currency forward.
+
+35
+00:03:16.274 --> 00:03:26.471
+On the asset side: buy about twenty-one million dollars, sell about eighteen million euro, at an agreed rate, with maturity in December, and the counterparty with its LEI.
+
+36
+00:03:26.521 --> 00:03:32.703
+On the position side, the total value is the forward's current market value, which can also be negative.
+
+37
+00:03:33.852 --> 00:03:37.499
+Technically, this is a link the XML parser itself checks.
+
+38
+00:03:37.549 --> 00:03:43.012
+On the asset, UniqueID is declared as an ID: it must be unique in the whole document.
+
+39
+00:03:43.062 --> 00:03:47.682
+On the position, it is an ID reference: it must point to an existing ID.
+
+40
+00:03:47.732 --> 00:03:52.222
+The value must be a valid XML name, so it must not start with a digit.
+
+41
+00:03:52.272 --> 00:03:58.384
+A good habit is a stable value: the same asset keeps the same ID from one delivery to the next.
+
+42
+00:03:59.634 --> 00:04:01.391
+The schema protects this link.
+
+43
+00:04:01.441 --> 00:04:06.693
+Change the UniqueID of the first position to an asset that does not exist, and press F8.
+
+44
+00:04:06.743 --> 00:04:10.006
+The schema reports that there is no asset with this ID.
+
+45
+00:04:10.657 --> 00:04:14.496
+Set the ID back, validate again, and the document is in order.
+
+46
+00:04:15.649 --> 00:04:23.537
+A portfolio can also carry breakdowns: the fund's weights by country, currency, sector or asset class, already calculated by the sender.
+
+47
+00:04:23.587 --> 00:04:29.140
+A breakdown can combine several dimensions, for example country and currency, and can be nested.
+
+48
+00:04:29.190 --> 00:04:34.218
+The receiver can use them as they are, and should allow for small rounding differences.
+
+49
+00:04:34.268 --> 00:04:42.331
+Breakdowns are useful for receivers who only need an overview, such as a factsheet, and do not want to aggregate every position themselves.
+
+50
+00:04:43.681 --> 00:04:45.552
+And funds that hold other funds?
+
+51
+00:04:45.602 --> 00:04:49.155
+A position of the kind ShareClass points to the target fund.
+
+52
+00:04:49.205 --> 00:04:54.921
+The target fund can be delivered in the same file, as a fund of its own, with its own portfolio.
+
+53
+00:04:54.971 --> 00:05:03.028
+And a portfolio can also carry decomposed positions, where fund holdings are replaced by the scaled-down positions of the target funds.
+
+54
+00:05:03.078 --> 00:05:09.874
+That is how look-through works in FundsXML: through the fund hierarchy, not through extra fields on each position.
+
+55
+00:05:11.224 --> 00:05:13.987
+That was the portfolio and its master data.
+
+56
+00:05:14.037 --> 00:05:18.894
+In the next film, you see how transactions and investor flows are recorded.
+
+57
+00:05:18.944 --> 00:05:20.203
+Thanks for watching.

@@ -1,0 +1,209 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:08.296
+In this film you take a FundsXML delivery apart: its main blocks, and its control data, the envelope of every delivery.
+
+2
+00:00:08.346 --> 00:00:10.142
+It takes about five minutes.
+
+3
+00:00:10.993 --> 00:00:19.980
+Here is a realistic FundsXML delivery: the month-end data of a fictional multi-asset fund, from the public example files.
+
+4
+00:00:20.030 --> 00:00:24.013
+Every document starts with the root element FundsXML4.
+
+5
+00:00:24.063 --> 00:00:28.494
+It has no namespace, and it names its schema, FundsXML4.xsd.
+
+6
+00:00:29.145 --> 00:00:33.407
+Fold the document to its main parts, and its structure becomes clear.
+
+7
+00:00:33.457 --> 00:00:35.032
+This file has four blocks.
+
+8
+00:00:35.082 --> 00:00:37.657
+ControlData describes the delivery itself.
+
+9
+00:00:37.707 --> 00:00:41.969
+Funds holds the funds, with their static data, prices and portfolios.
+
+10
+00:00:42.019 --> 00:00:46.094
+AssetMasterData describes every security that the portfolios hold.
+
+11
+00:00:46.144 --> 00:00:52.031
+And RegulatoryReportings carries templates for partners, here an EMT and a Tripartite Template.
+
+12
+00:00:53.181 --> 00:00:55.352
+These are the blocks at the top level.
+
+13
+00:00:55.402 --> 00:00:57.981
+ControlData is the only one that is required.
+
+14
+00:00:58.031 --> 00:01:01.137
+Funds and AssetMasterData carry the classic fund data.
+
+15
+00:01:01.187 --> 00:01:07.449
+A block for the management company holds figures of the company itself, such as its assets under management.
+
+16
+00:01:07.499 --> 00:01:12.358
+Documents links fund documents, such as key information documents or annual reports.
+
+17
+00:01:12.408 --> 00:01:15.397
+RegulatoryReportings carries the European templates.
+
+18
+00:01:15.447 --> 00:01:18.027
+CountrySpecificData holds national reporting.
+
+19
+00:01:18.077 --> 00:01:23.755
+And an optional signature lets the receiver check who sent the file, and that nothing was changed.
+
+20
+00:01:23.805 --> 00:01:33.281
+A delivery contains only the blocks it needs: a price feed has funds but no portfolio, and a pure template delivery may have little more than its regulatory block.
+
+21
+00:01:34.531 --> 00:01:36.404
+Now the envelope, ControlData.
+
+22
+00:01:36.454 --> 00:01:42.172
+The unique document ID identifies this delivery; it must be unique for each data supplier.
+
+23
+00:01:42.222 --> 00:01:46.210
+Document generated is the time stamp when the file was written.
+
+24
+00:01:46.260 --> 00:01:49.671
+Version names the FundsXML version it was written for.
+
+25
+00:01:49.721 --> 00:01:55.055
+And content date is the business date of the data, here the thirty-first of October.
+
+26
+00:01:55.105 --> 00:02:01.465
+Do not confuse the two dates: the content date is what the data refers to, not when it was produced.
+
+27
+00:02:02.114 --> 00:02:10.946
+The data supplier says who sent the file: the country of the sending system, a short name, the full name, and the type of supplier, here an asset manager.
+
+28
+00:02:11.596 --> 00:02:13.796
+The last field is the data operation.
+
+29
+00:02:13.846 --> 00:02:16.107
+Initial is a first, complete delivery.
+
+30
+00:02:16.157 --> 00:02:25.776
+A click into it, and the Properties panel shows the schema's own explanation: amend updates or corrects data that was already delivered, and delete removes it.
+
+31
+00:02:26.926 --> 00:02:29.237
+In practice, deliveries form a chain.
+
+32
+00:02:29.287 --> 00:02:30.832
+The first one is initial.
+
+33
+00:02:30.882 --> 00:02:40.086
+A correction is a new file, with its own unique document ID, the operation amend, and the ID of the delivery it corrects in related document IDs.
+
+34
+00:02:40.136 --> 00:02:44.617
+Delete works the same way, and always names the documents it refers to.
+
+35
+00:02:44.667 --> 00:02:49.914
+So the receiver can follow every change, from the first delivery to the latest one.
+
+36
+00:02:51.164 --> 00:02:53.931
+Let us turn this delivery into a correction.
+
+37
+00:02:53.981 --> 00:02:58.988
+The document gets a new ID: the old one with a suffix for the first correction.
+
+38
+00:02:59.038 --> 00:03:00.780
+The operation becomes amend.
+
+39
+00:03:00.830 --> 00:03:05.582
+And related document IDs name the delivery it corrects, by its original ID.
+
+40
+00:03:05.632 --> 00:03:13.456
+Press F8 to validate: the file is still valid, and the receiver now knows exactly which earlier delivery this one replaces.
+
+41
+00:03:14.605 --> 00:03:15.866
+Some common pitfalls.
+
+42
+00:03:15.916 --> 00:03:20.172
+Reusing a document ID: the receiver may drop the file as a duplicate.
+
+43
+00:03:20.222 --> 00:03:23.916
+Mixing up the two dates, so data is booked on the wrong day.
+
+44
+00:03:23.966 --> 00:03:28.596
+A version that does not match the schema that the file was checked against.
+
+45
+00:03:28.646 --> 00:03:33.588
+And corrections without related document IDs, which leave the receiver guessing.
+
+46
+00:03:34.838 --> 00:03:37.320
+This file uses only a part of the standard.
+
+47
+00:03:37.370 --> 00:03:41.677
+Open the schema in the graphic view: here are all blocks at the top level.
+
+48
+00:03:41.727 --> 00:03:52.687
+Regulatory reportings is opened: it splits into direct reporting, and indirect reporting with the templates for partners, such as the Tripartite Template in its versions, and PRIIPs data.
+
+49
+00:03:52.737 --> 00:03:59.988
+Every block can be explored like this, down to the last element, with the documentation of each one in the Properties panel.
+
+50
+00:04:01.140 --> 00:04:03.408
+That was the anatomy of a delivery.
+
+51
+00:04:03.458 --> 00:04:08.376
+In the next film, you look at funds, share classes and the net asset value.
+
+52
+00:04:08.426 --> 00:04:09.701
+Thanks for watching.

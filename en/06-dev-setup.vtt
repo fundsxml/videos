@@ -1,0 +1,177 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:08.554
+In this film you set up a free working environment for FundsXML: the schema, the example files, and an editor that knows the standard.
+
+2
+00:00:08.604 --> 00:00:10.247
+It takes about four minutes.
+
+3
+00:00:11.497 --> 00:00:13.737
+Everything starts with the schema.
+
+4
+00:00:13.787 --> 00:00:17.913
+It is published on GitHub under the MIT licence, in two forms.
+
+5
+00:00:17.963 --> 00:00:23.705
+One flat file, FundsXML4.xsd, contains everything, and is the one to validate against.
+
+6
+00:00:23.755 --> 00:00:29.699
+The modular form splits it into one file per area, which is easier to read and to change.
+
+7
+00:00:29.749 --> 00:00:35.155
+The schema uses XSD version one point one, with assertions and conditional rules.
+
+8
+00:00:35.205 --> 00:00:43.574
+So you need a validator that supports it, such as Saxon, Xerces, or the editor in this film; older tools like xmllint do not.
+
+9
+00:00:44.543 --> 00:00:49.653
+FreeXmlToolkit is a free XML editor, and it has a FundsXML extension.
+
+10
+00:00:49.703 --> 00:00:51.073
+It is off at first.
+
+11
+00:00:51.123 --> 00:00:56.308
+Open a FundsXML file, and a bar above the editor offers to turn it on.
+
+12
+00:00:56.961 --> 00:00:59.236
+Click Enable the FundsXML extension.
+
+13
+00:00:59.286 --> 00:01:06.339
+FreeXmlToolkit fetches the official FundsXML schemas and example files from GitHub, and keeps them up to date.
+
+14
+00:01:06.389 --> 00:01:10.537
+You can turn the extension off again at any time in the settings.
+
+15
+00:01:11.188 --> 00:01:13.228
+Two things change right away.
+
+16
+00:01:13.278 --> 00:01:19.282
+The status bar shows a green FundsXML mark: the document was recognised as FundsXML.
+
+17
+00:01:19.332 --> 00:01:23.534
+And the activity bar on the left has a new FundsXML button.
+
+18
+00:01:24.186 --> 00:01:26.322
+Click it to open the FundsXML panel.
+
+19
+00:01:26.372 --> 00:01:32.213
+At the top, you choose the schema version, here four point two point eleven, the current release.
+
+20
+00:01:32.263 --> 00:01:34.825
+Every check in the panel uses this version.
+
+21
+00:01:35.475 --> 00:01:47.236
+Below are the tools for the open document: validate it against the FundsXML schema, run the data-quality checks, look up its identifiers online, and helpers for the grid view and for percentages.
+
+22
+00:01:47.286 --> 00:01:49.901
+Later films in this series use each of them.
+
+23
+00:01:50.551 --> 00:01:59.905
+Further down, the identifier checker for ISIN and LEI codes, and links to the schema, its documentation, and the folder with the example files.
+
+24
+00:02:00.557 --> 00:02:02.969
+Now the most useful help while you work.
+
+25
+00:02:03.019 --> 00:02:06.540
+Click into any element, here the asset type of a security.
+
+26
+00:02:06.590 --> 00:02:15.219
+The Properties panel shows what the schema says about it: its data type, the allowed codes, its place in the document, and its documentation.
+
+27
+00:02:15.269 --> 00:02:21.991
+The FundsXML schema documents every element, in English and in German, so the answer is always one click away.
+
+28
+00:02:22.642 --> 00:02:24.947
+You can also read the schema itself.
+
+29
+00:02:24.997 --> 00:02:28.283
+In the FundsXML panel, click Open Schema in Editor.
+
+30
+00:02:28.333 --> 00:02:31.162
+The flat schema opens next to your document.
+
+31
+00:02:31.212 --> 00:02:38.228
+The status bar shows it right away: an XSD one point one schema, so it needs an XSD one point one validator.
+
+32
+00:02:38.278 --> 00:02:44.639
+Below, every element and type comes with its documentation, in English, German and more languages.
+
+33
+00:02:44.689 --> 00:02:50.528
+Search it with Control F, or switch to the graphic view to see the structure as a diagram.
+
+34
+00:02:51.178 --> 00:02:52.171
+One more place.
+
+35
+00:02:52.221 --> 00:03:00.933
+Close all documents, and the Welcome page shows a FundsXML row: open an example, open the schema, or browse all example files.
+
+36
+00:03:00.983 --> 00:03:06.635
+Click Open Example, and you start with a real FundsXML document, ready to explore.
+
+37
+00:03:07.787 --> 00:03:10.075
+FreeXmlToolkit is not the only tool.
+
+38
+00:03:10.125 --> 00:03:17.545
+On the command line, Saxon or Xerces validate files in scripts and build pipelines; both support XSD one point one.
+
+39
+00:03:17.595 --> 00:03:24.496
+Your development environment, such as IntelliJ, VS Code or Eclipse, offers code completion from the schema.
+
+40
+00:03:24.546 --> 00:03:29.562
+And the online documentation shows every element of the schema in the browser.
+
+41
+00:03:29.612 --> 00:03:33.655
+Use whatever fits your work: the files are the same everywhere.
+
+42
+00:03:35.005 --> 00:03:36.673
+Your environment is ready.
+
+43
+00:03:36.723 --> 00:03:42.290
+In the next film, you take a FundsXML delivery apart, starting with its control data.
+
+44
+00:03:42.340 --> 00:03:43.612
+Thanks for watching.
