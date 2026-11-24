@@ -412,6 +412,76 @@
           "subtitles": "en/10-dev-transactions.vtt",
           "chapters_vtt": "en/10-dev-transactions-chapters.vtt",
           "poster": "posters/10-dev-transactions.jpg"
+        },
+        {
+          "id": "dev-regulatory",
+          "number": 11,
+          "title": "Regulatory templates in XML",
+          "description": "How the FinDatEx templates sit in a FundsXML file: RegulatoryReportings with DirectReporting and IndirectReporting, an EMT V4.3 block (data set information, general information, target market, ex-ante costs) and a TPT V8 block for Solvency II (portfolio data, positions with CIC codes and valuations), template versions as their own elements, and how country-specific data and custom attributes extend the standard.",
+          "duration": 282.9,
+          "chapters": [
+            {
+              "t": 0,
+              "title": "Intro"
+            },
+            {
+              "t": 12,
+              "title": "The regulatory block"
+            },
+            {
+              "t": 59,
+              "title": "EMT"
+            },
+            {
+              "t": 110,
+              "title": "TPT"
+            },
+            {
+              "t": 229,
+              "title": "Core and templates"
+            },
+            {
+              "t": 252,
+              "title": "Extensions"
+            }
+          ],
+          "mp4": "en/11-dev-regulatory.mp4",
+          "subtitles": "en/11-dev-regulatory.vtt",
+          "chapters_vtt": "en/11-dev-regulatory-chapters.vtt",
+          "poster": "posters/11-dev-regulatory.jpg"
+        },
+        {
+          "id": "dev-query",
+          "number": 13,
+          "title": "Query, transform and integrate",
+          "description": "Work with the data in a FundsXML file: XPath paths without a namespace, the ready-made FundsXML queries in the Query Console of FreeXmlToolkit (the ten largest positions as a table), an XSLT stylesheet that turns the positions into CSV, strategies for large files, and how FundsXML fits into a system landscape of databases, data warehouses and scheduled deliveries.",
+          "duration": 254.9,
+          "chapters": [
+            {
+              "t": 0,
+              "title": "Intro"
+            },
+            {
+              "t": 11,
+              "title": "Paths and queries"
+            },
+            {
+              "t": 81,
+              "title": "Transform"
+            },
+            {
+              "t": 119,
+              "title": "Into your systems"
+            },
+            {
+              "t": 221,
+              "title": "Summary"
+            }
+          ],
+          "mp4": "en/13-dev-query.mp4",
+          "subtitles": "en/13-dev-query.vtt",
+          "chapters_vtt": "en/13-dev-query-chapters.vtt",
+          "poster": "posters/13-dev-query.jpg"
         }
       ]
     }

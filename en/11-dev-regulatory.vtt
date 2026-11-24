@@ -1,0 +1,189 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:09.110
+In this film you look inside the regulatory part of a FundsXML file: an EMT block for distributors, and a TPT block for insurers.
+
+2
+00:00:09.160 --> 00:00:10.990
+It takes about five minutes.
+
+3
+00:00:12.240 --> 00:00:17.226
+All regulatory data sits in one block at the top level: RegulatoryReportings.
+
+4
+00:00:17.276 --> 00:00:19.057
+It splits into two branches.
+
+5
+00:00:19.107 --> 00:00:25.532
+Direct reporting holds templates that describe the fund or share class itself, such as EMT and EET.
+
+6
+00:00:25.582 --> 00:00:33.118
+Indirect reporting holds data that others use for their own reporting, such as the TPT for insurers and PRIIPs data.
+
+7
+00:00:33.168 --> 00:00:36.192
+Each template version is an element of its own.
+
+8
+00:00:37.143 --> 00:00:40.419
+Here it is in the file, after the asset master data.
+
+9
+00:00:40.469 --> 00:00:49.502
+Regulatory reportings, then direct reporting, and inside it the element EMT V four two: the European MiFID Template in version four point two.
+
+10
+00:00:49.552 --> 00:00:58.521
+This example file is written for FundsXML four point two point nine; newer schema versions add EMT four point three as an element of its own.
+
+11
+00:00:59.173 --> 00:01:06.308
+An EMT block describes one financial instrument, here the euro retail class; the file has one for each share class.
+
+12
+00:01:06.358 --> 00:01:11.993
+Data set information names the template version, the producer and which parts are reported.
+
+13
+00:01:12.043 --> 00:01:19.553
+General information identifies the share class by its ISIN, and gives its name, its currency, and whether it distributes.
+
+14
+00:01:20.205 --> 00:01:35.898
+The target market follows the MiFID categories: which investor types the fund is meant for, their knowledge and experience, their ability to bear losses, the risk indicator, here three, and the client objectives: capital growth, with a recommended holding period of five years.
+
+15
+00:01:36.549 --> 00:01:45.852
+And the ex-ante costs: ongoing costs, management fee, transaction costs and incidental costs, given as decimal fractions of the net asset value.
+
+16
+00:01:45.902 --> 00:01:50.139
+Zero point zero one five eight means one point five eight percent.
+
+17
+00:01:50.790 --> 00:01:55.285
+Below, in indirect reporting, the Tripartite Template in version seven.
+
+18
+00:01:55.335 --> 00:02:05.912
+At portfolio level: the TPT version, the identifier of the share class, its name and currency, the fund's total net assets, the valuation date and the reporting date.
+
+19
+00:02:06.563 --> 00:02:07.666
+Then the positions.
+
+20
+00:02:07.716 --> 00:02:16.533
+Each one starts with its CIC code, the Complementary Identification Code: four characters for the country of quotation and the kind of instrument.
+
+21
+00:02:16.583 --> 00:02:23.578
+U S three one is a listed equity quoted in the United States, here the same fictional share we met in the portfolio.
+
+22
+00:02:23.628 --> 00:02:31.474
+Then the instrument code and name, and the valuation: quantity, market values in quotation and portfolio currency, and the weight.
+
+23
+00:02:31.524 --> 00:02:35.786
+Credit risk data names the issuer, its country and its economic sector.
+
+24
+00:02:36.437 --> 00:02:38.453
+Further down is a government bond.
+
+25
+00:02:38.503 --> 00:02:42.405
+Its CIC code is D E one one: a government bond quoted in Germany.
+
+26
+00:02:42.455 --> 00:02:50.489
+For bonds, the template adds the interest rate data: rate type, coupon rate and frequency, and the redemption with its maturity date.
+
+27
+00:02:50.539 --> 00:02:57.906
+Together with the modified duration below, that is the information an insurer needs for its interest rate and spread risk.
+
+28
+00:02:59.056 --> 00:03:01.322
+The other templates work the same way.
+
+29
+00:03:01.372 --> 00:03:07.355
+The EET for sustainability data and the EFT for feedback from distributors sit in direct reporting.
+
+30
+00:03:07.405 --> 00:03:10.646
+The PRIIPs data of the EPT sits in indirect reporting.
+
+31
+00:03:10.696 --> 00:03:21.129
+Each has its own element per version, and older versions remain in the schema for a transition period, so sender and receiver can move to a new version when both are ready.
+
+32
+00:03:22.479 --> 00:03:27.412
+Templates follow their own conventions, and they differ from the core of FundsXML.
+
+33
+00:03:27.462 --> 00:03:29.478
+Flags are single letters, Y and N.
+
+34
+00:03:29.528 --> 00:03:34.461
+Percentages are often decimal fractions, where one stands for one hundred percent.
+
+35
+00:03:34.511 --> 00:03:41.874
+And many fields are numbered codes from the template's own lists, for example code one for an ISIN as the identifier type.
+
+36
+00:03:41.924 --> 00:03:47.708
+Read the template's documentation for each field, and do not assume the conventions of the core.
+
+37
+00:03:49.058 --> 00:03:50.717
+One thing is worth knowing.
+
+38
+00:03:50.767 --> 00:03:57.742
+Much of what the templates ask for also exists in the core of FundsXML: identifiers, values, issuers and dates.
+
+39
+00:03:57.792 --> 00:04:05.401
+The core describes funds and assets neutrally; a template block is a view of that data in the form a regulation asks for.
+
+40
+00:04:05.451 --> 00:04:11.224
+Converters can fill a template from the core data, so the same fact is not maintained twice.
+
+41
+00:04:12.574 --> 00:04:13.882
+And when you need more?
+
+42
+00:04:13.932 --> 00:04:21.263
+Country-specific data carries national reporting at the top level and in several blocks, for example for Austria and Germany.
+
+43
+00:04:21.313 --> 00:04:27.109
+Custom attributes let partners exchange extra fields in a defined way, without breaking the schema.
+
+44
+00:04:27.159 --> 00:04:30.003
+Use them sparingly, and agree on them in writing.
+
+45
+00:04:31.353 --> 00:04:34.482
+That was the regulatory part of a FundsXML file.
+
+46
+00:04:34.532 --> 00:04:39.053
+In the next film, you validate a delivery and check its data quality.
+
+47
+00:04:39.103 --> 00:04:40.378
+Thanks for watching.

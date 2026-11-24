@@ -1,0 +1,181 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:08.602
+In this film you get the data out of a FundsXML file: you query it, you transform it, and you see how it fits into a system landscape.
+
+2
+00:00:08.652 --> 00:00:10.305
+It takes about five minutes.
+
+3
+00:00:11.555 --> 00:00:14.858
+Every value in a FundsXML file has a clear path.
+
+4
+00:00:14.908 --> 00:00:22.331
+FundsXML has no XML namespace, so the paths are short: FundsXML4, Funds, Fund, and so on down to the value.
+
+5
+00:00:22.381 --> 00:00:26.173
+Positions and assets are joined through their UniqueID.
+
+6
+00:00:26.223 --> 00:00:35.323
+With XPath you select values, with XQuery you build new results from them, and with XSLT you turn a whole file into another format.
+
+7
+00:00:36.288 --> 00:00:38.384
+Let us ask the file a question.
+
+8
+00:00:38.434 --> 00:00:41.015
+Press Control K for the Query Console.
+
+9
+00:00:41.065 --> 00:00:45.930
+In the Snippets menu, the FundsXML extension offers ready-made queries.
+
+10
+00:00:45.980 --> 00:00:50.222
+Choose Top 10 positions, load it into the console, and run it.
+
+11
+00:00:50.873 --> 00:00:58.834
+Click Table to see the result as a list: the ten largest positions, each with the name from the master data, its value and its weight.
+
+12
+00:00:58.884 --> 00:01:04.753
+The query is written in XQuery, so you can open it, adapt it, and save it as a snippet of your own.
+
+13
+00:01:05.902 --> 00:01:16.551
+More ready-made queries come with the extension and with the public examples: values aggregated by asset type, a summary of each fund, and a look-through that expands holdings of other funds.
+
+14
+00:01:16.601 --> 00:01:19.968
+Use them as a starting point for your own reports and checks.
+
+15
+00:01:21.218 --> 00:01:22.615
+Now transform the file.
+
+16
+00:01:22.665 --> 00:01:30.725
+In the Transform panel, the stylesheet positions to CSV from the public examples is selected, and the FundsXML file is the input.
+
+17
+00:01:30.775 --> 00:01:31.354
+Click Run.
+
+18
+00:01:31.404 --> 00:01:40.785
+The result is a CSV file with one row per position: the fund, the instrument, its identifiers, quantity, price and value, joined with the master data.
+
+19
+00:01:40.835 --> 00:01:43.175
+Ready for a spreadsheet or a database.
+
+20
+00:01:43.225 --> 00:01:51.977
+The stylesheet picks the one instrument block of each position generically, so the same columns work for shares, bonds and fund units alike.
+
+21
+00:01:52.027 --> 00:01:58.390
+The same stylesheet runs on the command line with Saxon, so the export can be part of a scheduled job.
+
+22
+00:01:59.540 --> 00:02:01.076
+What about large files?
+
+23
+00:02:01.126 --> 00:02:07.347
+A full delivery with many funds and thousands of positions can reach hundreds of megabytes.
+
+24
+00:02:07.397 --> 00:02:11.620
+Loading it all into memory is simple, and fine for most files.
+
+25
+00:02:11.670 --> 00:02:21.474
+For very large ones, read it as a stream, element by element, with StAX, SAX or streaming XSLT, and process one fund or one position at a time.
+
+26
+00:02:22.824 --> 00:02:25.206
+Many teams prefer to work with classes.
+
+27
+00:02:25.256 --> 00:02:32.188
+Generate them from the schema: JAXB for Java, xsdata for Python, or the XML schema tools of dot net for C sharp.
+
+28
+00:02:32.238 --> 00:02:38.235
+The generated code reads and writes valid documents, and the compiler helps you with every field.
+
+29
+00:02:38.285 --> 00:02:45.466
+Because the schema is large, generate only once per version, and keep the classes apart from your own business code.
+
+30
+00:02:46.816 --> 00:02:49.939
+Most receivers load FundsXML into a database.
+
+31
+00:02:49.989 --> 00:02:53.181
+The structure of the file suggests the tables.
+
+32
+00:02:53.231 --> 00:03:00.865
+One row per delivery, with its document ID, content date, sender and operation, so corrections can be traced.
+
+33
+00:03:00.915 --> 00:03:04.178
+Funds and share classes, keyed by LEI and ISIN.
+
+34
+00:03:04.228 --> 00:03:07.280
+Positions, keyed by fund, date and UniqueID.
+
+35
+00:03:07.330 --> 00:03:12.073
+And assets, described once per delivery and joined to the positions.
+
+36
+00:03:12.123 --> 00:03:17.219
+Keep the original file as well: it is the evidence of what was delivered.
+
+37
+00:03:18.569 --> 00:03:21.998
+In a system landscape, FundsXML usually sits at the edge.
+
+38
+00:03:22.048 --> 00:03:29.748
+Outgoing, data comes from the fund accounting and the data warehouse, is turned into FundsXML, checked, and sent on a schedule.
+
+39
+00:03:29.798 --> 00:03:36.766
+Incoming, files are collected, checked, and loaded into a database, from where reports and other systems read them.
+
+40
+00:03:36.816 --> 00:03:40.549
+The same checks and the same test files serve both directions.
+
+41
+00:03:41.899 --> 00:03:43.868
+That brings the series together.
+
+42
+00:03:43.918 --> 00:03:55.790
+You set up the tools, took a delivery apart, read funds, share classes and portfolios, saw transactions and regulatory templates, validated a file in two stages, and got the data out again.
+
+43
+00:03:55.840 --> 00:04:02.035
+The schema, the examples and the documentation are free, so you can start with your own data today.
+
+44
+00:04:03.385 --> 00:04:06.537
+That was the last film of the series for developers.
+
+45
+00:04:06.587 --> 00:04:10.601
+Thanks for watching, and good luck with your own FundsXML project.
