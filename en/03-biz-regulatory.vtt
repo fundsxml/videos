@@ -1,0 +1,309 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:03.829
+Regulation is the biggest driver of fund data today.
+
+2
+00:00:03.879 --> 00:00:12.081
+In this film you see which regulatory data travels between fund houses, distributors and insurers, and how FundsXML carries it.
+
+3
+00:00:13.331 --> 00:00:17.828
+Over the last decade, a series of European rules has changed the fund industry.
+
+4
+00:00:17.878 --> 00:00:23.124
+MiFID two asks distributors to know the target market and the costs of every fund they sell.
+
+5
+00:00:23.174 --> 00:00:26.808
+PRIIPs requires a key information document for retail investors.
+
+6
+00:00:26.858 --> 00:00:29.398
+The SFDR asks for sustainability information.
+
+7
+00:00:29.448 --> 00:00:35.212
+And Solvency two asks insurance companies to look through to the real holdings of the funds they own.
+
+8
+00:00:35.262 --> 00:00:40.565
+Each of these rules needs data from the fund house, in large amounts, regularly, and on time.
+
+9
+00:00:40.615 --> 00:00:47.070
+Without a common format, every fund house would have to deliver this data in a different layout to every partner.
+
+10
+00:00:48.420 --> 00:00:51.127
+The industry answered with common templates.
+
+11
+00:00:51.177 --> 00:00:58.832
+They are defined by FinDatEx, a joint body of the European associations of fund managers, insurers, banks and distributors.
+
+12
+00:00:58.882 --> 00:01:03.343
+A template defines which fields are exchanged and what each field means.
+
+13
+00:01:03.393 --> 00:01:05.411
+FundsXML carries these templates.
+
+14
+00:01:05.461 --> 00:01:15.372
+The division of work is clear: FinDatEx decides what is exchanged, and FundsXML decides how it travels, together with all other fund data, in one checked file.
+
+15
+00:01:15.422 --> 00:01:24.644
+FinDatEx publishes each template as a list of fields with their definitions; FundsXML turns each version into a structure that a computer can check.
+
+16
+00:01:25.994 --> 00:01:29.592
+The European MiFID Template, EMT, is the most widely used.
+
+17
+00:01:29.642 --> 00:01:32.989
+The fund house sends it to distributors and platforms.
+
+18
+00:01:33.039 --> 00:01:44.437
+It describes the target market of each share class: which investors the fund is meant for, their knowledge and experience, their ability to bear losses, and their investment horizon.
+
+19
+00:01:44.487 --> 00:01:53.872
+And it carries the costs: ongoing charges, transaction costs and entry and exit fees, so that the distributor can show investors what they really pay.
+
+20
+00:01:55.222 --> 00:01:57.066
+How does a distributor use it?
+
+21
+00:01:57.116 --> 00:02:00.411
+It receives EMT data for every share class it offers.
+
+22
+00:02:00.461 --> 00:02:05.776
+Before a sale, it matches the client's profile against the target market of the fund.
+
+23
+00:02:05.826 --> 00:02:09.942
+It shows the client the expected costs, before the client invests.
+
+24
+00:02:09.992 --> 00:02:13.919
+And once a year, it reports the costs the client actually paid.
+
+25
+00:02:13.969 --> 00:02:20.925
+Every step relies on data from the fund house, in a form that the distributor's systems can read automatically.
+
+26
+00:02:22.275 --> 00:02:27.432
+The European PRIIPs Template, EPT, carries the data behind the key information document.
+
+27
+00:02:27.482 --> 00:02:30.805
+The summary risk indicator, on a scale from one to seven.
+
+28
+00:02:30.855 --> 00:02:33.941
+The performance scenarios, from stress to favourable.
+
+29
+00:02:33.991 --> 00:02:36.841
+And the cost figures in the form PRIIPs requires.
+
+30
+00:02:36.891 --> 00:02:43.113
+Whoever produces the key information document, the fund house or a service provider, works from this data.
+
+31
+00:02:43.163 --> 00:02:55.362
+Because the key information document must be kept up to date, the data behind it travels again whenever a figure changes, and the receiver always knows from the file which version of the template it follows.
+
+32
+00:02:56.712 --> 00:03:00.479
+The European ESG Template, EET, carries sustainability data.
+
+33
+00:03:00.529 --> 00:03:04.615
+Is the fund an article six, eight or nine product under the SFDR?
+
+34
+00:03:04.665 --> 00:03:07.605
+How much of it is aligned with the EU taxonomy?
+
+35
+00:03:07.655 --> 00:03:12.822
+And how does it consider the principal adverse impacts on environment and society?
+
+36
+00:03:12.872 --> 00:03:18.611
+The EET is by far the largest template, with several hundred fields, most of them optional.
+
+37
+00:03:18.661 --> 00:03:24.273
+Distributors need it to match funds with the sustainability preferences of their clients.
+
+38
+00:03:24.323 --> 00:03:35.916
+Data vendors often collect EET files from many fund houses and offer them to distributors in one place; because the structure is the same everywhere, this works without manual rework.
+
+39
+00:03:37.266 --> 00:03:40.816
+The Tripartite Template, TPT, serves insurance companies.
+
+40
+00:03:40.866 --> 00:03:47.889
+Under Solvency two, an insurer must calculate its capital requirement on the real holdings of the funds it owns.
+
+41
+00:03:47.939 --> 00:04:00.961
+So the fund house delivers the full portfolio, position by position, with the data an insurer needs: a classification of each instrument, the so-called CIC code, its value, its issuer, and many risk figures.
+
+42
+00:04:01.011 --> 00:04:07.466
+Insurers collect these files from every fund house, often each quarter, and load them all the same way.
+
+43
+00:04:08.816 --> 00:04:11.472
+Most data flows from the fund house outwards.
+
+44
+00:04:11.522 --> 00:04:23.320
+The European Feedback Template, EFT, goes the other way: distributors report back to the fund house how a fund was sold, for example to which types of clients and whether outside the target market.
+
+45
+00:04:23.370 --> 00:04:28.613
+So the fund house can check whether its products reach the investors they were made for.
+
+46
+00:04:28.663 --> 00:04:32.642
+It closes the loop between the two sides of the distribution chain.
+
+47
+00:04:33.992 --> 00:04:35.750
+Here is the whole picture.
+
+48
+00:04:35.800 --> 00:04:42.634
+The fund house sends EMT, EET and EPT data to distributors and platforms, and TPT data to insurers.
+
+49
+00:04:42.684 --> 00:04:46.668
+Data vendors often collect and pass on the same templates.
+
+50
+00:04:46.718 --> 00:04:49.171
+Distributors send EFT feedback back.
+
+51
+00:04:49.221 --> 00:04:58.211
+And because all of it travels in FundsXML, one delivery can carry several templates together with the fund's prices and portfolio.
+
+52
+00:04:59.561 --> 00:05:02.308
+Templates change over time, as the rules change.
+
+53
+00:05:02.358 --> 00:05:10.582
+Each template version gets its own place in the FundsXML schema, so an old version and a new one can be used side by side during a transition.
+
+54
+00:05:10.632 --> 00:05:15.710
+Sender and receiver agree on the version they exchange, and move on when both are ready.
+
+55
+00:05:15.760 --> 00:05:22.644
+And when a new version is published, it is built into the standard once, and not into every interface of every partner.
+
+56
+00:05:23.994 --> 00:05:26.375
+Each template also has its own rhythm.
+
+57
+00:05:26.425 --> 00:05:31.812
+EMT data is updated when costs or the target market change, and at least once a year.
+
+58
+00:05:31.862 --> 00:05:37.377
+EET data follows changes in sustainability data, for example with the periodic reports.
+
+59
+00:05:37.427 --> 00:05:41.279
+EPT data follows the updates of the key information document.
+
+60
+00:05:41.329 --> 00:05:46.589
+And TPT data is needed for every reporting date of the insurer, often each quarter.
+
+61
+00:05:46.639 --> 00:05:51.706
+Sender and receiver agree on these dates, so the data arrives when it is needed.
+
+62
+00:05:53.056 --> 00:05:57.478
+Beyond the European templates, FundsXML also serves national reporting.
+
+63
+00:05:57.528 --> 00:06:07.492
+Country modules carry data that only one country asks for, for example statistics for a national central bank, or tax data for investors in Austria or Germany.
+
+64
+00:06:07.542 --> 00:06:20.971
+And as the European Single Access Point, ESAP, is being set up, fund documents and disclosures will become available in one place across the EU; structured data like FundsXML makes such reporting easier to produce.
+
+65
+00:06:22.321 --> 00:06:23.790
+A few tips from practice.
+
+66
+00:06:23.840 --> 00:06:28.955
+Know your receivers: which templates, which versions, and which dates each one needs.
+
+67
+00:06:29.005 --> 00:06:34.485
+Fill the mandatory fields first, and then the optional ones that your receivers really use.
+
+68
+00:06:34.535 --> 00:06:39.771
+Check every file before it leaves the house, against the schema and the business rules.
+
+69
+00:06:39.821 --> 00:06:47.306
+And keep the history: send corrections as amend deliveries that refer to the original, instead of silently overwriting data.
+
+70
+00:06:48.656 --> 00:06:50.613
+What does this mean in practice?
+
+71
+00:06:50.663 --> 00:06:57.637
+A fund house produces its regulatory data once, in one format, and serves every distributor and insurer from it.
+
+72
+00:06:57.687 --> 00:07:01.149
+Receivers load the data of all fund houses the same way.
+
+73
+00:07:01.199 --> 00:07:04.786
+Every file can be checked automatically before it is sent.
+
+74
+00:07:04.836 --> 00:07:09.427
+And when the next rule arrives, the industry adds it to the standard once.
+
+75
+00:07:10.777 --> 00:07:13.586
+That was regulatory reporting with FundsXML.
+
+76
+00:07:13.636 --> 00:07:17.875
+In the next film, you see how the quality of fund data is checked.
+
+77
+00:07:17.925 --> 00:07:19.175
+Thanks for watching.

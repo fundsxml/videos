@@ -1,0 +1,373 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:04.904
+You want to introduce FundsXML, as a sender or as a receiver of fund data.
+
+2
+00:00:04.954 --> 00:00:11.826
+In this film you see how such a project runs, from the first idea to daily operation, and what helps along the way.
+
+3
+00:00:13.076 --> 00:00:14.090
+Why start at all?
+
+4
+00:00:14.140 --> 00:00:17.032
+The business case usually rests on four points.
+
+5
+00:00:17.082 --> 00:00:21.663
+Fewer interfaces: one format for many partners instead of one per partner.
+
+6
+00:00:21.713 --> 00:00:27.421
+Partners ask for it: distributors, platforms and insurers increasingly expect standard data.
+
+7
+00:00:27.471 --> 00:00:33.179
+Regulation is built in: new templates arrive through the standard, not through new projects.
+
+8
+00:00:33.229 --> 00:00:39.000
+And quality improves, because every file is checked automatically before it leaves the house.
+
+9
+00:00:40.350 --> 00:00:42.838
+A FundsXML project runs in six phases.
+
+10
+00:00:42.888 --> 00:00:45.510
+Preparation sets the goal and the scope.
+
+11
+00:00:45.560 --> 00:00:48.650
+Mapping connects your own data to the standard.
+
+12
+00:00:48.700 --> 00:00:52.591
+A prototype and a pilot prove that it works with real data.
+
+13
+00:00:52.641 --> 00:00:54.194
+Testing makes it robust.
+
+14
+00:00:54.244 --> 00:00:56.398
+Go-live moves it into production.
+
+15
+00:00:56.448 --> 00:01:00.005
+And operations keep it running, release after release.
+
+16
+00:01:00.055 --> 00:01:02.276
+Let us go through them one by one.
+
+17
+00:01:03.626 --> 00:01:06.206
+Preparation starts with the question why.
+
+18
+00:01:06.256 --> 00:01:12.812
+Which partners ask for FundsXML, and which data do they need: prices, portfolios, regulatory templates?
+
+19
+00:01:12.862 --> 00:01:16.661
+Which version of the standard do they expect, and how often?
+
+20
+00:01:16.711 --> 00:01:20.702
+Collect these requirements first, and agree on them in writing.
+
+21
+00:01:20.752 --> 00:01:25.256
+A clear scope is the best protection against a project that never ends.
+
+22
+00:01:26.606 --> 00:01:28.785
+Mapping is usually the biggest step.
+
+23
+00:01:28.835 --> 00:01:35.656
+For every field you deliver, you decide where it comes from in your own systems, and where it goes in FundsXML.
+
+24
+00:01:35.706 --> 00:01:37.328
+Some fields map one to one.
+
+25
+00:01:37.378 --> 00:01:42.713
+Others need a conversion, for example from internal codes to the standard's code lists.
+
+26
+00:01:42.763 --> 00:01:45.128
+And some data may not exist yet at all.
+
+27
+00:01:45.178 --> 00:01:50.266
+A mapping table, reviewed by business and IT together, is the heart of the project.
+
+28
+00:01:51.616 --> 00:01:56.747
+Then build a prototype, and start from the public example files instead of an empty page.
+
+29
+00:01:56.797 --> 00:02:03.907
+Produce a first real delivery for one fund, check it against the schema and the business rules, and send it to one partner.
+
+30
+00:02:03.957 --> 00:02:11.241
+A pilot with real data and one friendly partner shows quickly where the mapping is still wrong, long before the full roll-out.
+
+31
+00:02:12.591 --> 00:02:14.575
+Testing makes the solution robust.
+
+32
+00:02:14.625 --> 00:02:20.858
+Test the files against the schema and your business rules, with good data and with deliberately bad data.
+
+33
+00:02:20.908 --> 00:02:25.584
+Test the special cases: a new share class, a fund in liquidation, a correction.
+
+34
+00:02:25.634 --> 00:02:30.790
+And test end to end with your partners, until they confirm that they can load the data.
+
+35
+00:02:30.840 --> 00:02:34.918
+Keep all test files: they are your safety net for every later change.
+
+36
+00:02:36.268 --> 00:02:39.386
+Agree a few things with every partner, in writing.
+
+37
+00:02:39.436 --> 00:02:45.151
+The scope and the version: which data, and which versions of FundsXML and of the templates.
+
+38
+00:02:45.201 --> 00:02:51.550
+The rhythm and the timing: on which days files arrive, until what time, and how corrections are sent.
+
+39
+00:02:51.600 --> 00:02:58.202
+The channel: how files travel, for example by secure file transfer, through an API or through a platform.
+
+40
+00:02:58.252 --> 00:03:01.497
+And the contacts: who to call when a delivery fails.
+
+41
+00:03:02.847 --> 00:03:05.635
+Go-live moves the deliveries into production.
+
+42
+00:03:05.685 --> 00:03:10.492
+Automate them: the files are produced, checked and sent without manual steps.
+
+43
+00:03:10.542 --> 00:03:15.474
+Monitor every delivery, and alert someone when a check fails or a file is late.
+
+44
+00:03:15.524 --> 00:03:22.601
+Then the project becomes operations: new partners, new funds, and new versions of the standard and the templates.
+
+45
+00:03:22.651 --> 00:03:24.872
+Plan for at least one update a year.
+
+46
+00:03:26.222 --> 00:03:31.070
+If you are on the receiving side, the project looks similar, but the focus differs.
+
+47
+00:03:31.120 --> 00:03:33.903
+Collect the files from all senders in one place.
+
+48
+00:03:33.953 --> 00:03:38.565
+Check every file before loading it, against the schema and your business rules.
+
+49
+00:03:38.615 --> 00:03:43.640
+Build one import that serves all fund houses, because they all use the same structure.
+
+50
+00:03:43.690 --> 00:03:49.837
+And report findings back to the sender quickly, with a clear description, so the next delivery is better.
+
+51
+00:03:51.187 --> 00:03:52.757
+Who needs to be involved?
+
+52
+00:03:52.807 --> 00:03:57.229
+The business side knows what the data means and what partners expect.
+
+53
+00:03:57.279 --> 00:03:59.432
+IT builds and runs the interfaces.
+
+54
+00:03:59.482 --> 00:04:02.024
+Operations watches the daily deliveries.
+
+55
+00:04:02.074 --> 00:04:04.940
+And the partners themselves test and confirm.
+
+56
+00:04:04.990 --> 00:04:10.319
+Projects go best when business and IT own the mapping together, from the first day.
+
+57
+00:04:11.669 --> 00:04:13.186
+Some pitfalls are typical.
+
+58
+00:04:13.236 --> 00:04:16.621
+Starting too big, with all data and all partners at once.
+
+59
+00:04:16.671 --> 00:04:20.961
+Treating it as an IT-only project, so the meaning of the data gets lost.
+
+60
+00:04:21.011 --> 00:04:24.878
+Checking only against the schema, and not against business rules.
+
+61
+00:04:24.928 --> 00:04:30.664
+And forgetting that the standard and the templates change, so nobody plans for the next version.
+
+62
+00:04:32.014 --> 00:04:33.655
+What can you do next week?
+
+63
+00:04:33.705 --> 00:04:38.077
+Ask your main partners which FundsXML data and versions they expect.
+
+64
+00:04:38.127 --> 00:04:42.890
+Download the schema and the example files, and open them with a free tool.
+
+65
+00:04:42.940 --> 00:04:48.938
+Pick one fund and one data area, and sketch the mapping with your business and IT colleagues.
+
+66
+00:04:48.988 --> 00:04:51.084
+And find one partner for a pilot.
+
+67
+00:04:51.134 --> 00:04:54.141
+Four small steps, and your project has started.
+
+68
+00:04:55.491 --> 00:04:58.079
+Everything you need to start is free.
+
+69
+00:04:58.129 --> 00:05:01.429
+The schema and the example files are on GitHub.
+
+70
+00:05:01.479 --> 00:05:04.352
+The documentation is on fundsxml dot org.
+
+71
+00:05:04.402 --> 00:05:09.983
+And free tools, such as FreeXmlToolkit, open, check and explore FundsXML files.
+
+72
+00:05:11.333 --> 00:05:12.899
+A few tips from practice.
+
+73
+00:05:12.949 --> 00:05:16.519
+Start small: one data area and one partner, then extend.
+
+74
+00:05:16.569 --> 00:05:23.048
+Agree on the details: which optional fields you fill, which codes you use, and when the data arrives.
+
+75
+00:05:23.098 --> 00:05:28.866
+Check on both sides: the sender validates before sending, and the receiver before loading.
+
+76
+00:05:28.916 --> 00:05:35.459
+And keep a set of test files, good ones and bad ones, so that every change can be tested against them.
+
+77
+00:05:36.809 --> 00:05:38.362
+How do new versions fit in?
+
+78
+00:05:38.412 --> 00:05:42.460
+Every file names the version it was written for, in its control data.
+
+79
+00:05:42.510 --> 00:05:48.101
+New releases mostly add elements, and these are usually optional, so existing files stay valid.
+
+80
+00:05:48.151 --> 00:05:52.673
+Partners agree on the version they exchange, and move on when they are ready.
+
+81
+00:05:52.723 --> 00:05:57.127
+And every change is documented in the changelog that comes with the schema.
+
+82
+00:05:58.477 --> 00:06:00.342
+FundsXML is a living standard.
+
+83
+00:06:00.392 --> 00:06:04.364
+New versions follow new regulation and the needs of the market.
+
+84
+00:06:04.414 --> 00:06:13.237
+Changes are discussed and agreed by the people who use the standard every day: asset managers, administrators, banks and service providers.
+
+85
+00:06:13.287 --> 00:06:20.898
+And your voice counts: you can report issues and propose changes on GitHub, and every proposal is discussed in the open.
+
+86
+00:06:22.248 --> 00:06:24.188
+And the standard keeps moving.
+
+87
+00:06:24.238 --> 00:06:32.612
+Data is increasingly exchanged through interfaces and APIs, not only as files, and FundsXML documents fit well into that world.
+
+88
+00:06:32.662 --> 00:06:35.265
+New regulation will bring new templates.
+
+89
+00:06:35.315 --> 00:06:41.368
+And new tools, including AI-based ones, help with mapping, checking and analysing fund data.
+
+90
+00:06:41.418 --> 00:06:45.945
+A clean, standard structure is the best starting point for all of it.
+
+91
+00:06:47.295 --> 00:06:52.587
+That was a FundsXML project from A to Z, and the end of the series for business readers.
+
+92
+00:06:52.637 --> 00:06:57.928
+If you want to see the standard in a real file, continue with the series for developers.
+
+93
+00:06:57.978 --> 00:06:59.142
+Thanks for watching.

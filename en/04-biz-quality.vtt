@@ -1,0 +1,265 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:03.398
+Fund data is only useful if it can be trusted.
+
+2
+00:00:03.448 --> 00:00:11.153
+In this film you see how FundsXML helps to secure the quality of fund data, and why a valid file is not yet correct data.
+
+3
+00:00:12.403 --> 00:00:14.177
+Wrong fund data is expensive.
+
+4
+00:00:14.227 --> 00:00:17.070
+A wrong price reaches investors and platforms.
+
+5
+00:00:17.120 --> 00:00:20.528
+A wrong weight distorts the risk figures of an insurer.
+
+6
+00:00:20.578 --> 00:00:27.006
+A wrong cost figure ends up in a client report, and a wrong identifier attaches data to the wrong fund.
+
+7
+00:00:27.056 --> 00:00:34.741
+Every error found late costs more: it has to be explained, corrected, and delivered again, often to many receivers at once.
+
+8
+00:00:36.091 --> 00:00:38.868
+FundsXML checks quality on three levels.
+
+9
+00:00:38.918 --> 00:00:44.169
+First, the file must be readable: well-formed XML that any system can open.
+
+10
+00:00:44.219 --> 00:00:51.166
+Second, it must be valid: it fits the FundsXML schema, with the right fields, data types and codes.
+
+11
+00:00:51.216 --> 00:01:00.355
+Third, it must be plausible: business rules hold, for example portfolio weights add up, and identifiers have correct check digits.
+
+12
+00:01:00.405 --> 00:01:02.899
+Each level catches different errors.
+
+13
+00:01:04.249 --> 00:01:05.864
+What does the schema check?
+
+14
+00:01:05.914 --> 00:01:09.504
+Every field in its place, and every required field present.
+
+15
+00:01:09.554 --> 00:01:13.884
+Every value of the right type: a date is a date, an amount is a number.
+
+16
+00:01:13.934 --> 00:01:18.201
+Codes from fixed lists, such as currencies, countries and asset types.
+
+17
+00:01:18.251 --> 00:01:23.445
+And links inside the file: every position must point to a security that is described.
+
+18
+00:01:23.495 --> 00:01:27.886
+All of this is checked automatically, in a second, by any standard tool.
+
+19
+00:01:29.236 --> 00:01:31.215
+But a valid file can still be wrong.
+
+20
+00:01:31.265 --> 00:01:36.738
+The schema cannot know that the weights of a portfolio should add up to about one hundred percent.
+
+21
+00:01:36.788 --> 00:01:42.261
+It does not see that a price times the number of shares should match the value of the share class.
+
+22
+00:01:42.311 --> 00:01:45.304
+And it does not notice a valuation date in the future.
+
+23
+00:01:45.354 --> 00:01:47.220
+For that, you need business rules.
+
+24
+00:01:48.570 --> 00:01:54.456
+Typical business rules for fund data: the weights of all positions add up to the whole fund.
+
+25
+00:01:54.506 --> 00:01:57.166
+Position values match the net asset value.
+
+26
+00:01:57.216 --> 00:02:00.780
+Identifiers like ISIN and LEI have correct check digits.
+
+27
+00:02:00.830 --> 00:02:06.265
+Dates fit together: no valuation in the future, no price before the launch of a fund.
+
+28
+00:02:06.315 --> 00:02:11.233
+And currencies are consistent, between a position, its security and the fund.
+
+29
+00:02:12.583 --> 00:02:14.920
+Check digits deserve a special mention.
+
+30
+00:02:14.970 --> 00:02:20.183
+The last digit of an ISIN, and the last two of an LEI, are calculated from the others.
+
+31
+00:02:20.233 --> 00:02:25.629
+So a single typing error, or two swapped digits, is found at once, without asking anyone.
+
+32
+00:02:25.679 --> 00:02:32.055
+It is the cheapest check there is, and it prevents data from being attached to the wrong fund or company.
+
+33
+00:02:33.405 --> 00:02:35.261
+Where do these rules come from?
+
+34
+00:02:35.311 --> 00:02:40.425
+The schema is published with every FundsXML version, and it is binding for everyone.
+
+35
+00:02:40.475 --> 00:02:49.524
+On top of it, there are common quality rules, published openly, for example in Schematron, a standard language for such rules, and built into tools.
+
+36
+00:02:49.574 --> 00:02:58.439
+And then there are your own agreements with each partner: which optional fields must be filled, which codes are used, and which tolerances apply.
+
+37
+00:02:58.489 --> 00:03:01.513
+Write them down, and check them automatically too.
+
+38
+00:03:02.483 --> 00:03:04.472
+Tools do these checks for you.
+
+39
+00:03:04.522 --> 00:03:07.598
+Here is a FundsXML delivery in FreeXmlToolkit.
+
+40
+00:03:07.648 --> 00:03:13.714
+One click in the FundsXML panel runs more than fifty data-quality checks on the open file.
+
+41
+00:03:14.366 --> 00:03:19.041
+The report lists every check, and whether it passed or found something to look at.
+
+42
+00:03:19.091 --> 00:03:24.803
+A receiver can run the same checks, so both sides talk about the same findings, with the same words.
+
+43
+00:03:24.853 --> 00:03:30.392
+Run it before every delivery, and keep the reports: they show how the quality develops over time.
+
+44
+00:03:31.542 --> 00:03:33.144
+Checks belong on both sides.
+
+45
+00:03:33.194 --> 00:03:39.514
+The sender checks every file before it leaves the house: against the schema, and against the business rules.
+
+46
+00:03:39.564 --> 00:03:43.290
+The receiver checks it again before loading it into its systems.
+
+47
+00:03:43.340 --> 00:03:48.303
+Errors found by the receiver go back to the sender quickly, with a clear description.
+
+48
+00:03:48.353 --> 00:03:53.671
+And both sides keep a set of test files, good and bad, that every change is tested against.
+
+49
+00:03:55.021 --> 00:03:57.419
+And when something was wrong after all?
+
+50
+00:03:57.469 --> 00:03:59.868
+FundsXML has a clean way to correct it.
+
+51
+00:03:59.918 --> 00:04:06.334
+A correction is a new delivery of its own, marked as an amendment, that names the delivery it corrects.
+
+52
+00:04:06.384 --> 00:04:08.342
+Nothing is overwritten silently.
+
+53
+00:04:08.392 --> 00:04:14.306
+The receiver can see what changed, and when, and an auditor can follow the whole history later.
+
+54
+00:04:15.656 --> 00:04:16.955
+Quality can be measured.
+
+55
+00:04:17.005 --> 00:04:20.271
+Count the deliveries that passed all checks the first time.
+
+56
+00:04:20.321 --> 00:04:24.093
+Count the findings per check, and watch which ones keep coming back.
+
+57
+00:04:24.143 --> 00:04:28.814
+Track the corrections, and how long it takes from a finding to a corrected delivery.
+
+58
+00:04:28.864 --> 00:04:34.546
+Share these figures with your partners: they turn a feeling about bad data into facts you can improve.
+
+59
+00:04:35.896 --> 00:04:37.140
+The result is trust.
+
+60
+00:04:37.190 --> 00:04:41.216
+Errors are found where they are cheapest to fix: at the source.
+
+61
+00:04:41.266 --> 00:04:44.386
+Receivers can rely on data from many fund houses.
+
+62
+00:04:44.436 --> 00:04:48.526
+Disputes become shorter, because both sides use the same checks.
+
+63
+00:04:48.576 --> 00:04:52.731
+And data quality can be measured over time, delivery by delivery.
+
+64
+00:04:54.081 --> 00:04:57.153
+That was quality and control with FundsXML.
+
+65
+00:04:57.203 --> 00:05:03.976
+In the next film, you see how a FundsXML project runs, from the first idea to daily operation.
+
+66
+00:05:04.026 --> 00:05:05.428
+Thanks for watching.
