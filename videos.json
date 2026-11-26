@@ -258,8 +258,8 @@
       ],
       "full": {
         "title": "FundsXML for business (all films)",
-        "duration": 1939.4,
-        "url": "https://github.com/fundsxml/videos/releases/download/v1/fundsxml-business-en.mp4"
+        "duration": 2377.5,
+        "url": "https://github.com/fundsxml/videos/releases/download/v2/fundsxml-business-en.mp4"
       }
     },
     {
@@ -306,10 +306,10 @@
               "title": "Other tools"
             }
           ],
-          "mp4": "en/06-dev-setup.mp4",
-          "subtitles": "en/06-dev-setup.vtt",
-          "chapters_vtt": "en/06-dev-setup-chapters.vtt",
-          "poster": "posters/06-dev-setup.jpg"
+          "mp4": "en/07-dev-setup.mp4",
+          "subtitles": "en/07-dev-setup.vtt",
+          "chapters_vtt": "en/07-dev-setup-chapters.vtt",
+          "poster": "posters/07-dev-setup.jpg"
         },
         {
           "id": "dev-anatomy",
@@ -339,10 +339,10 @@
               "title": "The whole schema"
             }
           ],
-          "mp4": "en/07-dev-anatomy.mp4",
-          "subtitles": "en/07-dev-anatomy.vtt",
-          "chapters_vtt": "en/07-dev-anatomy-chapters.vtt",
-          "poster": "posters/07-dev-anatomy.jpg"
+          "mp4": "en/08-dev-anatomy.mp4",
+          "subtitles": "en/08-dev-anatomy.vtt",
+          "chapters_vtt": "en/08-dev-anatomy-chapters.vtt",
+          "poster": "posters/08-dev-anatomy.jpg"
         },
         {
           "id": "dev-funds",
@@ -376,10 +376,10 @@
               "title": "Reading tips"
             }
           ],
-          "mp4": "en/08-dev-funds.mp4",
-          "subtitles": "en/08-dev-funds.vtt",
-          "chapters_vtt": "en/08-dev-funds-chapters.vtt",
-          "poster": "posters/08-dev-funds.jpg"
+          "mp4": "en/09-dev-funds.mp4",
+          "subtitles": "en/09-dev-funds.vtt",
+          "chapters_vtt": "en/09-dev-funds-chapters.vtt",
+          "poster": "posters/09-dev-funds.jpg"
         },
         {
           "id": "dev-portfolio",
@@ -413,10 +413,10 @@
               "title": "Breakdowns and look-through"
             }
           ],
-          "mp4": "en/09-dev-portfolio.mp4",
-          "subtitles": "en/09-dev-portfolio.vtt",
-          "chapters_vtt": "en/09-dev-portfolio-chapters.vtt",
-          "poster": "posters/09-dev-portfolio.jpg"
+          "mp4": "en/10-dev-portfolio.mp4",
+          "subtitles": "en/10-dev-portfolio.vtt",
+          "chapters_vtt": "en/10-dev-portfolio-chapters.vtt",
+          "poster": "posters/10-dev-portfolio.jpg"
         },
         {
           "id": "dev-transactions",
@@ -454,17 +454,17 @@
               "title": "What it does not cover"
             }
           ],
-          "mp4": "en/10-dev-transactions.mp4",
-          "subtitles": "en/10-dev-transactions.vtt",
-          "chapters_vtt": "en/10-dev-transactions-chapters.vtt",
-          "poster": "posters/10-dev-transactions.jpg"
+          "mp4": "en/11-dev-transactions.mp4",
+          "subtitles": "en/11-dev-transactions.vtt",
+          "chapters_vtt": "en/11-dev-transactions-chapters.vtt",
+          "poster": "posters/11-dev-transactions.jpg"
         },
         {
           "id": "dev-regulatory",
           "number": 12,
           "title": "Regulatory templates in XML",
           "description": "How the FinDatEx templates sit in a FundsXML file: RegulatoryReportings with DirectReporting and IndirectReporting, an EMT V4.2 block (data set information, general information, target market, ex-ante costs) and a TPT V7 block for Solvency II (portfolio data, positions with CIC codes and valuations), template versions as their own elements, and how country-specific data and custom attributes extend the standard.",
-          "duration": 282.9,
+          "duration": 284.2,
           "chapters": [
             {
               "t": 0,
@@ -491,10 +491,10 @@
               "title": "Extensions"
             }
           ],
-          "mp4": "en/11-dev-regulatory.mp4",
-          "subtitles": "en/11-dev-regulatory.vtt",
-          "chapters_vtt": "en/11-dev-regulatory-chapters.vtt",
-          "poster": "posters/11-dev-regulatory.jpg"
+          "mp4": "en/12-dev-regulatory.mp4",
+          "subtitles": "en/12-dev-regulatory.vtt",
+          "chapters_vtt": "en/12-dev-regulatory-chapters.vtt",
+          "poster": "posters/12-dev-regulatory.jpg"
         },
         {
           "id": "dev-documents",
@@ -573,17 +573,17 @@
               "title": "Automate it"
             }
           ],
-          "mp4": "en/12-dev-validate.mp4",
-          "subtitles": "en/12-dev-validate.vtt",
-          "chapters_vtt": "en/12-dev-validate-chapters.vtt",
-          "poster": "posters/12-dev-validate.jpg"
+          "mp4": "en/14-dev-validate.mp4",
+          "subtitles": "en/14-dev-validate.vtt",
+          "chapters_vtt": "en/14-dev-validate-chapters.vtt",
+          "poster": "posters/14-dev-validate.jpg"
         },
         {
           "id": "dev-query",
           "number": 15,
           "title": "Query, transform and integrate",
           "description": "Work with the data in a FundsXML file: XPath paths without a namespace, the ready-made FundsXML queries in the Query Console of FreeXmlToolkit (the ten largest positions as a table), an XSLT stylesheet that turns the positions into CSV, strategies for large files, and how FundsXML fits into a system landscape of databases, data warehouses and scheduled deliveries.",
-          "duration": 254.9,
+          "duration": 259.8,
           "chapters": [
             {
               "t": 0,
@@ -606,16 +606,16 @@
               "title": "Summary"
             }
           ],
-          "mp4": "en/13-dev-query.mp4",
-          "subtitles": "en/13-dev-query.vtt",
-          "chapters_vtt": "en/13-dev-query-chapters.vtt",
-          "poster": "posters/13-dev-query.jpg"
+          "mp4": "en/15-dev-query.mp4",
+          "subtitles": "en/15-dev-query.vtt",
+          "chapters_vtt": "en/15-dev-query-chapters.vtt",
+          "poster": "posters/15-dev-query.jpg"
         }
       ],
       "full": {
         "title": "FundsXML for developers (all films)",
-        "duration": 2248.0,
-        "url": "https://github.com/fundsxml/videos/releases/download/v1/fundsxml-developers-en.mp4"
+        "duration": 2731.4,
+        "url": "https://github.com/fundsxml/videos/releases/download/v2/fundsxml-developers-en.mp4"
       }
     },
     {
@@ -847,6 +847,6 @@
       }
     }
   ],
-  "release": "https://github.com/fundsxml/videos/releases/tag/v1",
+  "release": "https://github.com/fundsxml/videos/releases/tag/v2",
   "disclaimer": "Disclaimer: This video is for training purposes only and is not legal, regulatory or investment advice. The example data is fictitious: companies, funds, securities and identifiers are made up. The official FundsXML documentation and the applicable regulations are binding. Narration and editing are AI-generated; the video shows the real application."
 }
