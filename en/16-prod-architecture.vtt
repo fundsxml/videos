@@ -1,0 +1,461 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:06.252
+FundsXML in production: how do the files get from one system into another, every day, reliably?
+
+2
+00:00:06.302 --> 00:00:15.413
+In this film you see who sends what to whom, the delivery chain on both sides, how files travel, and the building blocks every production setup needs.
+
+3
+00:00:16.663 --> 00:00:18.122
+Start with the parties.
+
+4
+00:00:18.172 --> 00:00:26.523
+The asset manager and the fund administrator produce most of the data: master data, prices, portfolios and regulatory templates.
+
+5
+00:00:26.573 --> 00:00:29.476
+The custodian adds holdings and transactions.
+
+6
+00:00:29.526 --> 00:00:33.545
+Platforms and distributors, insurers and data vendors receive.
+
+7
+00:00:33.595 --> 00:00:39.779
+Many companies are on both sides: an insurer receives portfolios, and sends its own reports on.
+
+8
+00:00:41.129 --> 00:00:43.385
+Each receiver needs a different part.
+
+9
+00:00:43.435 --> 00:00:46.812
+Platforms and data vendors need prices and master data.
+
+10
+00:00:46.862 --> 00:00:51.673
+Insurers need the full portfolio and the Tripartite Template for Solvency two.
+
+11
+00:00:51.723 --> 00:00:56.160
+Distributors need the European MiFID and E S G templates, and documents.
+
+12
+00:00:56.210 --> 00:01:00.959
+One sender therefore produces several kinds of deliveries from the same data.
+
+13
+00:01:02.309 --> 00:01:05.433
+On the sender's side, the chain has five steps.
+
+14
+00:01:05.483 --> 00:01:11.713
+Extract the data from the source systems: fund accounting, portfolio management, master data.
+
+15
+00:01:11.763 --> 00:01:13.941
+Map it to the FundsXML structure.
+
+16
+00:01:13.991 --> 00:01:15.157
+Generate the file.
+
+17
+00:01:15.207 --> 00:01:19.141
+Validate it, against the schema and against business rules.
+
+18
+00:01:19.191 --> 00:01:21.302
+And deliver it to the receivers.
+
+19
+00:01:22.652 --> 00:01:24.958
+The data rarely comes from one system.
+
+20
+00:01:25.008 --> 00:01:37.358
+Net asset values come from fund accounting, positions from the portfolio system, identifiers and names from master data, regulatory templates from their own tools, and documents from a document store.
+
+21
+00:01:37.408 --> 00:01:43.496
+A good setup collects them in one place first, often a database, and generates the file from there.
+
+22
+00:01:44.846 --> 00:01:46.089
+Why one central place?
+
+23
+00:01:46.139 --> 00:01:49.911
+Because the data is checked once and then used for every partner.
+
+24
+00:01:49.961 --> 00:01:54.378
+Corrections are made in one place, and the history shows what was sent when.
+
+25
+00:01:54.428 --> 00:02:02.844
+And every partner gets the same numbers, which avoids the classic problem of two receivers with two different net asset values for the same day.
+
+26
+00:02:04.194 --> 00:02:06.937
+Follow one net asset value through the chain.
+
+27
+00:02:06.987 --> 00:02:10.226
+At six in the evening, fund accounting calculates it.
+
+28
+00:02:10.276 --> 00:02:11.778
+At eight, it is approved.
+
+29
+00:02:11.828 --> 00:02:17.550
+At ten, the file is generated and validated, and a quarter of an hour later it is on its way.
+
+30
+00:02:17.600 --> 00:02:23.509
+At seven the next morning, the platform has loaded it, and by nine, investors see the new price.
+
+31
+00:02:23.559 --> 00:02:26.612
+Every step has a time, and every step can be late.
+
+32
+00:02:27.962 --> 00:02:31.309
+On the receiver's side, the chain mirrors the sender's.
+
+33
+00:02:31.359 --> 00:02:32.359
+Receive the file.
+
+34
+00:02:32.409 --> 00:02:34.459
+Validate it, before anything else.
+
+35
+00:02:34.509 --> 00:02:36.250
+Load it into the own systems.
+
+36
+00:02:36.300 --> 00:02:40.758
+Reconcile it: do the numbers fit together and with what you already know?
+
+37
+00:02:40.808 --> 00:02:44.958
+And send feedback to the sender, especially when something is wrong.
+
+38
+00:02:46.308 --> 00:02:47.848
+How does the file travel?
+
+39
+00:02:47.898 --> 00:02:50.582
+Most often by S F T P, on a fixed schedule.
+
+40
+00:02:50.632 --> 00:02:52.998
+More and more partners offer an A P I.
+
+41
+00:02:53.048 --> 00:02:56.813
+Fund platforms and data vendors often run their own portals.
+
+42
+00:02:56.863 --> 00:03:02.981
+E-mail is still common, but it is hard to automate and to monitor, so it should be the exception.
+
+43
+00:03:04.331 --> 00:03:07.366
+With S F T P, a few rules prevent most problems.
+
+44
+00:03:07.416 --> 00:03:12.187
+Agree on file names that contain the sender, the kind of data and the date.
+
+45
+00:03:12.237 --> 00:03:19.836
+Upload under a temporary name and rename the file when it is complete, so that the receiver never picks up half a file.
+
+46
+00:03:19.886 --> 00:03:21.186
+Compress large files.
+
+47
+00:03:21.236 --> 00:03:24.336
+And use keys per partner, never shared passwords.
+
+48
+00:03:25.686 --> 00:03:29.441
+Fund data is often confidential, portfolios in particular.
+
+49
+00:03:29.491 --> 00:03:31.409
+Transport is always encrypted.
+
+50
+00:03:31.459 --> 00:03:37.970
+Where proof of origin matters, a FundsXML file can carry an X M L signature; the schema supports it.
+
+51
+00:03:38.020 --> 00:03:41.250
+Every file sent and received goes into an archive.
+
+52
+00:03:41.300 --> 00:03:46.039
+And access to the data is limited to the people and systems that need it.
+
+53
+00:03:47.389 --> 00:03:49.687
+Different data has a different rhythm.
+
+54
+00:03:49.737 --> 00:03:56.547
+Prices and net asset values go out daily, often with an agreed cut-off time, for example by ten in the morning.
+
+55
+00:03:56.597 --> 00:03:58.339
+Portfolios are often monthly.
+
+56
+00:03:58.389 --> 00:04:02.788
+Master data, documents and regulatory templates go out when they change.
+
+57
+00:04:02.838 --> 00:04:05.754
+And corrections go out whenever they are needed.
+
+58
+00:04:05.804 --> 00:04:09.215
+Each delivery is its own file, with its own document ID.
+
+59
+00:04:10.565 --> 00:04:13.212
+Not every partner uses the same schema version.
+
+60
+00:04:13.262 --> 00:04:18.607
+A sender often writes two or three versions at the same time, one for each group of receivers.
+
+61
+00:04:18.657 --> 00:04:27.961
+That needs a clear list of which partner gets which version and which templates, tests for every version, and a plan for moving partners to a new version together.
+
+62
+00:04:29.311 --> 00:04:33.709
+Whatever the tools, every production setup needs five building blocks.
+
+63
+00:04:33.759 --> 00:04:36.695
+A scheduler that starts the deliveries on time.
+
+64
+00:04:36.745 --> 00:04:38.283
+Validation on both sides.
+
+65
+00:04:38.333 --> 00:04:41.016
+An archive of every file sent and received.
+
+66
+00:04:41.066 --> 00:04:44.383
+Monitoring that notices when a file is late or wrong.
+
+67
+00:04:44.433 --> 00:04:47.433
+And a partner register that knows who gets what.
+
+68
+00:04:48.783 --> 00:04:50.583
+Technology is only half of it.
+
+69
+00:04:50.633 --> 00:04:52.248
+Someone must own the chain.
+
+70
+00:04:52.298 --> 00:04:57.551
+The data owners answer for the content: whether a price is right, and who corrects it.
+
+71
+00:04:57.601 --> 00:05:01.436
+Operations runs the daily deliveries and talks to the partners.
+
+72
+00:05:01.486 --> 00:05:05.136
+And I T looks after the systems, the transfers and security.
+
+73
+00:05:05.186 --> 00:05:09.761
+When these roles are clear, problems are solved in minutes instead of days.
+
+74
+00:05:11.111 --> 00:05:13.083
+How large should a delivery be?
+
+75
+00:05:13.133 --> 00:05:17.388
+Some senders put a whole fund family into one file, with all data.
+
+76
+00:05:17.438 --> 00:05:20.714
+Others send one file per fund and per kind of data.
+
+77
+00:05:20.764 --> 00:05:26.845
+Large files mean fewer transfers, small files mean that one error does not hold up everything.
+
+78
+00:05:26.895 --> 00:05:31.150
+Most partners prefer files per kind of data, so agree on it early.
+
+79
+00:05:32.500 --> 00:05:35.570
+Some architectures cause trouble sooner or later.
+
+80
+00:05:35.620 --> 00:05:39.708
+A separate script for every partner, each one a little different.
+
+81
+00:05:39.758 --> 00:05:42.254
+Manual steps in the middle of the night.
+
+82
+00:05:42.304 --> 00:05:45.056
+No archive, so nobody can say what was sent.
+
+83
+00:05:45.106 --> 00:05:48.366
+Checks only at the receiver, so errors travel first.
+
+84
+00:05:48.416 --> 00:05:53.141
+And no monitoring, so a missing file is noticed by the partner, not by you.
+
+85
+00:05:54.491 --> 00:05:55.286
+Build or buy?
+
+86
+00:05:55.336 --> 00:06:00.357
+Some companies build the chain themselves, with a database and scheduled jobs.
+
+87
+00:06:00.407 --> 00:06:07.507
+Others use the data management or distribution platforms of specialised vendors, many of which speak FundsXML.
+
+88
+00:06:07.557 --> 00:06:12.318
+A common middle way: a vendor for distribution, and the own checks on top.
+
+89
+00:06:12.368 --> 00:06:15.308
+Either way, the building blocks stay the same.
+
+90
+00:06:16.658 --> 00:06:17.785
+And how to start?
+
+91
+00:06:17.835 --> 00:06:18.201
+Small.
+
+92
+00:06:18.251 --> 00:06:22.287
+Take one kind of data, for example prices, and one partner.
+
+93
+00:06:22.337 --> 00:06:26.097
+Automate it completely, with validation and monitoring.
+
+94
+00:06:26.147 --> 00:06:29.560
+Then add partners, and then further kinds of data.
+
+95
+00:06:29.610 --> 00:06:32.261
+Each step reuses what is already there.
+
+96
+00:06:33.611 --> 00:06:36.278
+Every chain needs at least two environments.
+
+97
+00:06:36.328 --> 00:06:43.133
+A test environment, where new partners, new versions and changes are tried with example data and test partners.
+
+98
+00:06:43.183 --> 00:06:45.541
+And production, with the real partners.
+
+99
+00:06:45.591 --> 00:06:54.001
+Both run the same code, but with separate data, separate keys and separate addresses, so that a test file can never reach a real partner.
+
+100
+00:06:55.351 --> 00:07:00.342
+Plan the document IDs carefully, because everything downstream relies on them.
+
+101
+00:07:00.392 --> 00:07:02.216
+An ID must be unique forever.
+
+102
+00:07:02.266 --> 00:07:08.419
+A simple pattern works well: the supplier, the kind of delivery, the date and a sequence number.
+
+103
+00:07:08.469 --> 00:07:13.072
+A resend of the same file keeps its ID; a corrected file gets a new one.
+
+104
+00:07:13.122 --> 00:07:15.657
+Never reuse an ID, not even after years.
+
+105
+00:07:17.007 --> 00:07:17.947
+Plan for peaks.
+
+106
+00:07:17.997 --> 00:07:23.359
+At month end, prices, portfolios and regulatory templates go out at the same time.
+
+107
+00:07:23.409 --> 00:07:26.593
+At year end, annual reports and documents follow.
+
+108
+00:07:26.643 --> 00:07:29.893
+Regulatory deadlines bring waves of new templates.
+
+109
+00:07:29.943 --> 00:07:32.995
+And the chain grows: more funds, more partners.
+
+110
+00:07:33.045 --> 00:07:38.275
+A setup that is just fast enough on a quiet day will be late on the busiest one.
+
+111
+00:07:39.625 --> 00:07:49.955
+For the next films we use a small reference implementation, published on GitHub: a PostgreSQL database, a loader for FundsXML files and an export back to FundsXML.
+
+112
+00:07:50.005 --> 00:07:57.278
+It is an example, not a product, but it shows the essential steps in a few hundred lines that you can run yourself.
+
+113
+00:07:58.628 --> 00:08:01.397
+That was the delivery chain on both sides.
+
+114
+00:08:01.447 --> 00:08:05.962
+In the next film, you see how FundsXML data is stored in a database.
+
+115
+00:08:06.012 --> 00:08:07.305
+Thanks for watching.

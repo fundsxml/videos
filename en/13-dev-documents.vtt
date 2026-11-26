@@ -1,0 +1,385 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:02.606
+Fund deliveries are not only data.
+
+2
+00:00:02.656 --> 00:00:07.172
+Prospectuses, key information documents and factsheets travel with them.
+
+3
+00:00:07.222 --> 00:00:17.826
+In this film you see how FundsXML carries documents: as a link, or embedded in the file, how to get them out again with FreeXmlToolkit, and what receivers do with them.
+
+4
+00:00:19.076 --> 00:00:20.890
+Why documents in a data format?
+
+5
+00:00:20.940 --> 00:00:27.804
+Distributors must give investors the current key information document before every purchase, in the right language.
+
+6
+00:00:27.854 --> 00:00:31.352
+Platforms show prospectuses, annual reports and factsheets.
+
+7
+00:00:31.402 --> 00:00:35.140
+A fund sold in ten countries quickly has hundreds of documents.
+
+8
+00:00:35.190 --> 00:00:42.355
+FundsXML lets them travel through the same channel as the data, together with the information which fund they belong to.
+
+9
+00:00:43.421 --> 00:00:50.000
+Documents have their own block at the top level of the file: Documents, next to Funds and the asset master data.
+
+10
+00:00:50.050 --> 00:00:59.528
+This example delivery carries three documents for the multi-asset fund of our fictitious asset manager: a prospectus, a key information document and a factsheet.
+
+11
+00:00:59.578 --> 00:01:01.421
+Each one is an element Document.
+
+12
+00:01:02.071 --> 00:01:04.088
+A document starts with its type.
+
+13
+00:01:04.138 --> 00:01:20.237
+The schema lists the common ones: the prospectus, the PRIIPs key information document, the factsheet, annual, half-year, quarterly and monthly reports, audit and valuation reports, marketing material, and the sustainability disclosures under S F D R.
+
+14
+00:01:20.287 --> 00:01:25.469
+A type that is not in the list goes into the element unlisted type, as free text.
+
+15
+00:01:26.122 --> 00:01:28.346
+You do not need to remember the list.
+
+16
+00:01:28.396 --> 00:01:34.676
+In FreeXmlToolkit, the documentation of the schema shows all allowed values, right next to the element.
+
+17
+00:01:34.726 --> 00:01:40.023
+Use a listed type whenever one fits, because receivers sort and filter documents by it.
+
+18
+00:01:40.676 --> 00:01:44.121
+Then the language, as an I S O code, such as e n or d e.
+
+19
+00:01:44.171 --> 00:01:45.806
+Whether translations exist.
+
+20
+00:01:45.856 --> 00:01:50.238
+And the countries where the document is published, also as I S O codes.
+
+21
+00:01:50.288 --> 00:01:58.976
+A key information document for Austria and Germany in German, and another one for Luxembourg in English, are two separate Document elements.
+
+22
+00:01:59.626 --> 00:02:02.407
+And then: what does the document belong to?
+
+23
+00:02:02.457 --> 00:02:07.345
+To the whole fund, to a subfund of an umbrella, or to single share classes.
+
+24
+00:02:07.395 --> 00:02:09.518
+Each is named by its identifiers.
+
+25
+00:02:09.568 --> 00:02:12.217
+A prospectus usually belongs to the fund.
+
+26
+00:02:12.267 --> 00:02:18.934
+A key information document belongs to one or more share classes, here two classes, each with its ISIN.
+
+27
+00:02:19.584 --> 00:02:20.683
+Then the details.
+
+28
+00:02:20.733 --> 00:02:22.506
+The name and the file name.
+
+29
+00:02:22.556 --> 00:02:25.073
+Whether the document may be published.
+
+30
+00:02:25.123 --> 00:02:28.855
+The format, as a media type, here application slash pdf.
+
+31
+00:02:28.905 --> 00:02:31.895
+Whether it is signed, digitally or as a scan.
+
+32
+00:02:31.945 --> 00:02:38.041
+The creation date, and an expiration date, after which the document must no longer be used.
+
+33
+00:02:38.091 --> 00:02:39.527
+And the size in bytes.
+
+34
+00:02:40.677 --> 00:02:46.892
+Documents are replaced regularly: a new key information document every year, a new factsheet every month.
+
+35
+00:02:46.942 --> 00:02:52.859
+The new document has the same type, language and share classes, and a new version and creation date.
+
+36
+00:02:52.909 --> 00:02:55.723
+Receivers use these to replace the old document.
+
+37
+00:02:55.773 --> 00:03:01.392
+For a small correction of the same document, the modification date says that something changed.
+
+38
+00:03:02.742 --> 00:03:04.822
+Not every document is for the public.
+
+39
+00:03:04.872 --> 00:03:09.254
+Some are only for professional investors, or only for the distributor itself.
+
+40
+00:03:09.304 --> 00:03:13.744
+Then For Public Usage is false, and Restrictions says in words who may see it.
+
+41
+00:03:13.794 --> 00:03:19.788
+The document still travels through the same channel, but a receiver must not show it on a public website.
+
+42
+00:03:21.138 --> 00:03:22.418
+A word on signatures.
+
+43
+00:03:22.468 --> 00:03:33.437
+The element Signature says whether the document is signed: not at all, digitally, which means the signature sits inside the P D F, or as a scan of a document signed on paper.
+
+44
+00:03:33.487 --> 00:03:36.604
+This is information for the receiver, not a check.
+
+45
+00:03:36.654 --> 00:03:42.747
+If the whole delivery has to be protected, the FundsXML file itself can carry an X M L signature.
+
+46
+00:03:43.997 --> 00:03:44.913
+Now the content.
+
+47
+00:03:44.963 --> 00:03:46.060
+There are two ways.
+
+48
+00:03:46.110 --> 00:03:53.065
+The prospectus is delivered as a link: the element Document U R L holds the address where the receiver downloads it.
+
+49
+00:03:53.115 --> 00:03:57.111
+The file stays small, and the document can be updated in one place.
+
+50
+00:03:57.161 --> 00:04:01.459
+But the link must remain reachable, and the receiver needs access to it.
+
+51
+00:04:02.109 --> 00:04:04.782
+The key information document is embedded.
+
+52
+00:04:04.832 --> 00:04:09.098
+The element Binary Data holds the whole P D F, encoded as base64.
+
+53
+00:04:09.148 --> 00:04:13.480
+The receiver has everything in one file, and nothing can get lost.
+
+54
+00:04:13.530 --> 00:04:19.921
+The price: base64 makes the content about a third larger, and the file grows with every document.
+
+55
+00:04:21.072 --> 00:04:22.324
+How does base64 work?
+
+56
+00:04:22.374 --> 00:04:28.338
+It takes three bytes of the file, twenty-four bits, and splits them into four groups of six bits.
+
+57
+00:04:28.388 --> 00:04:33.670
+Each group becomes one of sixty-four safe characters: letters, digits, plus and slash.
+
+58
+00:04:33.720 --> 00:04:38.692
+So three bytes become four characters, which is where the extra third comes from.
+
+59
+00:04:38.742 --> 00:04:42.040
+Line breaks are allowed and are ignored when decoding.
+
+60
+00:04:43.390 --> 00:04:44.109
+So which one?
+
+61
+00:04:44.159 --> 00:04:50.028
+A link suits large documents and documents that change often, if the receiver can reach the address.
+
+62
+00:04:50.078 --> 00:04:58.847
+Embedding suits deliveries that must be complete on their own, for example for archiving, or when the receiver has no access to the sender's website.
+
+63
+00:05:00.197 --> 00:05:08.140
+In practice, many senders deliver documents separately: a FundsXML file that contains only ControlData and the Documents block.
+
+64
+00:05:08.190 --> 00:05:12.231
+It goes out when documents change, not every day with the prices.
+
+65
+00:05:12.281 --> 00:05:17.895
+That keeps the daily data files small and fast, and documents can follow their own rhythm.
+
+66
+00:05:19.145 --> 00:05:21.135
+FreeXmlToolkit helps with both.
+
+67
+00:05:21.185 --> 00:05:31.664
+In the FundsXML panel, the tool Documents lists all documents of the open file: type, language, the share class, whether it is linked or embedded, and its size.
+
+68
+00:05:31.714 --> 00:05:35.218
+A linked document opens in the browser with one click.
+
+69
+00:05:35.868 --> 00:05:40.326
+To get an embedded document out, select it and choose Save embedded document.
+
+70
+00:05:40.376 --> 00:05:44.716
+The tool decodes the base64 content and saves the file under its file name.
+
+71
+00:05:44.766 --> 00:05:49.633
+It also compares the size with the value in Size in Bytes, and warns if they differ.
+
+72
+00:05:49.683 --> 00:05:53.262
+Here is the key information document, as the receiver sees it.
+
+73
+00:05:53.912 --> 00:05:55.969
+The other way round: Embed file.
+
+74
+00:05:56.019 --> 00:06:01.367
+Choose a P D F, the document type, the language and the share class it belongs to.
+
+75
+00:06:01.417 --> 00:06:11.506
+The tool adds a new Document element: with the file name, the media type, the size, and the content as base64, wrapped in lines of seventy-six characters.
+
+76
+00:06:11.556 --> 00:06:14.731
+Validation confirms that the file is still valid.
+
+77
+00:06:16.622 --> 00:06:18.986
+What does the schema check for documents?
+
+78
+00:06:19.036 --> 00:06:25.404
+That the base64 content is well formed, that the format and the language are there, and that dates are dates.
+
+79
+00:06:25.454 --> 00:06:32.293
+What it cannot check: whether the content really is a P D F, whether the size matches, or whether a link still works.
+
+80
+00:06:32.343 --> 00:06:36.768
+Those are business checks, done by the tool, or by the receiver's own rules.
+
+81
+00:06:38.118 --> 00:06:40.645
+What does a receiver do with the documents?
+
+82
+00:06:40.695 --> 00:06:49.576
+It reads the list, matches each document to its share classes by ISIN, stores the file, and replaces the older version of the same type and language.
+
+83
+00:06:49.626 --> 00:06:53.173
+Expiration dates tell it when a document must be taken down.
+
+84
+00:06:53.223 --> 00:06:58.508
+Then the platform or the distributor's system can show the current document to investors.
+
+85
+00:06:59.858 --> 00:07:03.155
+Without the tool, the same works with standard means.
+
+86
+00:07:03.205 --> 00:07:11.176
+Select the Binary Data element with X Path, and decode it with base64 on the command line, or in a few lines of Python or Java.
+
+87
+00:07:11.226 --> 00:07:19.007
+For large deliveries with many documents, read the file as a stream, so that the documents do not all sit in memory at once.
+
+88
+00:07:20.357 --> 00:07:21.011
+A few tips.
+
+89
+00:07:21.061 --> 00:07:25.235
+Keep the size in bytes correct; receivers use it as a first check.
+
+90
+00:07:25.285 --> 00:07:30.611
+Set an expiration date on documents that are replaced regularly, such as factsheets.
+
+91
+00:07:30.661 --> 00:07:33.363
+Mark documents that are not for the public.
+
+92
+00:07:33.413 --> 00:07:35.539
+Deliver one document per language.
+
+93
+00:07:35.589 --> 00:07:41.300
+And note: FundsXML has no checksum for documents yet; that would be a good change request.
+
+94
+00:07:42.650 --> 00:07:49.617
+That was documents in FundsXML: linked or embedded, how to get them in and out, and what receivers do with them.
+
+95
+00:07:49.667 --> 00:07:53.940
+In the next film, you validate a delivery and check its data quality.
+
+96
+00:07:53.990 --> 00:07:55.193
+Thanks for watching.

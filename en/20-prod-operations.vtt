@@ -1,0 +1,425 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:01.723
+The chain is built.
+
+2
+00:00:01.773 --> 00:00:04.940
+Now it has to run, every day, for every partner.
+
+3
+00:00:04.990 --> 00:00:15.795
+In this film you see what daily operation needs: monitoring, error handling, reconciliation, feedback, onboarding new partners, and moving to new schema versions.
+
+4
+00:00:17.045 --> 00:00:19.062
+What does a normal day look like?
+
+5
+00:00:19.112 --> 00:00:22.069
+At night, the deliveries are generated and sent.
+
+6
+00:00:22.119 --> 00:00:26.267
+In the morning, files from partners arrive, are loaded and checked.
+
+7
+00:00:26.317 --> 00:00:30.088
+By midday, the data is released for the systems that need it.
+
+8
+00:00:30.138 --> 00:00:35.413
+And in the evening, an overview shows what went well and which issues are still open.
+
+9
+00:00:36.763 --> 00:00:37.779
+First, monitoring.
+
+10
+00:00:37.829 --> 00:00:43.879
+For every expected delivery, the system should know whether it arrived, when, and whether it was valid.
+
+11
+00:00:43.929 --> 00:00:48.499
+Counts and file sizes compared with the day before reveal many problems early.
+
+12
+00:00:48.549 --> 00:00:54.540
+Alerts go to the people who can act, and a daily overview shows the state of all partners at a glance.
+
+13
+00:00:55.890 --> 00:00:57.805
+Such an overview can be simple.
+
+14
+00:00:57.855 --> 00:01:05.159
+One row per expected delivery: the partner, the kind of data, when it was expected, when it arrived, and its status.
+
+15
+00:01:05.209 --> 00:01:10.485
+Green when everything is fine, yellow for warnings, red for errors or missing files.
+
+16
+00:01:10.535 --> 00:01:14.225
+This one table answers the first question of every morning.
+
+17
+00:01:15.575 --> 00:01:17.141
+Who looks at the overview?
+
+18
+00:01:17.191 --> 00:01:24.162
+Daily operation needs clear duty: who is responsible on which day, also early in the morning and during holidays.
+
+19
+00:01:24.212 --> 00:01:30.189
+A runbook describes every delivery: where it comes from, what it needs, what to do when it fails.
+
+20
+00:01:30.239 --> 00:01:32.861
+A list holds the contacts of every partner.
+
+21
+00:01:32.911 --> 00:01:37.832
+And an escalation path says who decides when a delivery cannot be fixed in time.
+
+22
+00:01:39.182 --> 00:01:41.178
+Errors fall into four classes.
+
+23
+00:01:41.228 --> 00:01:45.337
+Technical errors: the transfer failed, or the file is broken.
+
+24
+00:01:45.387 --> 00:01:47.860
+Schema errors: the file is not valid.
+
+25
+00:01:47.910 --> 00:01:52.156
+Business errors: the file is valid, but values are implausible.
+
+26
+00:01:52.206 --> 00:01:53.725
+And missing deliveries.
+
+27
+00:01:53.775 --> 00:01:59.521
+Each class has its own handling and its own owner: operations, I T, or the data team.
+
+28
+00:02:00.871 --> 00:02:04.419
+When an error occurs, follow the same steps every time.
+
+29
+00:02:04.469 --> 00:02:05.597
+The alert arrives.
+
+30
+00:02:05.647 --> 00:02:06.382
+Classify it.
+
+31
+00:02:06.432 --> 00:02:10.503
+Inform the people affected, inside the company and the partner.
+
+32
+00:02:10.553 --> 00:02:13.774
+Fix the cause, or ask the sender for a correction.
+
+33
+00:02:13.824 --> 00:02:14.493
+Load again.
+
+34
+00:02:14.543 --> 00:02:20.512
+And close the case with a short note, so that the same error is recognised faster next time.
+
+35
+00:02:21.862 --> 00:02:22.519
+An example.
+
+36
+00:02:22.569 --> 00:02:30.299
+At ten past seven, the reconciliation raises an alert: the weights of a portfolio add up to a hundred and twenty percent.
+
+37
+00:02:30.349 --> 00:02:35.442
+At twenty past, it is classified as a business error, and the data is held back.
+
+38
+00:02:35.492 --> 00:02:39.043
+At half past, the partner is told, with the document ID.
+
+39
+00:02:39.093 --> 00:02:46.244
+At nine, the correction arrives as an amend delivery, and five minutes later it is loaded, checked and released.
+
+40
+00:02:47.594 --> 00:02:49.894
+Reconciliation is the daily safety net.
+
+41
+00:02:49.944 --> 00:02:52.787
+Do the positions add up to the total net assets?
+
+42
+00:02:52.837 --> 00:02:55.258
+Do the weights reach one hundred percent?
+
+43
+00:02:55.308 --> 00:02:59.235
+Did the net asset value move more than usual since the day before?
+
+44
+00:02:59.285 --> 00:03:02.429
+Are the identifiers valid, with correct check digits?
+
+45
+00:03:02.479 --> 00:03:07.190
+FreeXmlToolkit's data-quality checks are a good starting point for these rules.
+
+46
+00:03:08.540 --> 00:03:16.739
+When something is wrong, tell the sender, quickly and precisely: which file, by its document ID, which element, and what was expected.
+
+47
+00:03:16.789 --> 00:03:19.571
+The sender answers with a correction delivery.
+
+48
+00:03:19.621 --> 00:03:26.342
+For feedback from distributors there is even a template of its own, the E F T, which FundsXML carries as well.
+
+49
+00:03:27.692 --> 00:03:31.662
+Many problems are avoided with a clear agreement between partners.
+
+50
+00:03:31.712 --> 00:03:36.169
+It says which data is delivered, when, and in which version and templates.
+
+51
+00:03:36.219 --> 00:03:43.842
+It names cut-off times and contacts on both sides, and it describes how errors are reported and how corrections are delivered.
+
+52
+00:03:43.892 --> 00:03:45.365
+One page is often enough.
+
+53
+00:03:46.715 --> 00:03:48.932
+A new partner follows a fixed path.
+
+54
+00:03:48.982 --> 00:03:51.847
+Agree on the scope: data, versions, schedule.
+
+55
+00:03:51.897 --> 00:03:55.863
+Exchange test files, ideally built from the official examples.
+
+56
+00:03:55.913 --> 00:03:57.482
+Both sides validate them.
+
+57
+00:03:57.532 --> 00:04:02.923
+Then a parallel run of a few weeks, where the new delivery runs next to the old way.
+
+58
+00:04:02.973 --> 00:04:05.708
+And only then the switch to live operation.
+
+59
+00:04:07.058 --> 00:04:09.114
+The partner landscape keeps moving.
+
+60
+00:04:09.164 --> 00:04:15.009
+New funds and share classes must be added to the right deliveries, closed or merged funds removed.
+
+61
+00:04:15.059 --> 00:04:18.318
+A partner changes its systems and needs new test files.
+
+62
+00:04:18.368 --> 00:04:25.237
+And when a partnership ends, the deliveries are stopped, the archive is kept, and both sides confirm it in writing.
+
+63
+00:04:25.287 --> 00:04:30.290
+Each of these is a small change in the register, if the register is kept up to date.
+
+64
+00:04:31.640 --> 00:04:34.067
+Security is part of daily operation too.
+
+65
+00:04:34.117 --> 00:04:37.659
+Rotate the keys and passwords for the transfers regularly.
+
+66
+00:04:37.709 --> 00:04:41.127
+Review who has access to the data, at least once a year.
+
+67
+00:04:41.177 --> 00:04:44.100
+Watch for failed logins on the transfer servers.
+
+68
+00:04:44.150 --> 00:04:51.470
+And test now and then that files can really be restored from the archive; an archive that cannot be read is no archive.
+
+69
+00:04:52.820 --> 00:04:54.891
+New schema versions come regularly.
+
+70
+00:04:54.941 --> 00:05:00.284
+Read the changelog, update the schema in your tools, and test with the official examples.
+
+71
+00:05:00.334 --> 00:05:06.526
+Agree a date with your partners, switch over, and keep the old version running for a transition period.
+
+72
+00:05:06.576 --> 00:05:10.586
+Because new elements are usually optional, most upgrades are small.
+
+73
+00:05:11.936 --> 00:05:17.692
+Keep an archive of every file, sent and received, together with its validation result and its status.
+
+74
+00:05:17.742 --> 00:05:20.452
+Keep it as long as your retention rules require.
+
+75
+00:05:20.502 --> 00:05:27.753
+When a partner or an auditor asks months later what was delivered on a certain day, the document ID leads straight to the file.
+
+76
+00:05:29.103 --> 00:05:30.128
+Finally, measure.
+
+77
+00:05:30.178 --> 00:05:32.404
+How many deliveries arrived on time?
+
+78
+00:05:32.454 --> 00:05:34.491
+How many had errors, per partner?
+
+79
+00:05:34.541 --> 00:05:36.388
+How long did corrections take?
+
+80
+00:05:36.438 --> 00:05:43.912
+Watched over months, these numbers show where the chain is weak, and they make the conversation with partners concrete.
+
+81
+00:05:43.962 --> 00:05:47.074
+Good data quality is not a project; it is a habit.
+
+82
+00:05:48.424 --> 00:05:50.065
+Operations depends on people.
+
+83
+00:05:50.115 --> 00:05:56.361
+Make sure at least two people know each partner and each delivery, so that holidays and illness are no risk.
+
+84
+00:05:56.411 --> 00:05:58.576
+Keep the runbooks written and current.
+
+85
+00:05:58.626 --> 00:06:03.473
+And let new colleagues learn in the test environment, where a mistake costs nothing.
+
+86
+00:06:04.823 --> 00:06:17.308
+Once a month, a short report for management helps: how many deliveries went out and came in, how many errors and corrections there were, which issues with partners are open, and which changes and new versions are coming.
+
+87
+00:06:17.358 --> 00:06:22.151
+It shows that the chain works, and it makes the case for the time and money it needs.
+
+88
+00:06:23.501 --> 00:06:25.449
+What goes wrong in the first year?
+
+89
+00:06:25.499 --> 00:06:38.377
+Experience shows a familiar list: time zones around midnight, decimal separators from a server with other language settings, cash and derivatives without identifiers, and partners who change their systems without notice.
+
+90
+00:06:38.427 --> 00:06:43.254
+Most of these show up in the parallel run, which is why it should never be skipped.
+
+91
+00:06:44.604 --> 00:06:47.188
+To close, a checklist for production.
+
+92
+00:06:47.238 --> 00:06:48.967
+Validation on both sides.
+
+93
+00:06:49.017 --> 00:06:51.245
+Loading that never doubles data.
+
+94
+00:06:51.295 --> 00:06:53.025
+An archive of every file.
+
+95
+00:06:53.075 --> 00:06:54.662
+Monitoring with alerts.
+
+96
+00:06:54.712 --> 00:06:56.157
+Reconciliation rules.
+
+97
+00:06:56.207 --> 00:06:59.502
+A register of partners, versions and templates.
+
+98
+00:06:59.552 --> 00:07:01.780
+And a plan for the next upgrade.
+
+99
+00:07:01.830 --> 00:07:08.827
+With these in place, FundsXML runs quietly in the background, and that is exactly how it should be.
+
+100
+00:07:10.177 --> 00:07:11.237
+And stay involved.
+
+101
+00:07:11.287 --> 00:07:13.704
+Read the changelog of every new version.
+
+102
+00:07:13.754 --> 00:07:17.588
+Report problems you find in the standard, and share what works.
+
+103
+00:07:17.638 --> 00:07:26.283
+The working groups of FundsXML welcome people from operations, because they know best where the standard helps, and where it could help more.
+
+104
+00:07:27.633 --> 00:07:31.164
+That was the last film of the series FundsXML in production.
+
+105
+00:07:31.214 --> 00:07:37.728
+You find the reference implementation on GitHub, and the community and the working groups on fundsxml dot org.
+
+106
+00:07:37.778 --> 00:07:38.922
+Thanks for watching.

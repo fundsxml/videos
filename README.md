@@ -1,10 +1,14 @@
 # FundsXML training videos
 
-Two short video series about [FundsXML](https://www.fundsxml.org), the open standard for fund data exchange:
+Three video series about [FundsXML](https://www.fundsxml.org), the open standard for fund data exchange:
 
-- **FundsXML for business**: five films for business readers, management and project leads (5–8 min each)
-- **FundsXML for developers**: eight films for developers, data teams and IT, shown in
-  [FreeXmlToolkit](https://freexmltoolkit.org) (3–6 min each)
+- **FundsXML for business**: six films for business readers, management and project leads
+- **FundsXML for developers**: nine films for developers, data teams and IT, shown in
+  [FreeXmlToolkit](https://freexmltoolkit.org)
+- **FundsXML in production**: five films on running FundsXML in real systems, with the reference implementation
+  [fundsxml/integration-examples](https://github.com/fundsxml/integration-examples)
+
+New films are added as they are finished.
 
 Watch them on the player page: <https://fundsxml.github.io/videos/>.
 

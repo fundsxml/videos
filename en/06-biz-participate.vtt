@@ -1,0 +1,345 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:03.431
+How does FundsXML evolve, and how can you take part?
+
+2
+00:00:03.481 --> 00:00:14.438
+In this film you see who decides about the standard, which working groups there are, how to join them, how a change request becomes part of a new version, and what makes a good change request.
+
+3
+00:00:15.688 --> 00:00:17.545
+Why should you take part at all?
+
+4
+00:00:17.595 --> 00:00:20.583
+Because the standard follows the people who use it.
+
+5
+00:00:20.633 --> 00:00:25.767
+Regulation changes every year, new templates appear, and markets bring new instruments.
+
+6
+00:00:25.817 --> 00:00:29.044
+Every change to FundsXML affects many partners at once.
+
+7
+00:00:29.094 --> 00:00:37.504
+Whoever takes part brings in their own requirements early, hears about changes before they arrive, and can plan their own systems accordingly.
+
+8
+00:00:38.854 --> 00:00:41.178
+FundsXML belongs to no single company.
+
+9
+00:00:41.228 --> 00:00:46.302
+It is run by FundsXML dot org, a not-for-profit organisation of the fund industry.
+
+10
+00:00:46.352 --> 00:00:48.489
+Its rules are set out in a charter.
+
+11
+00:00:48.539 --> 00:00:51.676
+At the top stands the FundsXML Standards Committee.
+
+12
+00:00:51.726 --> 00:01:00.112
+A secretariat organises the work, working groups do the work on the standard, and members and the wider community bring in their needs.
+
+13
+00:01:01.462 --> 00:01:04.786
+The Standards Committee, or F S C, is the governing body.
+
+14
+00:01:04.836 --> 00:01:10.942
+Its members are fund companies, service providers and fund associations from several European countries.
+
+15
+00:01:10.992 --> 00:01:12.777
+It meets at least twice a year.
+
+16
+00:01:12.827 --> 00:01:22.780
+It decides on new members, it sets up the working groups and names their chairs, and it decides when the results of a working group become a new version of the standard.
+
+17
+00:01:24.130 --> 00:01:26.183
+The secretariat keeps things running.
+
+18
+00:01:26.233 --> 00:01:31.183
+It is the first point of contact for questions, for new members and for change requests.
+
+19
+00:01:31.233 --> 00:01:40.446
+It looks after the website and the communication of FundsXML, prepares the meetings of the committee, and makes sure that decisions are documented and followed up.
+
+20
+00:01:41.796 --> 00:01:44.660
+The work itself happens in three working groups.
+
+21
+00:01:44.710 --> 00:01:52.734
+Content and Technique is the technical heart: it maintains the schema, designs new data structures and keeps the standard consistent.
+
+22
+00:01:52.784 --> 00:01:57.772
+Promotion makes FundsXML known across Europe and talks to new members and partners.
+
+23
+00:01:57.822 --> 00:02:05.785
+And Documentation creates the guides, examples and references that help users implement the standard, including films like this one.
+
+24
+00:02:07.135 --> 00:02:13.366
+Each working group has a chair and a written assignment: its goal, its members, its scope and its timeline.
+
+25
+00:02:13.416 --> 00:02:19.412
+The groups meet regularly, today mostly online, and report to every meeting of the Standards Committee.
+
+26
+00:02:19.462 --> 00:02:22.288
+The groups are open to experts from the industry.
+
+27
+00:02:22.338 --> 00:02:28.628
+Active participation is expected: a group lives from the people who bring in their time and their knowledge.
+
+28
+00:02:29.978 --> 00:02:32.700
+What happens in a meeting of a working group?
+
+29
+00:02:32.750 --> 00:02:37.936
+A typical agenda starts with the open change requests: what is new, and who needs it.
+
+30
+00:02:37.986 --> 00:02:43.357
+Then the drafts under discussion: a proposed structure, an example file, open questions.
+
+31
+00:02:43.407 --> 00:02:45.821
+Then decisions, recorded in the minutes.
+
+32
+00:02:45.871 --> 00:02:49.270
+And finally the next steps, each with a name next to it.
+
+33
+00:02:49.320 --> 00:02:52.535
+Between meetings, much of the work happens on GitHub.
+
+34
+00:02:53.885 --> 00:02:55.376
+There are three ways in.
+
+35
+00:02:55.426 --> 00:02:57.559
+First, become an associate member.
+
+36
+00:02:57.609 --> 00:03:05.071
+It is free, any company or person can apply on the website, and members receive the news and invitations of FundsXML.
+
+37
+00:03:05.121 --> 00:03:14.702
+Second, join a working group: on the About page of fundsxml dot org, a short form asks for your name, your e-mail and the group you are interested in.
+
+38
+00:03:14.752 --> 00:03:20.159
+Third, contribute on GitHub, where the schema, the examples and the tools are public.
+
+39
+00:03:21.509 --> 00:03:26.588
+Full membership is meant for fund companies, asset managers and national fund associations.
+
+40
+00:03:26.638 --> 00:03:30.420
+The Standards Committee decides on it, and full members have a vote.
+
+41
+00:03:30.470 --> 00:03:35.042
+More than a hundred and ten companies support FundsXML as associate members today.
+
+42
+00:03:35.092 --> 00:03:42.932
+Both kinds of members are invited to take part in the working groups, and at least once a year there is a meeting for the associate members.
+
+43
+00:03:44.282 --> 00:03:50.826
+On GitHub, the organisation fundsxml publishes the schema, the example files, and also these videos.
+
+44
+00:03:50.876 --> 00:04:02.696
+In the schema repository you can follow every change: issues describe problems and wishes, pull requests contain proposed changes, and the changelog lists what each version brings.
+
+45
+00:04:02.746 --> 00:04:06.125
+Anyone can read along, and anyone can open an issue.
+
+46
+00:04:07.475 --> 00:04:11.481
+The most direct way to shape the standard is a change request.
+
+47
+00:04:11.531 --> 00:04:16.061
+Anyone can submit one: a member, a software provider or a single user.
+
+48
+00:04:16.111 --> 00:04:24.500
+A change request may be a new data field, a new code value, a correction, or a whole new area, such as a new regulatory template.
+
+49
+00:04:25.850 --> 00:04:27.905
+This is the path of a change request.
+
+50
+00:04:27.955 --> 00:04:34.503
+It is submitted in writing to the working group or to a member of the Standards Committee, or as an issue on GitHub.
+
+51
+00:04:34.553 --> 00:04:38.087
+The working group decides whether it goes into a working draft.
+
+52
+00:04:38.137 --> 00:04:39.338
+The draft is reviewed.
+
+53
+00:04:39.388 --> 00:04:45.425
+And when it is approved, it becomes part of the next version of the schema, with an entry in the changelog.
+
+54
+00:04:46.775 --> 00:04:50.033
+How long the review takes depends on the size of the change.
+
+55
+00:04:50.083 --> 00:04:59.627
+Small changes, such as new optional fields or corrections that keep existing files valid, are decided by the working group, and the committee has five working days to object.
+
+56
+00:04:59.677 --> 00:05:07.677
+Large changes, which alter the structure or break compatibility, need a vote of the committee and a public comment period of at least twenty days.
+
+57
+00:05:09.027 --> 00:05:14.144
+Accepted changes are collected in the next version, for example four point two point twelve.
+
+58
+00:05:14.194 --> 00:05:21.557
+Every change is listed in the changelog, and every new element carries a mark in the schema that says since which version it exists.
+
+59
+00:05:21.607 --> 00:05:29.082
+Because new fields are usually optional, existing deliveries stay valid, and partners can move to the new version when they are ready.
+
+60
+00:05:30.432 --> 00:05:31.056
+An example.
+
+61
+00:05:31.106 --> 00:05:39.200
+Today a document in FundsXML carries its size, but no checksum, so a receiver cannot be sure that an embedded file arrived unchanged.
+
+62
+00:05:39.250 --> 00:05:45.997
+A change request could propose an optional checksum element with the algorithm, for example S H A two five six.
+
+63
+00:05:46.047 --> 00:05:51.263
+Since it is optional and keeps existing files valid, it would count as a small change.
+
+64
+00:05:52.613 --> 00:05:55.744
+Here is how such a request could look as an issue.
+
+65
+00:05:55.794 --> 00:05:56.635
+A short title.
+
+66
+00:05:56.685 --> 00:06:01.852
+The use case: receivers of embedded key information documents want to verify them.
+
+67
+00:06:01.902 --> 00:06:08.214
+The proposal: an element Checksum after the size, with the value and an attribute for the algorithm.
+
+68
+00:06:08.264 --> 00:06:09.614
+A small X M L example.
+
+69
+00:06:09.664 --> 00:06:14.195
+And the note that the element is optional, so existing files stay valid.
+
+70
+00:06:15.545 --> 00:06:17.646
+What makes a good change request?
+
+71
+00:06:17.696 --> 00:06:21.296
+Describe the business case: who needs the data, and why.
+
+72
+00:06:21.346 --> 00:06:25.663
+Define the data point exactly: its meaning, its type and its codes.
+
+73
+00:06:25.713 --> 00:06:27.553
+Add a short example in X M L.
+
+74
+00:06:27.603 --> 00:06:30.030
+Say whether existing files stay valid.
+
+75
+00:06:30.080 --> 00:06:32.572
+And name the partners who would use it.
+
+76
+00:06:32.622 --> 00:06:36.092
+A clear request saves the working group a lot of time.
+
+77
+00:06:37.442 --> 00:06:39.046
+And what makes a weak one?
+
+78
+00:06:39.096 --> 00:06:42.992
+A request that is too vague, such as: we need more E S G data.
+
+79
+00:06:43.042 --> 00:06:45.473
+A solution without a problem behind it.
+
+80
+00:06:45.523 --> 00:06:49.800
+A field that only makes sense for the internal codes of one company.
+
+81
+00:06:49.850 --> 00:06:53.172
+Or an element that already exists under another name.
+
+82
+00:06:53.222 --> 00:06:58.072
+So look into the schema documentation first; the answer may already be there.
+
+83
+00:06:59.422 --> 00:07:06.383
+That was how to take part in FundsXML: the committee, the working groups, membership and change requests.
+
+84
+00:07:06.433 --> 00:07:11.190
+You find the contact form on fundsxml dot org, and the schema on GitHub.
+
+85
+00:07:11.240 --> 00:07:15.330
+The next series shows FundsXML in a real file, for developers.
+
+86
+00:07:15.380 --> 00:07:16.665
+Thanks for watching.
