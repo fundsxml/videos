@@ -32,6 +32,20 @@ The films are generated with the video pipeline of FreeXmlToolkit (`scripts/make
 narration, speech from a local text-to-speech model, the picture from the real application driven by a scenario,
 and the cut by ffmpeg. `scripts/publish-videos.py` there writes the contents of this repository.
 
+## AI-generated content
+
+These films contain AI-generated content, labelled in line with Article 50 of the EU AI Act and the Commission's
+Code of Practice on transparency of AI-generated content:
+
+- **Narration:** a synthetic voice (Piper text-to-speech, voice `en_US-lessac-high`, run locally). It does not imitate
+  a real person.
+- **Text and editing:** written and cut with AI support; every narration text was reviewed and approved by a person
+  before recording.
+- **Picture:** real screen recordings of the application. Nothing in the footage is generated or altered.
+
+The label is shown on the title card at the start of every film, next to the player, and in the closing disclaimer.
+Every MP4 file also carries it in its metadata (`comment`).
+
 ## Disclaimer
 
 These videos are for training purposes only and are not legal, regulatory or investment advice. The official
