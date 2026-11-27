@@ -737,8 +737,9 @@
           "id": "prod-loading",
           "number": 18,
           "title": "Loading FundsXML files",
+          "audience": "engineering",
           "description": "How FundsXML files get into a database safely, with the loader of the complete PostgreSQL example: the steps of a robust loader, a landing folder, cheap checks first, triggers, validation and schema versions, idempotency through the UniqueDocumentID, full and delta deliveries, streaming large files with one handler per repeating element, funds and subfunds, the order of assets and positions, asset keys, transactions, documents and regulatory templates, business rules, speed, six deliveries and four broken files at work, corrections and deletions, reconciliation, code checks, error reports, tests and release. All files can be downloaded.",
-          "duration": 663.4,
+          "duration": 681.9,
           "chapters": [
             {
               "t": 0,
@@ -749,39 +750,38 @@
               "title": "The steps"
             },
             {
-              "t": 112,
+              "t": 101,
               "title": "Validate first"
             },
             {
-              "t": 152,
+              "t": 141,
               "title": "Twice is not double"
             },
             {
-              "t": 199,
+              "t": 188,
               "title": "Large files"
             },
             {
-              "t": 317,
+              "t": 306,
               "title": "Transactions, documents, templates"
             },
             {
-              "t": 430,
+              "t": 419,
               "title": "The loader at work"
             },
             {
-              "t": 504,
+              "t": 523,
               "title": "Reconcile"
             },
             {
-              "t": 622,
+              "t": 640,
               "title": "Download"
             }
           ],
           "mp4": "en/18-prod-loading.mp4",
           "subtitles": "en/18-prod-loading.vtt",
           "chapters_vtt": "en/18-prod-loading-chapters.vtt",
-          "poster": "posters/18-prod-loading.jpg",
-          "audience": "engineering"
+          "poster": "posters/18-prod-loading.jpg"
         },
         {
           "id": "prod-generating",
