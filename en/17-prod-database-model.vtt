@@ -1,353 +1,497 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:04.306
+00:00:00.500 --> 00:00:04.298
 Where does the data of a FundsXML file live once it has arrived?
 
 2
-00:00:04.356 --> 00:00:15.994
-In this film you see two ways of storing FundsXML in a database, a table model for the core data, the traps around keys and currencies, and how to keep the history of deliveries and corrections.
+00:00:04.348 --> 00:00:18.666
+In this film you see two ways of storing FundsXML in a database, a complete table model in which every repeating part of a file has its place, the traps around keys and currencies, and how to keep the history of deliveries and corrections.
 
 3
-00:00:17.244 --> 00:00:18.949
-There are two basic ways.
+00:00:18.716 --> 00:00:23.956
+Everything you see comes from a complete example that you can download and run yourself.
 
 4
-00:00:18.999 --> 00:00:22.811
-The first: store the whole document in an X M L column.
+00:00:25.206 --> 00:00:26.911
+There are two basic ways.
 
 5
-00:00:22.861 --> 00:00:28.568
-PostgreSQL, Oracle and SQL Server all have one, and they can query it with X Path.
+00:00:26.961 --> 00:00:30.773
+The first: store the whole document in an X M L column.
 
 6
-00:00:28.618 --> 00:00:33.342
-The second: shred the document into tables, one per business object.
+00:00:30.823 --> 00:00:36.530
+PostgreSQL, Oracle and SQL Server all have one, and they can query it with X Path.
 
 7
-00:00:33.392 --> 00:00:40.012
-Most setups do both: they keep the original file, and they load the data they need into tables.
+00:00:36.580 --> 00:00:41.304
+The second: shred the document into tables, one per business object.
 
 8
-00:00:41.362 --> 00:00:46.246
-Storing the document is simple and keeps everything, also data you do not use today.
+00:00:41.354 --> 00:00:47.974
+Most setups do both: they keep the original file, and they load the data they need into tables.
 
 9
-00:00:46.296 --> 00:00:53.765
-Here the deliveries table holds every file in an X M L column, and a query reads the total net asset value directly with X Path.
+00:00:49.324 --> 00:00:54.342
+Storing the document is simple and keeps everything, also data you do not use today.
 
 10
-00:00:53.815 --> 00:00:59.815
-That is good for archives and for occasional questions, but slow for reporting over thousands of files.
+00:00:54.392 --> 00:01:03.873
+In the example, the deliveries table keeps every file in an X M L column, and a query counts the funds, subfunds and prices of each file directly with X Path.
 
 11
-00:01:01.165 --> 00:01:06.920
-Some teams convert the file to J S O N and store that instead, because web applications like it.
+00:01:03.923 --> 00:01:10.087
+That is good for archives and for occasional questions, but slow for reporting over thousands of files.
 
 12
-00:01:06.970 --> 00:01:14.116
-That works, but the conversion loses details: the order of elements and the difference between attributes and elements.
+00:01:11.437 --> 00:01:17.192
+Some teams convert the file to J S O N and store that instead, because web applications like it.
 
 13
-00:01:14.166 --> 00:01:20.465
-Whatever you choose for daily use, keep the original file, unchanged, as the record of what was received.
+00:01:17.242 --> 00:01:24.388
+That works, but the conversion loses details: the order of elements and the difference between attributes and elements.
 
 14
-00:01:21.815 --> 00:01:24.408
-Many setups arrange the database in layers.
+00:01:24.438 --> 00:01:30.737
+Whatever you choose for daily use, keep the original file, unchanged, as the record of what was received.
 
 15
-00:01:24.458 --> 00:01:26.805
-The raw layer holds the original files.
+00:01:32.087 --> 00:01:36.212
+Many setups arrange the database in layers, and so does the example.
 
 16
-00:01:26.855 --> 00:01:30.677
-The staging layer holds the data as delivered, still unchecked.
+00:01:36.262 --> 00:01:39.282
+The raw layer holds the original files, unchanged.
 
 17
-00:01:30.727 --> 00:01:34.856
-The core layer holds checked data with the own keys and the history.
+00:01:39.332 --> 00:01:45.606
+The staging layer holds data as delivered, still unchecked: here, positions that wait for their assets.
 
 18
-00:01:34.906 --> 00:01:39.896
-And the reporting layer offers views for the people and systems that use the data.
+00:01:45.656 --> 00:01:49.781
+The core layer holds checked data with its own keys and the history.
 
 19
-00:01:39.946 --> 00:01:44.198
-Each layer has one job, and errors stay in the layer where they occur.
+00:01:49.831 --> 00:01:54.816
+And the reporting layer offers views for the people and systems that use the data.
 
 20
-00:01:45.548 --> 00:01:47.738
-For daily work, tables are better.
+00:01:54.866 --> 00:01:59.114
+Each layer has one job, and errors stay in the layer where they occur.
 
 21
-00:01:47.788 --> 00:01:51.295
-The reference model follows the structure of FundsXML.
+00:02:00.464 --> 00:02:02.657
+For daily work, tables are better.
 
 22
-00:01:51.345 --> 00:01:53.600
-Every delivery is registered first.
+00:02:02.707 --> 00:02:06.551
+The model of the example follows the structure of FundsXML.
 
 23
-00:01:53.650 --> 00:02:05.984
-Then come funds and, for umbrellas, their subfunds; share classes with their prices and net asset values; portfolios with their positions; the assets the positions refer to; and documents.
+00:02:06.601 --> 00:02:08.860
+Every delivery is registered first.
 
 24
-00:02:07.334 --> 00:02:09.114
-Here is the table definition.
+00:02:08.910 --> 00:02:24.169
+Then come funds and, for umbrellas, their subfunds; share classes with their prices and net asset values; portfolios with their positions; the assets the positions refer to; the transactions; documents; and the regulatory templates.
 
 25
-00:02:09.164 --> 00:02:20.662
-The columns follow the FundsXML elements, so that the mapping stays easy to read: the fund has its LEI and its name, the share class its ISIN, its currency and the fund it belongs to.
+00:02:24.219 --> 00:02:26.610
+Twenty tables in all, in eight files.
 
 26
-00:02:20.712 --> 00:02:25.206
-A price row has the share class, the date, the price type and the value.
+00:02:27.960 --> 00:02:29.768
+Here is the table definition.
 
 27
-00:02:26.556 --> 00:02:29.052
-Here is one position on its way into a table.
+00:02:29.818 --> 00:02:41.047
+The columns follow the FundsXML elements, so that the mapping stays easy to read: the fund has its L E I, its name, its currency and, for a subfund, the umbrella it belongs to.
 
 28
-00:02:29.102 --> 00:02:34.880
-On the left in the file: the reference to the asset, the total value with its currency, and the weight.
+00:02:41.097 --> 00:02:43.930
+The share class has its I S I N and the fund.
 
 29
-00:02:34.930 --> 00:02:46.367
-On the right the row: the asset is no longer the reference of the file, but the key of the database; the value keeps its currency; and the row knows the portfolio, the date and the delivery it came from.
+00:02:43.980 --> 00:02:50.915
+A price row has the share class, the date, the nature of the price, the value, and the delivery it came from.
 
 30
-00:02:47.717 --> 00:02:50.736
-One structural point: single funds and umbrellas.
+00:02:52.265 --> 00:02:58.348
+The most important rule of the model: everything that can repeat in a file is a row, never a column.
 
 31
-00:02:50.786 --> 00:02:59.128
-FundsXML says with the single fund flag whether a fund has share classes directly, or subfunds that each have their own share classes.
+00:02:58.398 --> 00:03:00.249
+A file can carry several funds.
 
 32
-00:02:59.178 --> 00:03:07.958
-In the database, one fund table with a parent column handles both cases, so that queries do not need to know which kind of fund they look at.
+00:03:00.299 --> 00:03:02.273
+A fund has several share classes.
 
 33
-00:03:09.308 --> 00:03:10.757
-One trap concerns keys.
+00:03:02.323 --> 00:03:07.916
+A share class has prices for many dates, and on one date an estimated and an official price.
 
 34
-00:03:10.807 --> 00:03:14.213
-A position points to its asset through the Unique ID.
+00:03:07.966 --> 00:03:10.247
+Net assets come in several currencies.
 
 35
-00:03:14.263 --> 00:03:20.863
-But that ID is only valid inside one file: the next delivery may use the same ID for another security.
+00:03:10.297 --> 00:03:14.540
+A fund has portfolios for many dates, each with hundreds of positions.
 
 36
-00:03:20.913 --> 00:03:31.033
-So the database needs its own keys, based on the ISIN, the LEI or the sender's own codes, and the link between position and asset is resolved while loading.
+00:03:14.590 --> 00:03:20.857
+Whoever puts a second date or a second currency into columns rebuilds the table with the next delivery.
 
 37
-00:03:32.383 --> 00:03:34.426
-And not every asset has an ISIN.
+00:03:22.207 --> 00:03:24.686
+Here is what the example deliveries bring.
 
 38
-00:03:34.476 --> 00:03:39.921
-Cash accounts, over-the-counter derivatives and currency forwards usually have none.
+00:03:24.736 --> 00:03:31.972
+The month-end file holds four funds: an umbrella with two subfunds, and two single funds, so five rows in the fund table.
 
 39
-00:03:39.971 --> 00:03:45.743
-For them, build a key from the sender, the type of asset and the sender's own identifier.
+00:03:32.022 --> 00:03:39.558
+Together that is twenty-four valuation days, two hundred sixty-four prices and five hundred twenty-two positions, in one file.
 
 40
-00:03:45.793 --> 00:03:55.489
-Keep all identifiers of an asset in a table of their own: ISIN, WKN, Bloomberg ticker and internal codes, so that any of them can be used to find it.
+00:03:39.608 --> 00:03:44.315
+The daily file brings three days, each with an estimated and an official value.
 
 41
-00:03:56.839 --> 00:03:58.320
-Amounts are the next trap.
+00:03:45.665 --> 00:03:47.893
+One share class on one day shows why.
 
 42
-00:03:58.370 --> 00:04:05.975
-In FundsXML, one amount can be given in several currencies at once, with flags for the fund currency and the share-class currency.
+00:03:47.943 --> 00:03:59.407
+The franc class of the multi-asset fund reports its net assets as an estimate and as the official value, each in francs and in euros, flagged as share-class currency and as fund currency.
 
 43
-00:04:06.025 --> 00:04:11.451
-So the database stores the currency with every amount, and if needed several rows per amount.
+00:03:59.457 --> 00:04:01.624
+Four rows, one day, one share class.
 
 44
-00:04:11.501 --> 00:04:16.044
-A bare number without its currency is the most common source of wrong reports.
+00:04:01.674 --> 00:04:05.195
+A table with one value column per day could not hold them.
 
 45
-00:04:17.394 --> 00:04:24.210
-Many FundsXML elements use fixed lists of codes: document types, price types, data operations and many more.
+00:04:06.545 --> 00:04:09.112
+Here is one position on its way into a table.
 
 46
-00:04:24.260 --> 00:04:30.122
-Store them in lookup tables, filled from the schema, and refresh them with every new version.
+00:04:09.162 --> 00:04:15.624
+At the top, in the file: the sender's reference to the asset, the total value with its currency, and the weight.
 
 47
-00:04:30.172 --> 00:04:35.208
-Then the database can check incoming codes, and reports can show readable names.
+00:04:15.674 --> 00:04:25.392
+Below, the row: the asset is now the key of the database; the value keeps its currency; the row knows its portfolio, and through it the fund, the date and the delivery.
 
 48
-00:04:36.558 --> 00:04:37.799
-Dates need care too.
+00:04:25.442 --> 00:04:31.439
+And it keeps its number in the file, so that a generator can write the positions back in the same order.
 
 49
-00:04:37.849 --> 00:04:44.321
-A file has a content date, the day its data is valid for, and a generation time, when it was written.
+00:04:32.789 --> 00:04:37.469
+A fund of funds can also deliver what its target funds hold: the look-through.
 
 50
-00:04:44.371 --> 00:04:47.163
-A price has its own date, the valuation day.
+00:04:37.519 --> 00:04:43.471
+These positions have the same shape as the fund's own, so they go into the same table, with a flag.
 
 51
-00:04:47.213 --> 00:04:52.458
-These can all differ: a file generated on Monday morning carries prices of Friday.
+00:04:43.521 --> 00:04:45.776
+The example has seventy-three of them.
 
 52
-00:04:52.508 --> 00:04:56.655
-Store all of them, and decide clearly which one your reports use.
+00:04:45.826 --> 00:04:52.203
+The flag matters: the reconciliation counts only the fund's own positions, never the look-through as well.
 
 53
-00:04:58.005 --> 00:05:00.305
-Data changes, and corrections arrive.
+00:04:53.553 --> 00:04:56.520
+One structural point: single funds and umbrellas.
 
 54
-00:05:00.355 --> 00:05:08.370
-So every row remembers where it came from: the delivery, its document ID, and the content date, the date the data is valid for.
+00:04:56.570 --> 00:05:04.772
+FundsXML says with the single fund flag whether a fund has share classes directly, or subfunds that each have their own share classes.
 
 55
-00:05:08.420 --> 00:05:14.720
-A delivery with the data operation amend replaces the values of an earlier one; delete removes them.
+00:05:04.822 --> 00:05:09.206
+In the database, one fund table with a parent column handles both cases.
 
 56
-00:05:14.770 --> 00:05:18.975
-The original rows are not overwritten, they are marked as replaced.
+00:05:09.256 --> 00:05:18.320
+In the example, the umbrella and its two subfunds are three rows of the same table, and queries do not need to know which kind of fund they look at.
 
 57
-00:05:20.325 --> 00:05:30.003
-This makes questions like these simple: what was the net asset value of this share class on the thirty-first of October, as known today, and as known on the first of November?
+00:05:19.670 --> 00:05:21.119
+One trap concerns keys.
 
 58
-00:05:30.053 --> 00:05:32.504
-Here the second delivery corrected one value.
+00:05:21.169 --> 00:05:24.575
+A position points to its asset through the Unique ID.
 
 59
-00:05:32.554 --> 00:05:36.618
-Both versions are in the table, and the query picks the one that is valid.
+00:05:24.625 --> 00:05:31.225
+But that ID is only valid inside one file: the next delivery may use the same ID for another security.
 
 60
-00:05:37.968 --> 00:05:41.022
-Users should not have to know how the history works.
+00:05:31.275 --> 00:05:41.395
+So the database needs its own keys, based on the ISIN, the LEI or the sender's own codes, and the link between position and asset is resolved while loading.
 
 61
-00:05:41.072 --> 00:05:46.991
-Offer views for each use: the current prices, the latest portfolio per fund, the documents in force.
+00:05:42.745 --> 00:05:44.759
+And not every asset has an I S I N.
 
 62
-00:05:47.041 --> 00:05:52.362
-The views hide the logic of deliveries and replaced rows, and give consumers stable names.
+00:05:44.809 --> 00:05:53.135
+Cash accounts, over-the-counter derivatives and currency forwards usually have none; in the example, forty-five of four hundred thirty assets.
 
 63
-00:05:52.412 --> 00:05:57.615
-Then you can change the tables underneath without breaking every report that reads them.
+00:05:53.185 --> 00:05:58.385
+For them, build a key from the sender, the type of asset and the sender's own identifier.
 
 64
-00:05:58.965 --> 00:06:01.646
-Store the quality of the data with the data.
+00:05:58.435 --> 00:06:04.342
+Keep all identifiers of an asset in a table of their own, so that any of them can be used to find it.
 
 65
-00:06:01.696 --> 00:06:09.033
-Each delivery has a status, and rows can carry warnings from the checks: an unusual price change, a missing identifier.
+00:06:05.692 --> 00:06:08.798
+Amounts are the next trap, as the franc class showed.
 
 66
-00:06:09.083 --> 00:06:12.446
-The database records who released a delivery, and when.
+00:06:08.848 --> 00:06:16.538
+In FundsXML, one amount can be given in several currencies at once, with flags for the fund currency and the share-class currency.
 
 67
-00:06:12.496 --> 00:06:17.288
-Reports read only released data, and anyone can see why a value was held back.
+00:06:16.588 --> 00:06:23.028
+So the database stores the currency with every amount, keeps the flags, and writes several rows where needed.
 
 68
-00:06:18.638 --> 00:06:20.301
-Portfolios are confidential.
+00:06:23.078 --> 00:06:27.672
+A bare number without its currency is the most common source of wrong reports.
 
 69
-00:06:20.351 --> 00:06:27.762
-A data vendor or an insurer may hold the portfolios of many clients in one database, and each client may only see its own.
+00:06:29.022 --> 00:06:35.864
+Many FundsXML elements use fixed lists of codes: document types, price natures, data operations and many more.
 
 70
-00:06:27.812 --> 00:06:35.836
-So control access per client or per fund, separate the roles of loading, releasing and reading, and keep a log of who accessed what.
+00:06:35.914 --> 00:06:41.690
+Store them in lookup tables, filled from the schema, and refresh them with every new version.
 
 71
-00:06:35.886 --> 00:06:39.016
-Most databases support this with row-level security.
+00:06:41.740 --> 00:06:49.647
+In the example, a small script reads the lists from the schema file and writes them into a code list table, per schema version.
 
 72
-00:06:40.366 --> 00:06:47.308
-Regulatory templates are a world of their own: hundreds of fields each, and a new version every few years.
+00:06:49.697 --> 00:06:54.659
+Then the database can check incoming codes, and reports can show readable names.
 
 73
-00:06:47.358 --> 00:06:48.957
-Two approaches work well.
+00:06:56.009 --> 00:06:57.250
+Dates need care too.
 
 74
-00:06:49.007 --> 00:06:54.235
-Keep each template in an X M L column and extract only the fields you report on.
+00:06:57.300 --> 00:07:03.772
+A file has a content date, the day its data is valid for, and a generation time, when it was written.
 
 75
-00:06:54.285 --> 00:06:56.939
-Or create one table per template version.
+00:07:03.822 --> 00:07:06.614
+A price has its own date, the valuation day.
 
 76
-00:06:56.989 --> 00:07:00.963
-Avoid one giant table for all versions; it ends in confusion.
+00:07:06.664 --> 00:07:11.909
+These can all differ: a file generated on Monday morning carries prices of Friday.
 
 77
-00:07:02.313 --> 00:07:04.170
-A few words on performance.
+00:07:11.959 --> 00:07:16.106
+Store all of them, and decide clearly which one your reports use.
 
 78
-00:07:04.220 --> 00:07:07.913
-Positions grow fastest: thousands per fund and month.
+00:07:17.456 --> 00:07:22.055
+Transactions live in four places in FundsXML, and the model keeps them apart.
 
 79
-00:07:07.963 --> 00:07:11.938
-Index the columns you search by: ISIN, date and delivery.
+00:07:22.105 --> 00:07:26.222
+Subscriptions, redemptions and distributions belong to a share class.
 
 80
-00:07:11.988 --> 00:07:14.198
-Partition large tables by month.
+00:07:26.272 --> 00:07:30.509
+The fund's own trades and its income belong to the portfolio of a date.
 
 81
-00:07:14.248 --> 00:07:16.952
-And load in bulk instead of row by row.
+00:07:30.559 --> 00:07:38.721
+The month-end file of the example brings sixty-seven flows, three distributions, two hundred nine trades and sixty-eight income records.
 
 82
-00:07:17.002 --> 00:07:23.802
-With these measures, ordinary databases handle many years of FundsXML deliveries without trouble.
+00:07:38.771 --> 00:07:44.276
+Trades keep their complete X M L next to the columns, so nothing of a complex trade is lost.
 
 83
-00:07:25.152 --> 00:07:28.700
-A last piece of advice: do not model the whole schema at once.
+00:07:45.626 --> 00:07:47.702
+Documents get a table of their own.
 
 84
-00:07:28.750 --> 00:07:35.026
-Start with the data you really use, keep the original file next to it, and add tables when new needs come up.
+00:07:47.752 --> 00:07:58.330
+A document is either a link, then the table keeps the address, or it is embedded, then the table keeps the decoded file itself, with its size and a hash to recognise it again.
 
 85
-00:07:35.076 --> 00:07:39.785
-The schema has thousands of elements, and most companies use a small part of them.
+00:07:58.380 --> 00:08:07.986
+A second table says which funds and share classes a document belongs to; one key information document can apply to several share classes, in several languages.
 
 86
-00:07:41.135 --> 00:07:47.421
-That was FundsXML in a database: documents and tables, keys, amounts and codes, and history.
+00:08:08.036 --> 00:08:11.205
+A function returns the documents in force on any day.
 
 87
-00:07:47.471 --> 00:07:51.210
-In the next film, you load large files into this model.
+00:08:12.555 --> 00:08:19.232
+Regulatory templates are a world of their own: hundreds of fields each, and a new version every few years.
 
 88
-00:07:51.260 --> 00:07:52.587
+00:08:19.282 --> 00:08:34.718
+The example keeps every template record in one table: the template, its version, the share class, the record as X M L, and the few fields it reports on as columns, such as the ongoing costs of the E M T or the S F D R product type of the E E T.
+
+89
+00:08:34.768 --> 00:08:38.589
+Avoid one column per field and version; it ends in confusion.
+
+90
+00:08:39.939 --> 00:08:42.239
+Data changes, and corrections arrive.
+
+91
+00:08:42.289 --> 00:08:50.304
+So every row remembers where it came from: the delivery, its document ID, and the content date, the date the data is valid for.
+
+92
+00:08:50.354 --> 00:08:56.654
+A delivery with the data operation amend replaces the values of an earlier one; delete removes them.
+
+93
+00:08:56.704 --> 00:09:00.909
+The original rows are not overwritten, they are marked as replaced.
+
+94
+00:09:02.259 --> 00:09:13.233
+This makes questions like these simple: what was the net asset value of the franc class on the fourth of November, as known today, and as known on the morning of the sixth, before the correction arrived?
+
+95
+00:09:13.283 --> 00:09:15.025
+The correction changed one value.
+
+96
+00:09:15.075 --> 00:09:19.098
+Both versions are in the table, and the query picks the one that was valid.
+
+97
+00:09:20.448 --> 00:09:23.421
+Users should not have to know how the history works.
+
+98
+00:09:23.471 --> 00:09:30.629
+Offer views for each use: the current prices, the current net assets, the latest portfolio per fund, the documents in force.
+
+99
+00:09:30.679 --> 00:09:35.861
+The views hide the logic of deliveries and replaced rows, and give consumers stable names.
+
+100
+00:09:35.911 --> 00:09:40.977
+Then you can change the tables underneath without breaking every report that reads them.
+
+101
+00:09:42.327 --> 00:09:44.961
+Store the quality of the data with the data.
+
+102
+00:09:45.011 --> 00:09:48.377
+Each delivery has a status: loaded, checked or released.
+
+103
+00:09:48.427 --> 00:09:54.232
+The findings of the checks are stored with it: the rule, the place in the file, the value found.
+
+104
+00:09:54.282 --> 00:09:58.624
+A function releases a checked delivery and records who did it, and when.
+
+105
+00:09:58.674 --> 00:10:03.504
+The views show released data only, and anyone can see why a value was held back.
+
+106
+00:10:04.854 --> 00:10:06.507
+Portfolios are confidential.
+
+107
+00:10:06.557 --> 00:10:13.928
+A data vendor or an insurer may hold the portfolios of many clients in one database, and each client may only see its own.
+
+108
+00:10:13.978 --> 00:10:19.220
+So separate the roles of loading, releasing and reading, and control access per client.
+
+109
+00:10:19.270 --> 00:10:26.823
+The example does it with row-level security: a reader for the insurer sees the one fund its client may see, and nothing else.
+
+110
+00:10:28.173 --> 00:10:30.030
+A few words on performance.
+
+111
+00:10:30.080 --> 00:10:33.773
+Positions grow fastest: thousands per fund and month.
+
+112
+00:10:33.823 --> 00:10:37.798
+Index the columns you search by: ISIN, date and delivery.
+
+113
+00:10:37.848 --> 00:10:40.058
+Partition large tables by month.
+
+114
+00:10:40.108 --> 00:10:42.812
+And load in bulk instead of row by row.
+
+115
+00:10:42.862 --> 00:10:49.662
+With these measures, ordinary databases handle many years of FundsXML deliveries without trouble.
+
+116
+00:10:51.012 --> 00:10:54.560
+A last piece of advice: do not model the whole schema at once.
+
+117
+00:10:54.610 --> 00:11:00.886
+Start with the data you really use, keep the original file next to it, and add tables when new needs come up.
+
+118
+00:11:00.936 --> 00:11:05.645
+The schema has thousands of elements, and most companies use a small part of them.
+
+119
+00:11:06.995 --> 00:11:18.681
+Everything you saw in this film is in the complete example: the table definitions, the views and the access rules, the code lists, the sample deliveries, the loader and the generator.
+
+120
+00:11:18.731 --> 00:11:26.504
+You find it in the FundsXML examples repository on GitHub, in the folder PostgreSQL end to end, also as a single zip file.
+
+121
+00:11:26.554 --> 00:11:31.763
+One script builds the database, loads the files and runs every query of this film.
+
+122
+00:11:33.113 --> 00:11:41.452
+That was FundsXML in a database: documents and tables, everything that repeats as rows, keys, amounts and codes, and history.
+
+123
+00:11:41.502 --> 00:11:45.881
+In the next film, you load the example deliveries into this model.
+
+124
+00:11:45.931 --> 00:11:47.223
 Thanks for watching.

@@ -259,7 +259,7 @@
       "full": {
         "title": "FundsXML for business (all films)",
         "duration": 2377.5,
-        "url": "https://github.com/fundsxml/videos/releases/download/v2/fundsxml-business-en.mp4"
+        "url": "https://github.com/fundsxml/videos/releases/download/v3/fundsxml-business-en.mp4"
       }
     },
     {
@@ -615,7 +615,7 @@
       "full": {
         "title": "FundsXML for developers (all films)",
         "duration": 2731.4,
-        "url": "https://github.com/fundsxml/videos/releases/download/v2/fundsxml-developers-en.mp4"
+        "url": "https://github.com/fundsxml/videos/releases/download/v3/fundsxml-developers-en.mp4"
       }
     },
     {
@@ -626,8 +626,8 @@
           "id": "prod-architecture",
           "number": 16,
           "title": "A FundsXML delivery chain",
-          "description": "How FundsXML runs in production: who sends what to whom, the delivery chain of sender and receiver, data sources and a central database, how files travel (SFTP, API, portals), security, rhythms and schema versions, roles, the five building blocks of a production setup, build or buy, how to start, and the reference implementation used in this series.",
-          "duration": 490.1,
+          "description": "How FundsXML runs in production: who sends what to whom, the delivery chain of sender and receiver, data sources and a central database, how files travel (SFTP, API, portals), security, rhythms and schema versions, roles, the five building blocks of a production setup, build or buy, how to start, and the complete example used in this series, which can be downloaded.",
+          "duration": 495.3,
           "chapters": [
             {
               "t": 0,
@@ -659,7 +659,7 @@
             },
             {
               "t": 459,
-              "title": "The reference implementation"
+              "title": "The complete example"
             }
           ],
           "mp4": "en/16-prod-architecture.mp4",
@@ -671,32 +671,44 @@
           "id": "prod-database-model",
           "number": 17,
           "title": "FundsXML in a database",
-          "description": "How FundsXML data lives in a database: storing whole documents in an XML column or shredding them into tables, layers, a table model for funds, share classes, prices, portfolios, positions and assets, own keys instead of file IDs, amounts with currencies, code lists, dates, history and corrections, views, data quality, access, regulatory templates and performance. With real results from the reference implementation.",
-          "duration": 474.7,
+          "description": "How FundsXML data is stored in a database, with the complete PostgreSQL example of the FundsXML examples repository: the XML column and shredded tables, layers, a table model in which everything that repeats is a row (several funds per file, umbrellas and subfunds, several NAVs per day and currency, portfolios and positions, look-through), keys and assets without an ISIN, amounts and currencies, code lists, dates, transactions in four places, documents, regulatory templates, history and corrections, views, quality, access and performance. All files can be downloaded.",
+          "duration": 709.3,
           "chapters": [
             {
               "t": 0,
               "title": "Intro"
             },
             {
-              "t": 17,
+              "t": 25,
               "title": "Two ways"
             },
             {
-              "t": 105,
+              "t": 120,
               "title": "A table model"
             },
             {
-              "t": 189,
+              "t": 172,
+              "title": "What repeats"
+            },
+            {
+              "t": 319,
               "title": "Keys"
             },
             {
-              "t": 236,
+              "t": 365,
               "title": "Amounts and codes"
             },
             {
-              "t": 298,
+              "t": 437,
+              "title": "Transactions and documents"
+            },
+            {
+              "t": 519,
               "title": "History and corrections"
+            },
+            {
+              "t": 666,
+              "title": "Download"
             }
           ],
           "mp4": "en/17-prod-database-model.mp4",
@@ -708,36 +720,44 @@
           "id": "prod-loading",
           "number": 18,
           "title": "Loading FundsXML files",
-          "description": "How a FundsXML file gets into a database safely: the six steps of a robust loader, a landing folder, cheap checks first, triggers, validation and schema versions, idempotency through the UniqueDocumentID, full and delta deliveries, streaming large files, the order of assets and positions, asset keys, transactions, business rules, speed, reconciliation, code checks, error reports, tests and release. With the reference loader at work.",
-          "duration": 467.3,
+          "description": "How FundsXML files get into a database safely, with the loader of the complete PostgreSQL example: the steps of a robust loader, a landing folder, cheap checks first, triggers, validation and schema versions, idempotency through the UniqueDocumentID, full and delta deliveries, streaming large files with one handler per repeating element, funds and subfunds, the order of assets and positions, asset keys, transactions, documents and regulatory templates, business rules, speed, six deliveries and four broken files at work, corrections and deletions, reconciliation, code checks, error reports, tests and release. All files can be downloaded.",
+          "duration": 663.4,
           "chapters": [
             {
               "t": 0,
               "title": "Intro"
             },
             {
-              "t": 16,
+              "t": 21,
               "title": "The steps"
             },
             {
-              "t": 96,
+              "t": 112,
               "title": "Validate first"
             },
             {
-              "t": 136,
+              "t": 152,
               "title": "Twice is not double"
             },
             {
-              "t": 181,
+              "t": 199,
               "title": "Large files"
             },
             {
-              "t": 329,
+              "t": 317,
+              "title": "Transactions, documents, templates"
+            },
+            {
+              "t": 430,
               "title": "The loader at work"
             },
             {
-              "t": 348,
+              "t": 504,
               "title": "Reconcile"
+            },
+            {
+              "t": 622,
+              "title": "Download"
             }
           ],
           "mp4": "en/18-prod-loading.mp4",
@@ -749,36 +769,52 @@
           "id": "prod-generating",
           "number": 19,
           "title": "Generating FundsXML",
-          "description": "How to produce FundsXML from a database: start with the target file, a mapping table, which data goes to whom, templates, XSLT or generated code, ControlData, the reference export, element order, empty elements and formats, validation in FreeXmlToolkit, corrections, large deliveries, several schema versions, partner configuration, time windows, golden-file tests and CI, handing over, resends and documentation.",
-          "duration": 462.0,
+          "description": "How to produce FundsXML from a database, with the generator of the complete PostgreSQL example: start with the target file, a mapping table, a partner register that says which data goes to whom, templates, XSLT or generated code, ControlData, writing share classes, several funds and dates in one file, element order, empty elements and formats, validation in FreeXmlToolkit, corrections, large deliveries, several schema versions, partner configuration, time windows, golden files, CI and the round trip, handing over, resends and documentation. All files can be downloaded.",
+          "duration": 615.1,
           "chapters": [
             {
               "t": 0,
               "title": "Intro"
             },
             {
-              "t": 17,
+              "t": 22,
               "title": "Start with the target"
             },
             {
-              "t": 79,
+              "t": 49,
+              "title": "The mapping"
+            },
+            {
+              "t": 101,
               "title": "Three ways"
             },
             {
-              "t": 148,
-              "title": "The reference export"
+              "t": 170,
+              "title": "The generator"
             },
             {
-              "t": 226,
+              "t": 311,
               "title": "Check before sending"
             },
             {
-              "t": 282,
+              "t": 328,
+              "title": "Corrections"
+            },
+            {
+              "t": 375,
               "title": "Several versions"
             },
             {
-              "t": 385,
+              "t": 442,
+              "title": "Tests"
+            },
+            {
+              "t": 511,
               "title": "Handing over"
+            },
+            {
+              "t": 574,
+              "title": "Download"
             }
           ],
           "mp4": "en/19-prod-generating.mp4",
@@ -791,7 +827,7 @@
           "number": 20,
           "title": "Running FundsXML in daily operations",
           "description": "What daily operation of a FundsXML chain needs: a day in operations, monitoring and a delivery overview, duty and runbooks, error classes and incident handling with an example, reconciliation, feedback, agreements with partners, onboarding, changes in the partner landscape, security, schema upgrades, the archive, metrics, people, reporting, typical first-year issues, a checklist, and staying involved in the standard.",
-          "duration": 461.0,
+          "duration": 463.0,
           "chapters": [
             {
               "t": 0,
@@ -842,11 +878,11 @@
       ],
       "full": {
         "title": "FundsXML in production (all films)",
-        "duration": 2355.1,
-        "url": "https://github.com/fundsxml/videos/releases/download/v2/fundsxml-production-en.mp4"
+        "duration": 2946.1,
+        "url": "https://github.com/fundsxml/videos/releases/download/v3/fundsxml-production-en.mp4"
       }
     }
   ],
-  "release": "https://github.com/fundsxml/videos/releases/tag/v2",
+  "release": "https://github.com/fundsxml/videos/releases/tag/v3",
   "disclaimer": "Disclaimer: This video is for training purposes only and is not legal, regulatory or investment advice. The example data is fictitious: companies, funds, securities and identifiers are made up. The official FundsXML documentation and the applicable regulations are binding. Narration and editing are AI-generated; the video shows the real application."
 }

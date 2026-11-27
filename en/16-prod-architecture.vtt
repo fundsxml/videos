@@ -441,21 +441,21 @@ And the chain grows: more funds, more partners.
 A setup that is just fast enough on a quiet day will be late on the busiest one.
 
 111
-00:07:39.625 --> 00:07:49.955
-For the next films we use a small reference implementation, published on GitHub: a PostgreSQL database, a loader for FundsXML files and an export back to FundsXML.
+00:07:39.625 --> 00:07:55.541
+For the next films we use a complete example, published in the FundsXML examples repository on GitHub: a PostgreSQL database, a loader for FundsXML files and a generator back to FundsXML, with six sample deliveries and the files it writes for three partners.
 
 112
-00:07:50.005 --> 00:07:57.278
-It is an example, not a product, but it shows the essential steps in a few hundred lines that you can run yourself.
+00:07:55.591 --> 00:08:02.410
+It is an example, not a product, but it shows the essential steps, and you can download it and run it yourself.
 
 113
-00:07:58.628 --> 00:08:01.397
+00:08:03.760 --> 00:08:06.529
 That was the delivery chain on both sides.
 
 114
-00:08:01.447 --> 00:08:05.962
+00:08:06.579 --> 00:08:11.094
 In the next film, you see how FundsXML data is stored in a database.
 
 115
-00:08:06.012 --> 00:08:07.305
+00:08:11.144 --> 00:08:12.437
 Thanks for watching.

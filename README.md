@@ -5,8 +5,8 @@ Three video series about [FundsXML](https://www.fundsxml.org), the open standard
 - **FundsXML for business**: six films for business readers, management and project leads
 - **FundsXML for developers**: nine films for developers, data teams and IT, shown in
   [FreeXmlToolkit](https://freexmltoolkit.org)
-- **FundsXML in production**: five films on running FundsXML in real systems, with the reference implementation
-  [fundsxml/integration-examples](https://github.com/fundsxml/integration-examples)
+- **FundsXML in production**: five films on running FundsXML in real systems, with a complete example to download:
+  [fundsxml/examples → PostgreSQL_End_to_End](https://github.com/fundsxml/examples/tree/main/PostgreSQL_End_to_End)
 
 New films are added as they are finished.
 

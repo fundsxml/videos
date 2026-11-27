@@ -1,365 +1,449 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:06.358
+00:00:00.500 --> 00:00:05.836
 Now the other direction: the data is in your database, and a partner expects a FundsXML file.
 
 2
-00:00:06.408 --> 00:00:16.331
-In this film you see the ways to generate FundsXML, the mapping behind it, how to handle several schema versions and large files, and how to test the result.
+00:00:05.886 --> 00:00:14.638
+In this film you see the ways to generate FundsXML, the mapping behind it, how to serve several partners from one generator, and how to test the result.
 
 3
-00:00:17.581 --> 00:00:19.990
-Start with the target, not with the code.
+00:00:14.688 --> 00:00:21.414
+The generator of the complete example writes from the database of the last two films, and you can download all of it.
 
 4
-00:00:20.040 --> 00:00:29.228
-Take an official example file that comes close to what your partner expects, for example one of the realistic samples in the FundsXML examples repository.
+00:00:22.664 --> 00:00:25.016
+Start with the target, not with the code.
 
 5
-00:00:29.278 --> 00:00:33.127
-It shows which elements a complete delivery uses, in which order.
+00:00:25.066 --> 00:00:34.040
+Take an official example file that comes close to what your partner expects, for example one of the realistic samples in the FundsXML examples repository.
 
 6
-00:00:33.177 --> 00:00:38.226
-Agree it with your partner, and you know what to build before the first line of code.
+00:00:34.090 --> 00:00:37.849
+It shows which elements a complete delivery uses, in which order.
 
 7
-00:00:39.576 --> 00:00:43.677
-Then the mapping: for each element, where does the value come from?
+00:00:37.899 --> 00:00:42.830
+Agree it with your partner, and you know what to build before the first line of code.
 
 8
-00:00:43.727 --> 00:00:51.175
-A simple table does the job: the database column, the FundsXML path, and the rule, such as a conversion or a fixed value.
+00:00:42.880 --> 00:00:47.928
+The complete example keeps the files its generator must produce right next to the code.
 
 9
-00:00:51.225 --> 00:00:54.707
-This table is the most important document of the project.
+00:00:49.278 --> 00:00:53.425
+Then the mapping: for each element, where does the value come from?
 
 10
-00:00:54.757 --> 00:00:59.106
-It is also what the business side reviews, long before any file exists.
+00:00:53.475 --> 00:01:01.442
+A simple table does the job: the FundsXML path, the source in the database, and the rule, such as a conversion or a fixed value.
 
 11
-00:01:00.456 --> 00:01:01.815
-Which data goes to whom?
+00:01:01.492 --> 00:01:05.013
+This table is the most important document of the project.
 
 12
-00:01:01.865 --> 00:01:08.857
-The partner register answers it: which funds a partner receives, which kinds of data, which version and which templates.
+00:01:05.063 --> 00:01:09.460
+It is also what the business side reviews, long before any file exists.
 
 13
-00:01:08.907 --> 00:01:13.435
-The generator reads the register and builds one delivery per partner and type.
+00:01:09.510 --> 00:01:13.218
+The example keeps it as a file of its own, next to the code.
 
 14
-00:01:13.485 --> 00:01:18.013
-Adding a fund for a partner is then a change in the register, not in the code.
+00:01:14.568 --> 00:01:15.999
+Which data goes to whom?
 
 15
-00:01:19.363 --> 00:01:22.306
-There are three common ways to write the file.
+00:01:16.049 --> 00:01:22.539
+The partner register answers it: which funds a partner receives, which kinds of data, and which templates.
 
 16
-00:01:22.356 --> 00:01:27.706
-Templates write the X M L directly from the query results; simple and easy to read.
+00:01:22.589 --> 00:01:31.485
+In the example, the distributor receives the umbrella and the multi-asset fund, with three days of prices, the documents and the E M T and E E T.
 
 17
-00:01:27.756 --> 00:01:33.367
-X S L T transforms an intermediate X M L, for example from the database, into FundsXML.
+00:01:31.535 --> 00:01:35.618
+The insurer receives two funds with their portfolios and the T P T.
 
 18
-00:01:33.417 --> 00:01:42.411
-And code generators create classes from the schema, with JAXB in Java or xsdata in Python; the code then fills objects and writes them out.
+00:01:35.668 --> 00:01:40.122
+Adding a fund for a partner is a change in the register, not in the code.
 
 19
-00:01:43.761 --> 00:01:44.698
-Which one fits?
+00:01:41.472 --> 00:01:44.415
+There are three common ways to write the file.
 
 20
-00:01:44.748 --> 00:01:49.960
-Templates suit small and medium deliveries and teams that like to see the X M L.
+00:01:44.465 --> 00:01:49.815
+Templates write the X M L directly from the query results; simple and easy to read.
 
 21
-00:01:50.010 --> 00:01:53.447
-X S L T suits setups where the data is already X M L.
+00:01:49.865 --> 00:01:55.476
+X S L T transforms an intermediate X M L, for example from the database, into FundsXML.
 
 22
-00:01:53.497 --> 00:02:03.117
-Generated code gives type safety, but the FundsXML schema is large, so the generated code is too, and it must be regenerated for every new version.
+00:01:55.526 --> 00:02:04.520
+And code generators create classes from the schema, with JAXB in Java or xsdata in Python; the code then fills objects and writes them out.
 
 23
-00:02:04.467 --> 00:02:06.704
-Every file begins with ControlData.
+00:02:05.870 --> 00:02:06.807
+Which one fits?
 
 24
-00:02:06.754 --> 00:02:10.560
-Generate a new document ID for every file, never reuse one.
+00:02:06.857 --> 00:02:12.069
+Templates suit small and medium deliveries and teams that like to see the X M L.
 
 25
-00:02:10.610 --> 00:02:17.422
-The generation time is now; the content date is the date the data is valid for, which is usually earlier.
+00:02:12.119 --> 00:02:15.556
+X S L T suits setups where the data is already X M L.
 
 26
-00:02:17.472 --> 00:02:18.925
-Name the data supplier.
+00:02:15.606 --> 00:02:25.226
+Generated code gives type safety, but the FundsXML schema is large, so the generated code is too, and it must be regenerated for every new version.
 
 27
-00:02:18.975 --> 00:02:26.898
-And set the data operation: initial for a first delivery, amend for a correction, with the ID of the delivery it corrects.
+00:02:26.576 --> 00:02:28.872
+Every file begins with control data.
 
 28
-00:02:28.248 --> 00:02:30.900
-The reference implementation uses templates.
+00:02:28.922 --> 00:02:32.716
+Generate a new document ID for every file, never reuse one.
 
 29
-00:02:30.950 --> 00:02:37.718
-This one writes a share class with its prices: the identifiers, the currency, and the net asset value per date.
+00:02:32.766 --> 00:02:39.558
+The generation time is now; the content date is the date the data is valid for, which is usually earlier.
 
 30
-00:02:37.768 --> 00:02:41.465
-The values come from the tables you saw in the earlier films.
+00:02:39.608 --> 00:02:41.057
+Name the data supplier.
 
 31
-00:02:41.515 --> 00:02:46.931
-The order of the elements follows the schema exactly, because X S D sequences are strict.
+00:02:41.107 --> 00:02:49.007
+And set the data operation: initial for a first delivery, amend for a correction, with the ID of the delivery it corrects.
 
 32
-00:02:47.899 --> 00:02:50.143
-The order matters more than many expect.
+00:02:50.357 --> 00:02:53.006
+The example uses templates written in code.
 
 33
-00:02:50.193 --> 00:02:54.042
-Here two elements of a share class were written the wrong way round.
+00:02:53.056 --> 00:03:04.431
+This part writes a share class: the identifiers, the name, the currency, then its prices for every date and nature, its net assets in every currency, its distributions and its flows.
 
 34
-00:02:54.092 --> 00:03:00.465
-The schema does not accept it: the validator reports invalid content, and names the element it expected instead.
+00:03:04.481 --> 00:03:09.955
+The values come from the tables you saw in the earlier films, current and released only.
 
 35
-00:03:00.515 --> 00:03:06.315
-The fix is in the generator, which must follow the sequence of the schema exactly, element by element.
+00:03:10.005 --> 00:03:15.542
+The order of the elements follows the schema exactly, because X S D sequences are strict.
 
 36
-00:03:07.465 --> 00:03:11.310
-A rule that saves many errors: leave out what you do not have.
+00:03:16.892 --> 00:03:20.772
+From one database, the example writes three quite different files.
 
 37
-00:03:11.360 --> 00:03:16.398
-An empty element is not the same as a missing one, and it often fails validation.
+00:03:20.822 --> 00:03:31.488
+The distributor's file has an umbrella with two subfunds and a single fund, nine share classes, three days of prices with an estimated and an official value each, and no portfolio.
 
 38
-00:03:16.448 --> 00:03:19.225
-Never write placeholders such as N A or zero.
+00:03:31.538 --> 00:03:38.395
+The insurer's file has two funds with their month-end portfolios and the one hundred seventy-seven assets they hold.
 
 39
-00:03:19.275 --> 00:03:25.382
-And if a required element has no value, the problem is in the data; fix it there, not in the file.
+00:03:38.445 --> 00:03:40.300
+The data vendor gets everything.
 
 40
-00:03:26.732 --> 00:03:29.173
-Formats are the next source of trouble.
+00:03:41.650 --> 00:03:45.518
+Several funds and dates in one file need no special code either.
 
 41
-00:03:29.223 --> 00:03:35.689
-Numbers use a decimal point and no thousands separators, whatever the language settings of the server.
+00:03:45.568 --> 00:03:49.927
+The generator writes one fund at a time, and forgets it when it is done.
 
 42
-00:03:35.739 --> 00:03:37.925
-Dates are written year, month, day.
+00:03:49.977 --> 00:03:56.110
+An umbrella brings its subfunds, found through the parent column, and each subfund its share classes.
 
 43
-00:03:37.975 --> 00:03:39.650
-Booleans are true or false.
+00:03:56.160 --> 00:03:59.294
+Every date and nature becomes one total asset value.
 
 44
-00:03:39.700 --> 00:03:41.183
-The file is U T F eight.
+00:03:59.344 --> 00:04:04.743
+The assets the positions refer to are collected on the way, and written once, at the end.
 
 45
-00:03:41.233 --> 00:03:44.889
-And percentages are plain numbers, without a percent sign.
+00:04:05.711 --> 00:04:07.955
+The order matters more than many expect.
 
 46
-00:03:46.139 --> 00:03:49.640
-Here is the generated file, opened in FreeXmlToolkit.
+00:04:08.005 --> 00:04:11.854
+Here two elements of a share class were written the wrong way round.
 
 47
-00:03:49.690 --> 00:03:52.119
-Validation against the schema: valid.
+00:04:11.904 --> 00:04:18.277
+The schema does not accept it: the validator reports invalid content, and names the element it expected instead.
 
 48
-00:03:52.169 --> 00:03:54.398
-The data-quality check: no errors.
+00:04:18.327 --> 00:04:24.127
+The fix is in the generator, which must follow the sequence of the schema exactly, element by element.
 
 49
-00:03:54.448 --> 00:04:00.898
-Every generated file goes through exactly these checks before it leaves the house, automatically.
+00:04:25.276 --> 00:04:29.108
+A rule that saves many errors: leave out what you do not have.
 
 50
-00:04:02.050 --> 00:04:03.821
-Corrections are generated too.
+00:04:29.158 --> 00:04:34.180
+An empty element is not the same as a missing one, and it often fails validation.
 
 51
-00:04:03.871 --> 00:04:10.980
-A correction is a new file with its own document ID, the data operation amend, and the ID of the delivery it corrects.
+00:04:34.230 --> 00:04:36.998
+Never write placeholders such as N A or zero.
 
 52
-00:04:11.030 --> 00:04:16.744
-It carries the complete corrected data for that fund and date, not just the one changed number.
+00:04:37.048 --> 00:04:46.014
+In the example, the one function that builds every element returns nothing when there is no value, so an empty element cannot be written at all.
 
 53
-00:04:16.794 --> 00:04:22.022
-Then the receiver can simply replace what it has, as you saw in the film about loading.
+00:04:46.064 --> 00:04:51.086
+And if a required element has no value, the problem is in the data; fix it there.
 
 54
-00:04:23.372 --> 00:04:31.361
-For large deliveries, write the file as a stream too: with the X M L stream writer in Java, or incremental writing in Python.
+00:04:52.436 --> 00:04:54.878
+Formats are the next source of trouble.
 
 55
-00:04:31.411 --> 00:04:34.962
-Generate one fund at a time, so that memory stays small.
+00:04:54.928 --> 00:05:01.394
+Numbers use a decimal point and no thousands separators, whatever the language settings of the server.
 
 56
-00:04:35.012 --> 00:04:39.206
-Very large deliveries can be split, for example one file per fund.
+00:05:01.444 --> 00:05:03.630
+Dates are written year, month, day.
 
 57
-00:04:39.256 --> 00:04:41.521
-And compress the file for transport.
+00:05:03.680 --> 00:05:05.355
+Booleans are true or false.
 
 58
-00:04:42.871 --> 00:04:44.954
-Partners expect different versions.
+00:05:05.405 --> 00:05:06.888
+The file is U T F eight.
 
 59
-00:04:45.004 --> 00:04:52.327
-Keep one generator and describe the differences between the versions in a table, rather than copying the whole generator.
+00:05:06.938 --> 00:05:10.593
+And percentages are plain numbers, without a percent sign.
 
 60
-00:04:52.377 --> 00:04:57.506
-New elements in FundsXML are usually optional, so a newer version mostly adds fields.
+00:05:11.843 --> 00:05:16.219
+Here is the generated file for the insurer, opened in FreeXmlToolkit.
 
 61
-00:04:57.556 --> 00:05:00.857
-Test every version you deliver, against its own schema.
+00:05:16.269 --> 00:05:18.593
+Validation against the schema: valid.
 
 62
-00:05:02.207 --> 00:05:08.475
-Partners have wishes: one wants the E S G template, another only some share classes, a third no documents.
+00:05:18.643 --> 00:05:20.774
+The data-quality check: no errors.
 
 63
-00:05:08.525 --> 00:05:11.038
-Handle these in configuration, not in code.
+00:05:20.824 --> 00:05:26.996
+Every generated file goes through exactly these checks before it leaves the house, automatically.
 
 64
-00:05:11.088 --> 00:05:16.581
-The register says which blocks and templates each partner gets, and the generator follows it.
+00:05:28.146 --> 00:05:29.881
+Corrections are generated too.
 
 65
-00:05:16.631 --> 00:05:23.316
-A copy of the generator per partner is the fastest way into the trouble you saw in the first film of this series.
+00:05:29.931 --> 00:05:36.904
+A correction is a new file with its own document ID, the data operation amend, and the ID of the delivery it corrects.
 
 66
-00:05:24.666 --> 00:05:32.160
-Generation usually has a short time window: between the approval of the data in the evening and the cut-off time of the partners.
+00:05:36.954 --> 00:05:42.974
+It carries the complete corrected data for those funds and that date, not just the one changed number.
 
 67
-00:05:32.210 --> 00:05:34.850
-Generate funds in parallel, one fund per task.
+00:05:43.024 --> 00:05:48.152
+Then the receiver can simply replace what it has, as you saw in the film about loading.
 
 68
-00:05:34.900 --> 00:05:39.411
-Start each delivery as soon as its data is approved, not at a fixed late hour.
+00:05:49.502 --> 00:05:57.873
+For large deliveries, write the file as a stream too: with the X M L stream writer in Java, or incremental writing in Python, as here.
 
 69
-00:05:39.461 --> 00:05:44.440
-And measure how long it takes, so that you notice early when growth makes it too slow.
+00:05:57.923 --> 00:06:07.300
+The example writes one fund at a time, and reads the positions through a server-side cursor, a few hundred rows at a time, so that memory stays small.
 
 70
-00:05:45.790 --> 00:05:50.743
-Test with golden files: a fixed set of input data and the file it must produce.
+00:06:07.350 --> 00:06:11.448
+Very large deliveries can be split, for example one file per fund.
 
 71
-00:05:50.793 --> 00:05:58.469
-After every change, the generator runs again, and the result is compared with the golden file, then validated and checked.
+00:06:11.498 --> 00:06:13.711
+And compress the file for transport.
 
 72
-00:05:58.519 --> 00:06:05.055
-Include the difficult cases: a correction, a fund without positions, a share class in a second currency.
+00:06:15.061 --> 00:06:17.144
+Partners expect different versions.
 
 73
-00:06:06.405 --> 00:06:07.527
-Automate the tests.
+00:06:17.194 --> 00:06:24.516
+Keep one generator and describe the differences between the versions in a table, rather than copying the whole generator.
 
 74
-00:06:07.577 --> 00:06:19.669
-In the reference implementation, every change runs through the same steps on GitHub: start the database, load the example files, export them again, validate the export, run the data-quality checks.
+00:06:24.566 --> 00:06:29.696
+New elements in FundsXML are usually optional, so a newer version mostly adds fields.
 
 75
-00:06:19.719 --> 00:06:24.045
-A change that breaks the output is noticed before it reaches a partner.
+00:06:29.746 --> 00:06:33.047
+Test every version you deliver, against its own schema.
 
 76
-00:06:25.395 --> 00:06:27.899
-After the checks, the file is handed over.
+00:06:34.397 --> 00:06:40.625
+Partners have wishes: one wants the E S G template, another only some share classes, a third no documents.
 
 77
-00:06:27.949 --> 00:06:33.371
-It gets the agreed name, is compressed if it is large, and goes out on the agreed channel.
+00:06:40.675 --> 00:06:43.172
+Handle these in configuration, not in code.
 
 78
-00:06:33.421 --> 00:06:36.654
-Where possible, the receiver confirms that it arrived.
+00:06:43.222 --> 00:06:53.005
+The register says which blocks and templates each partner gets, and the generator follows it; in the example, the distributor gets documents and the insurer does not.
 
 79
-00:06:36.704 --> 00:06:44.496
-And the file goes into the archive, together with its validation result, so that it can always be found again by its document ID.
+00:06:53.055 --> 00:06:59.698
+A copy of the generator per partner is the fastest way into the trouble you saw in the first film of this series.
 
 80
-00:06:45.846 --> 00:06:48.213
-Sometimes a partner asks for a file again.
+00:07:01.048 --> 00:07:08.542
+Generation usually has a short time window: between the approval of the data in the evening and the cut-off time of the partners.
 
 81
-00:06:48.263 --> 00:06:51.895
-Send the archived file, unchanged and with the same document ID.
+00:07:08.592 --> 00:07:11.232
+Generate funds in parallel, one fund per task.
 
 82
-00:06:51.945 --> 00:07:00.581
-Do not generate it again from the database, because the data may have changed since, and the partner would receive different numbers under the same ID.
+00:07:11.282 --> 00:07:15.793
+Start each delivery as soon as its data is approved, not at a fixed late hour.
 
 83
-00:07:00.631 --> 00:07:04.378
-If the content has to change, that is a correction, with a new ID.
+00:07:15.843 --> 00:07:20.822
+And measure how long it takes, so that you notice early when growth makes it too slow.
 
 84
-00:07:05.728 --> 00:07:07.570
-Finally, document the generator.
+00:07:22.172 --> 00:07:27.035
+Test with golden files: a fixed set of input data and the file it must produce.
 
 85
-00:07:07.620 --> 00:07:11.411
-Keep the mapping table next to the code and change both together.
+00:07:27.085 --> 00:07:32.820
+In the example, the six deliveries are the input, and the four expected files are the output.
 
 86
-00:07:11.461 --> 00:07:16.671
-Keep a short change log for your partners: what changed in the deliveries, and from when.
+00:07:32.870 --> 00:07:40.408
+After every change, the generator runs again, and the result is compared with the golden file, then validated and checked.
 
 87
-00:07:16.721 --> 00:07:19.804
-And keep one example file for every kind of delivery.
+00:07:40.458 --> 00:07:46.068
+Include the difficult cases: a correction, an umbrella, a share class in a second currency.
 
 88
-00:07:19.854 --> 00:07:24.177
-When a partner asks how a field is filled, the answer is found in minutes.
+00:07:47.418 --> 00:07:48.504
+Automate the tests.
 
 89
-00:07:25.527 --> 00:07:33.349
-That was generating FundsXML: the target first, a clear mapping, careful formats, several versions, and automatic tests.
+00:07:48.554 --> 00:08:03.692
+In the example, every change runs through the same steps on GitHub: start the database, load the deliveries, reject the broken ones, generate the files for every partner, validate them, compare them with the golden files, and run the data-quality checks.
 
 90
-00:07:33.399 --> 00:07:38.662
-In the last film of this series, you see how to run all this in daily operations.
+00:08:03.742 --> 00:08:07.937
+A change that breaks the output is noticed before it reaches a partner.
 
 91
-00:07:38.712 --> 00:07:39.974
+00:08:09.287 --> 00:08:15.866
+One more test is cheap and finds a lot: load the generated file again, with the loader of the last film.
+
+92
+00:08:15.916 --> 00:08:24.024
+Every asset must be found again: by its I S I N, or, for assets without one, by the key the generator wrote as other identifier.
+
+93
+00:08:24.074 --> 00:08:30.526
+In the example, the round trip creates no new asset, and every portfolio still reconciles to the cent.
+
+94
+00:08:31.876 --> 00:08:34.379
+After the checks, the file is handed over.
+
+95
+00:08:34.429 --> 00:08:39.851
+It gets the agreed name, is compressed if it is large, and goes out on the agreed channel.
+
+96
+00:08:39.901 --> 00:08:43.134
+Where possible, the receiver confirms that it arrived.
+
+97
+00:08:43.184 --> 00:08:50.977
+And the file goes into the archive, together with its validation result, so that it can always be found again by its document ID.
+
+98
+00:08:52.327 --> 00:08:54.693
+Sometimes a partner asks for a file again.
+
+99
+00:08:54.743 --> 00:08:58.375
+Send the archived file, unchanged and with the same document ID.
+
+100
+00:08:58.425 --> 00:09:07.062
+Do not generate it again from the database, because the data may have changed since, and the partner would receive different numbers under the same ID.
+
+101
+00:09:07.112 --> 00:09:10.859
+If the content has to change, that is a correction, with a new ID.
+
+102
+00:09:12.209 --> 00:09:14.057
+Finally, document the generator.
+
+103
+00:09:14.107 --> 00:09:17.914
+Keep the mapping table next to the code and change both together.
+
+104
+00:09:17.964 --> 00:09:23.194
+Keep a short change log for your partners: what changed in the deliveries, and from when.
+
+105
+00:09:23.244 --> 00:09:28.415
+And keep one example file for every kind of delivery; the golden files are exactly that.
+
+106
+00:09:28.465 --> 00:09:32.806
+When a partner asks how a field is filled, the answer is found in minutes.
+
+107
+00:09:34.156 --> 00:09:44.239
+Everything you saw in this film is in the complete example: the generator, the partner register, the mapping table, and the files it writes for the three partners.
+
+108
+00:09:44.289 --> 00:09:51.822
+You find it in the FundsXML examples repository on GitHub, in the folder PostgreSQL end to end, also as a single zip file.
+
+109
+00:09:51.872 --> 00:09:55.801
+Change the register, run the script, and compare your own files.
+
+110
+00:09:57.151 --> 00:10:06.827
+That was generating FundsXML: the target first, a clear mapping, a partner register, careful formats, and automatic tests with golden files and a round trip.
+
+111
+00:10:06.877 --> 00:10:11.845
+In the last film of this series, you see how to run all this in daily operations.
+
+112
+00:10:11.895 --> 00:10:13.084
 Thanks for watching.
