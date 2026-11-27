@@ -596,15 +596,16 @@
           "id": "dev-query",
           "number": 15,
           "title": "Query, transform and integrate",
-          "description": "Work with the data in a FundsXML file: XPath paths without a namespace, the ready-made FundsXML queries in the Query Console of FreeXmlToolkit (the ten largest positions as a table), an XSLT stylesheet that turns the positions into CSV, strategies for large files, and how FundsXML fits into a system landscape of databases, data warehouses and scheduled deliveries.",
-          "duration": 259.8,
+          "audience": "engineering",
+          "description": "Work with the data in a FundsXML file: XPath paths without a namespace, the ready-made FundsXML queries in the Query Console of FreeXmlToolkit (the ten largest positions as a table), an XSLT stylesheet that turns the positions into CSV, a large file read as a stream in Python with lxml (half a million positions with flat memory, from the FundsXML examples), classes generated from the schema, and the way on to a database.",
+          "duration": 254.3,
           "chapters": [
             {
               "t": 0,
               "title": "Intro"
             },
             {
-              "t": 11,
+              "t": 12,
               "title": "Paths and queries"
             },
             {
@@ -612,19 +613,18 @@
               "title": "Transform"
             },
             {
-              "t": 119,
+              "t": 120,
               "title": "Into your systems"
             },
             {
-              "t": 221,
+              "t": 216,
               "title": "Summary"
             }
           ],
           "mp4": "en/15-dev-query.mp4",
           "subtitles": "en/15-dev-query.vtt",
           "chapters_vtt": "en/15-dev-query-chapters.vtt",
-          "poster": "posters/15-dev-query.jpg",
-          "audience": "engineering"
+          "poster": "posters/15-dev-query.jpg"
         }
       ],
       "full": {
