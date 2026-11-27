@@ -356,6 +356,7 @@
           "id": "dev-funds",
           "number": 9,
           "title": "Funds, share classes and NAV",
+          "audience": "data",
           "description": "The fund part of a FundsXML document: fund identifiers and names, SingleFundFlag with single funds and umbrellas, FundStaticData and FundDynamicData, the total net asset value, share classes with prices, shares outstanding and amounts in several currencies (AmountType with ccy), action codes, and checking ISIN and LEI check digits in FreeXmlToolkit.",
           "duration": 378.9,
           "chapters": [
@@ -387,8 +388,7 @@
           "mp4": "en/09-dev-funds.mp4",
           "subtitles": "en/09-dev-funds.vtt",
           "chapters_vtt": "en/09-dev-funds-chapters.vtt",
-          "poster": "posters/09-dev-funds.jpg",
-          "audience": "data"
+          "poster": "posters/09-dev-funds.jpg"
         },
         {
           "id": "dev-portfolio",
