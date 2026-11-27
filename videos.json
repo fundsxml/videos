@@ -554,6 +554,7 @@
           "id": "dev-validate",
           "number": 14,
           "title": "Validate and check data quality",
+          "audience": "data",
           "description": "Validate a FundsXML delivery in two stages: against the XSD 1.1 schema, reading and fixing its error messages, and against business rules with the FundsXML data-quality checks of FreeXmlToolkit. With the data-quality report, a catalogue of typical schema errors, Schematron rules, and validation on the command line and in build pipelines.",
           "duration": 303.7,
           "chapters": [
@@ -589,8 +590,7 @@
           "mp4": "en/14-dev-validate.mp4",
           "subtitles": "en/14-dev-validate.vtt",
           "chapters_vtt": "en/14-dev-validate-chapters.vtt",
-          "poster": "posters/14-dev-validate.jpg",
-          "audience": "data"
+          "poster": "posters/14-dev-validate.jpg"
         },
         {
           "id": "dev-query",
