@@ -474,6 +474,7 @@
           "id": "dev-regulatory",
           "number": 12,
           "title": "Regulatory templates in XML",
+          "audience": "data",
           "description": "How the FinDatEx templates sit in a FundsXML file: RegulatoryReportings with DirectReporting and IndirectReporting, an EMT V4.2 block (data set information, general information, target market, ex-ante costs) and a TPT V7 block for Solvency II (portfolio data, positions with CIC codes and valuations), template versions as their own elements, and how country-specific data and custom attributes extend the standard.",
           "duration": 284.2,
           "chapters": [
@@ -505,8 +506,7 @@
           "mp4": "en/12-dev-regulatory.mp4",
           "subtitles": "en/12-dev-regulatory.vtt",
           "chapters_vtt": "en/12-dev-regulatory-chapters.vtt",
-          "poster": "posters/12-dev-regulatory.jpg",
-          "audience": "data"
+          "poster": "posters/12-dev-regulatory.jpg"
         },
         {
           "id": "dev-documents",
