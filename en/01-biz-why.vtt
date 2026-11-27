@@ -165,145 +165,145 @@ But a template alone does not say how the data travels between systems.
 That is where FundsXML comes in: it carries these templates, together with all other fund data, in one delivery.
 
 42
-00:03:25.546 --> 00:03:29.407
-FundsXML is the answer: one common language for fund data.
-
-43
-00:03:29.457 --> 00:03:34.801
-Instead of many bilateral formats, every party writes and reads the same format.
-
-44
-00:03:34.851 --> 00:03:40.330
-A sender produces a file once, and every receiver understands it, in the same way.
-
-45
-00:03:41.680 --> 00:03:43.183
+00:03:25.546 --> 00:03:27.032
 The arithmetic is simple.
 
-46
-00:03:43.233 --> 00:03:49.021
-Ten partners who all exchange data with each other need up to forty five bilateral interfaces.
+43
+00:03:27.082 --> 00:03:38.645
+Ten partners who all exchange data with each other need up to forty five bilateral interfaces: every line in this picture is one, with its own format, its own tests and its own maintenance.
 
-47
-00:03:49.071 --> 00:03:53.617
+44
+00:03:38.695 --> 00:03:43.192
 With a common format, each partner builds one: to read and write FundsXML.
 
-48
-00:03:53.667 --> 00:03:58.772
+45
+00:03:43.242 --> 00:03:48.292
 And a new partner no longer means a new project, because it speaks the same format.
 
+46
+00:03:49.642 --> 00:03:53.503
+FundsXML is the answer: one common language for fund data.
+
+47
+00:03:53.553 --> 00:03:58.897
+Instead of many bilateral formats, every party writes and reads the same format.
+
+48
+00:03:58.947 --> 00:04:04.426
+A sender produces a file once, and every receiver understands it, in the same way.
+
 49
-00:04:00.122 --> 00:04:01.283
+00:04:05.776 --> 00:04:06.937
 So what is FundsXML?
 
 50
-00:04:01.333 --> 00:04:08.247
+00:04:06.987 --> 00:04:13.901
 It is open and free: the schema and its documentation are published, and anyone can use them without a licence fee.
 
 51
-00:04:08.297 --> 00:04:10.669
+00:04:13.951 --> 00:04:16.323
 It was made by the fund industry itself.
 
 52
-00:04:10.719 --> 00:04:17.814
+00:04:16.373 --> 00:04:23.468
 It started in two thousand and one, when fund houses looked for a common format for the data they exchanged every day.
 
 53
-00:04:17.864 --> 00:04:26.534
+00:04:23.518 --> 00:04:32.188
 It is run by a not-for-profit association with open membership, and decisions are prepared in working groups by the people who use the standard.
 
 54
-00:04:26.584 --> 00:04:32.408
+00:04:32.238 --> 00:04:38.062
 And it is built on XML, so every system can read it, and every file can be checked automatically.
 
 55
-00:04:33.758 --> 00:04:35.039
+00:04:39.412 --> 00:04:40.693
 In short, its history.
 
 56
-00:04:35.089 --> 00:04:38.792
+00:04:40.743 --> 00:04:44.446
 It began in two thousand and one, with a group of fund houses.
 
 57
-00:04:38.842 --> 00:04:44.359
+00:04:44.496 --> 00:04:50.013
 In two thousand and three, version one was published under the German fund association, BVI.
 
 58
-00:04:44.409 --> 00:04:49.806
+00:04:50.063 --> 00:04:55.460
 Over the following years, Austria, the Netherlands, France, Denmark and Luxembourg joined.
 
 59
-00:04:49.856 --> 00:04:57.129
+00:04:55.510 --> 00:05:02.783
 Today, version four carries the European regulatory templates, and the standard keeps growing with every new requirement.
 
 60
-00:04:58.479 --> 00:05:01.533
+00:05:04.133 --> 00:05:07.187
 Where does FundsXML fit among other standards?
 
 61
-00:05:01.583 --> 00:05:06.257
+00:05:07.237 --> 00:05:11.911
 ISO 20022 covers messages, for example for fund orders and settlement.
 
 62
-00:05:06.307 --> 00:05:11.116
+00:05:11.961 --> 00:05:16.770
 openfunds is a dictionary of fund attributes, often exchanged as tables.
 
 63
-00:05:11.166 --> 00:05:13.950
+00:05:16.820 --> 00:05:19.604
 FinDatEx defines the regulatory templates.
 
 64
-00:05:14.000 --> 00:05:23.871
+00:05:19.654 --> 00:05:29.525
 FundsXML brings it together in complete fund deliveries: master data, prices, portfolios, transactions and regulatory data, in one structured file.
 
 65
-00:05:23.921 --> 00:05:28.122
+00:05:29.575 --> 00:05:33.776
 These standards work alongside each other; they do not compete.
 
 66
-00:05:29.472 --> 00:05:31.051
+00:05:35.126 --> 00:05:36.705
 What does each party gain?
 
 67
-00:05:31.101 --> 00:05:35.939
+00:05:36.755 --> 00:05:41.593
 Senders produce one format for all their partners, instead of one per partner.
 
 68
-00:05:35.989 --> 00:05:39.386
+00:05:41.643 --> 00:05:45.040
 Receivers load data from every fund house the same way.
 
 69
-00:05:39.436 --> 00:05:43.521
+00:05:45.090 --> 00:05:49.175
 Everyone can check a file automatically, before the data moves on.
 
 70
-00:05:43.571 --> 00:05:50.916
+00:05:49.225 --> 00:05:56.570
 And when regulation changes, the new requirement is built into the standard once, and not into every single interface.
 
 71
-00:05:50.966 --> 00:05:54.989
+00:05:56.620 --> 00:06:00.643
 In short: less effort for everyone, and data that can be trusted.
 
 72
-00:05:56.339 --> 00:05:59.134
+00:06:01.993 --> 00:06:04.788
 This is the key idea: one file, many receivers.
 
 73
-00:05:59.184 --> 00:06:03.794
+00:06:04.838 --> 00:06:09.448
 The same delivery can serve the distributor, the insurer and the data vendor.
 
 74
-00:06:03.844 --> 00:06:09.242
+00:06:09.498 --> 00:06:14.896
 Each one takes the part it needs, and nobody has to build a special file for each partner.
 
 75
-00:06:10.592 --> 00:06:13.296
+00:06:16.246 --> 00:06:18.950
 That was why fund data needs a standard.
 
 76
-00:06:13.346 --> 00:06:17.428
+00:06:19.000 --> 00:06:23.082
 In the next film, you see what a FundsXML delivery contains.
 
 77
-00:06:17.478 --> 00:06:18.805
+00:06:23.132 --> 00:06:24.459
 Thanks for watching.

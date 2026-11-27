@@ -9,8 +9,9 @@
           "id": "biz-why",
           "number": 1,
           "title": "Why fund data needs a standard",
+          "audience": "business",
           "description": "Why the fund industry needs a common data format: how fund data travels between asset managers, administrators, custodians, distributors, insurers, data vendors and regulators; what goes wrong without a standard; how regulation drives the need for structured data; and how FundsXML, an open standard made by the fund industry, answers it.",
-          "duration": 382.1,
+          "duration": 387.8,
           "chapters": [
             {
               "t": 0,
@@ -25,11 +26,11 @@
               "title": "Regulation as the driver"
             },
             {
-              "t": 240,
+              "t": 245,
               "title": "What FundsXML is"
             },
             {
-              "t": 298,
+              "t": 304,
               "title": "Where it fits"
             }
           ],
@@ -69,7 +70,8 @@
           "mp4": "en/02-biz-content.mp4",
           "subtitles": "en/02-biz-content.vtt",
           "chapters_vtt": "en/02-biz-content-chapters.vtt",
-          "poster": "posters/02-biz-content.jpg"
+          "poster": "posters/02-biz-content.jpg",
+          "audience": "business"
         },
         {
           "id": "biz-regulatory",
@@ -114,7 +116,8 @@
           "mp4": "en/03-biz-regulatory.mp4",
           "subtitles": "en/03-biz-regulatory.vtt",
           "chapters_vtt": "en/03-biz-regulatory-chapters.vtt",
-          "poster": "posters/03-biz-regulatory.jpg"
+          "poster": "posters/03-biz-regulatory.jpg",
+          "audience": "business"
         },
         {
           "id": "biz-quality",
@@ -159,7 +162,8 @@
           "mp4": "en/04-biz-quality.mp4",
           "subtitles": "en/04-biz-quality.vtt",
           "chapters_vtt": "en/04-biz-quality-chapters.vtt",
-          "poster": "posters/04-biz-quality.jpg"
+          "poster": "posters/04-biz-quality.jpg",
+          "audience": "business"
         },
         {
           "id": "biz-project",
@@ -212,7 +216,8 @@
           "mp4": "en/05-biz-project.mp4",
           "subtitles": "en/05-biz-project.vtt",
           "chapters_vtt": "en/05-biz-project-chapters.vtt",
-          "poster": "posters/05-biz-project.jpg"
+          "poster": "posters/05-biz-project.jpg",
+          "audience": "business"
         },
         {
           "id": "biz-participate",
@@ -253,7 +258,8 @@
           "mp4": "en/06-biz-participate.mp4",
           "subtitles": "en/06-biz-participate.vtt",
           "chapters_vtt": "en/06-biz-participate-chapters.vtt",
-          "poster": "posters/06-biz-participate.jpg"
+          "poster": "posters/06-biz-participate.jpg",
+          "audience": "business"
         }
       ],
       "full": {
@@ -309,7 +315,8 @@
           "mp4": "en/07-dev-setup.mp4",
           "subtitles": "en/07-dev-setup.vtt",
           "chapters_vtt": "en/07-dev-setup-chapters.vtt",
-          "poster": "posters/07-dev-setup.jpg"
+          "poster": "posters/07-dev-setup.jpg",
+          "audience": "data"
         },
         {
           "id": "dev-anatomy",
@@ -342,7 +349,8 @@
           "mp4": "en/08-dev-anatomy.mp4",
           "subtitles": "en/08-dev-anatomy.vtt",
           "chapters_vtt": "en/08-dev-anatomy-chapters.vtt",
-          "poster": "posters/08-dev-anatomy.jpg"
+          "poster": "posters/08-dev-anatomy.jpg",
+          "audience": "data"
         },
         {
           "id": "dev-funds",
@@ -379,7 +387,8 @@
           "mp4": "en/09-dev-funds.mp4",
           "subtitles": "en/09-dev-funds.vtt",
           "chapters_vtt": "en/09-dev-funds-chapters.vtt",
-          "poster": "posters/09-dev-funds.jpg"
+          "poster": "posters/09-dev-funds.jpg",
+          "audience": "data"
         },
         {
           "id": "dev-portfolio",
@@ -416,7 +425,8 @@
           "mp4": "en/10-dev-portfolio.mp4",
           "subtitles": "en/10-dev-portfolio.vtt",
           "chapters_vtt": "en/10-dev-portfolio-chapters.vtt",
-          "poster": "posters/10-dev-portfolio.jpg"
+          "poster": "posters/10-dev-portfolio.jpg",
+          "audience": "data"
         },
         {
           "id": "dev-transactions",
@@ -457,7 +467,8 @@
           "mp4": "en/11-dev-transactions.mp4",
           "subtitles": "en/11-dev-transactions.vtt",
           "chapters_vtt": "en/11-dev-transactions-chapters.vtt",
-          "poster": "posters/11-dev-transactions.jpg"
+          "poster": "posters/11-dev-transactions.jpg",
+          "audience": "data"
         },
         {
           "id": "dev-regulatory",
@@ -494,7 +505,8 @@
           "mp4": "en/12-dev-regulatory.mp4",
           "subtitles": "en/12-dev-regulatory.vtt",
           "chapters_vtt": "en/12-dev-regulatory-chapters.vtt",
-          "poster": "posters/12-dev-regulatory.jpg"
+          "poster": "posters/12-dev-regulatory.jpg",
+          "audience": "data"
         },
         {
           "id": "dev-documents",
@@ -535,7 +547,8 @@
           "mp4": "en/13-dev-documents.mp4",
           "subtitles": "en/13-dev-documents.vtt",
           "chapters_vtt": "en/13-dev-documents-chapters.vtt",
-          "poster": "posters/13-dev-documents.jpg"
+          "poster": "posters/13-dev-documents.jpg",
+          "audience": "data"
         },
         {
           "id": "dev-validate",
@@ -576,7 +589,8 @@
           "mp4": "en/14-dev-validate.mp4",
           "subtitles": "en/14-dev-validate.vtt",
           "chapters_vtt": "en/14-dev-validate-chapters.vtt",
-          "poster": "posters/14-dev-validate.jpg"
+          "poster": "posters/14-dev-validate.jpg",
+          "audience": "data"
         },
         {
           "id": "dev-query",
@@ -609,7 +623,8 @@
           "mp4": "en/15-dev-query.mp4",
           "subtitles": "en/15-dev-query.vtt",
           "chapters_vtt": "en/15-dev-query-chapters.vtt",
-          "poster": "posters/15-dev-query.jpg"
+          "poster": "posters/15-dev-query.jpg",
+          "audience": "engineering"
         }
       ],
       "full": {
@@ -665,7 +680,8 @@
           "mp4": "en/16-prod-architecture.mp4",
           "subtitles": "en/16-prod-architecture.vtt",
           "chapters_vtt": "en/16-prod-architecture-chapters.vtt",
-          "poster": "posters/16-prod-architecture.jpg"
+          "poster": "posters/16-prod-architecture.jpg",
+          "audience": "engineering"
         },
         {
           "id": "prod-database-model",
@@ -714,7 +730,8 @@
           "mp4": "en/17-prod-database-model.mp4",
           "subtitles": "en/17-prod-database-model.vtt",
           "chapters_vtt": "en/17-prod-database-model-chapters.vtt",
-          "poster": "posters/17-prod-database-model.jpg"
+          "poster": "posters/17-prod-database-model.jpg",
+          "audience": "engineering"
         },
         {
           "id": "prod-loading",
@@ -763,7 +780,8 @@
           "mp4": "en/18-prod-loading.mp4",
           "subtitles": "en/18-prod-loading.vtt",
           "chapters_vtt": "en/18-prod-loading-chapters.vtt",
-          "poster": "posters/18-prod-loading.jpg"
+          "poster": "posters/18-prod-loading.jpg",
+          "audience": "engineering"
         },
         {
           "id": "prod-generating",
@@ -820,7 +838,8 @@
           "mp4": "en/19-prod-generating.mp4",
           "subtitles": "en/19-prod-generating.vtt",
           "chapters_vtt": "en/19-prod-generating-chapters.vtt",
-          "poster": "posters/19-prod-generating.jpg"
+          "poster": "posters/19-prod-generating.jpg",
+          "audience": "engineering"
         },
         {
           "id": "prod-operations",
@@ -873,7 +892,8 @@
           "mp4": "en/20-prod-operations.mp4",
           "subtitles": "en/20-prod-operations.vtt",
           "chapters_vtt": "en/20-prod-operations-chapters.vtt",
-          "poster": "posters/20-prod-operations.jpg"
+          "poster": "posters/20-prod-operations.jpg",
+          "audience": "business"
         }
       ],
       "full": {
@@ -884,5 +904,22 @@
     }
   ],
   "release": "https://github.com/fundsxml/videos/releases/tag/v3",
-  "disclaimer": "Disclaimer: This video is for training purposes only and is not legal, regulatory or investment advice. The example data is fictitious: companies, funds, securities and identifiers are made up. The official FundsXML documentation and the applicable regulations are binding. Narration and editing are AI-generated; the video shows the real application."
+  "disclaimer": "Disclaimer: This video is for training purposes only and is not legal, regulatory or investment advice. The example data is fictitious: companies, funds, securities and identifiers are made up. The official FundsXML documentation and the applicable regulations are binding. Narration and editing are AI-generated; the video shows the real application.",
+  "audiences": {
+    "business": {
+      "label": "For business",
+      "color": "#C2620A",
+      "description": "business readers, management, project leads and operations managers"
+    },
+    "data": {
+      "label": "For data specialists",
+      "color": "#2B6CB0",
+      "description": "data specialists and analysts who read, check and query FundsXML files with tools"
+    },
+    "engineering": {
+      "label": "For engineers",
+      "color": "#6B46C1",
+      "description": "software and data engineers, database developers and IT architects"
+    }
+  }
 }
