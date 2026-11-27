@@ -394,6 +394,7 @@
           "id": "dev-portfolio",
           "number": 10,
           "title": "Portfolios and asset master data",
+          "audience": "data",
           "description": "The portfolio part of a FundsXML document: positions with their value and weight, the instrument-specific block (equities, bonds, fund units, options, FX forwards, cash), the link from a position to its asset in AssetMasterData through UniqueID (xs:ID and xs:IDREF), a broken link found by the schema, portfolio breakdowns, and how fund-of-fund look-through is modelled.",
           "duration": 322.7,
           "chapters": [
@@ -425,8 +426,7 @@
           "mp4": "en/10-dev-portfolio.mp4",
           "subtitles": "en/10-dev-portfolio.vtt",
           "chapters_vtt": "en/10-dev-portfolio-chapters.vtt",
-          "poster": "posters/10-dev-portfolio.jpg",
-          "audience": "data"
+          "poster": "posters/10-dev-portfolio.jpg"
         },
         {
           "id": "dev-transactions",
