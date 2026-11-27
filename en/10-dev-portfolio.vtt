@@ -17,23 +17,23 @@ The portfolio is part of the fund's dynamic data.
 Portfolios can hold several portfolios, each with a NAV date, the valuation day, and a list of positions.
 
 5
-00:00:21.476 --> 00:00:25.581
+00:00:21.476 --> 00:00:25.569
 Each position starts with a UniqueID, and identifiers like the ISIN.
 
 6
-00:00:25.631 --> 00:00:34.562
+00:00:25.619 --> 00:00:34.523
 Then come its currency, here the US dollar, its total value in the fund currency, and its weight: one point two one percent of the net asset value.
 
 7
-00:00:34.612 --> 00:00:39.328
+00:00:34.573 --> 00:00:39.275
 For a position in a foreign currency, the exchange rate used is given as well.
 
 8
-00:00:39.378 --> 00:00:42.322
+00:00:39.325 --> 00:00:42.260
 The last block depends on the kind of instrument.
 
 9
-00:00:42.372 --> 00:00:48.737
+00:00:42.310 --> 00:00:48.656
 For a share, it holds the number of units, the price in dollars, and the market value in both currencies.
 
 10
@@ -69,19 +69,19 @@ An option holds contracts.
 And cash, here call money, needs hardly more than its value.
 
 18
-00:01:30.204 --> 00:01:33.744
+00:01:30.204 --> 00:01:33.703
 What a security is, is not repeated in every position.
 
 19
-00:01:33.794 --> 00:01:37.600
+00:01:33.753 --> 00:01:37.516
 The UniqueID points to the asset master data further down.
 
 20
-00:01:37.650 --> 00:01:47.705
+00:01:37.566 --> 00:01:47.507
 There, asset ID_0002 is described once: Driftwood Engineering, a fictional share from the United States, listed in New York, with the LEI of its issuer.
 
 21
-00:01:47.755 --> 00:01:53.821
+00:01:47.557 --> 00:01:53.554
 If several funds or portfolios hold the same share, its master data still appears only once.
 
 22
@@ -101,19 +101,19 @@ Then come its identifiers and its name, its currency, and the asset type, a two-
 Asset details hold what is specific to the kind: the issuer of a share, the coupon of a bond, the strike of an option, or the counterparty of a forward.
 
 26
-00:02:23.518 --> 00:02:26.022
+00:02:23.518 --> 00:02:26.002
 Now a bond, from the position to its asset.
 
 27
-00:02:26.072 --> 00:02:32.851
+00:02:26.052 --> 00:02:32.776
 The position holds a nominal of six point two million euro, at a price of one hundred five point three six percent.
 
 28
-00:02:32.901 --> 00:02:39.206
+00:02:32.826 --> 00:02:39.080
 Nominal times price gives the market value, and the interest accrued since the last coupon is added on top.
 
 29
-00:02:39.256 --> 00:02:52.627
+00:02:39.130 --> 00:02:52.394
 On the asset side, the bond is described once: a government bond of a fictional state, with its issuer and the issuer's LEI, the maturity date in October twenty forty-five, and a fixed coupon of three point seven five percent.
 
 30
@@ -133,97 +133,97 @@ The asset is of type S C, a share class of another fund, with the management com
 This is the starting point for look-through: the target fund can be delivered in the same file, with its own portfolio.
 
 34
-00:03:14.657 --> 00:03:16.224
+00:03:14.657 --> 00:03:16.201
 Here is a currency forward.
 
 35
-00:03:16.274 --> 00:03:26.471
+00:03:16.251 --> 00:03:26.296
 On the asset side: buy about twenty-one million dollars, sell about eighteen million euro, at an agreed rate, with maturity in December, and the counterparty with its LEI.
 
 36
-00:03:26.521 --> 00:03:32.703
+00:03:26.346 --> 00:03:32.436
 On the position side, the total value is the forward's current market value, which can also be negative.
 
 37
-00:03:33.852 --> 00:03:37.499
+00:03:33.852 --> 00:03:37.557
 Technically, this is a link the XML parser itself checks.
 
 38
-00:03:37.549 --> 00:03:43.012
+00:03:37.607 --> 00:03:43.156
 On the asset, UniqueID is declared as an ID: it must be unique in the whole document.
 
 39
-00:03:43.062 --> 00:03:47.682
+00:03:43.206 --> 00:03:47.899
 On the position, it is an ID reference: it must point to an existing ID.
 
 40
-00:03:47.732 --> 00:03:52.222
+00:03:47.949 --> 00:03:52.510
 The value must be a valid XML name, so it must not start with a digit.
 
 41
-00:03:52.272 --> 00:03:58.384
+00:03:52.560 --> 00:03:58.768
 A good habit is a stable value: the same asset keeps the same ID from one delivery to the next.
 
 42
-00:03:59.634 --> 00:04:01.391
+00:04:00.018 --> 00:04:01.775
 The schema protects this link.
 
 43
-00:04:01.441 --> 00:04:06.693
+00:04:01.825 --> 00:04:07.077
 Change the UniqueID of the first position to an asset that does not exist, and press F8.
 
 44
-00:04:06.743 --> 00:04:10.006
+00:04:07.127 --> 00:04:10.390
 The schema reports that there is no asset with this ID.
 
 45
-00:04:10.657 --> 00:04:14.496
+00:04:11.041 --> 00:04:14.880
 Set the ID back, validate again, and the document is in order.
 
 46
-00:04:15.649 --> 00:04:23.537
+00:04:16.033 --> 00:04:23.921
 A portfolio can also carry breakdowns: the fund's weights by country, currency, sector or asset class, already calculated by the sender.
 
 47
-00:04:23.587 --> 00:04:29.140
+00:04:23.971 --> 00:04:29.524
 A breakdown can combine several dimensions, for example country and currency, and can be nested.
 
 48
-00:04:29.190 --> 00:04:34.218
+00:04:29.574 --> 00:04:34.602
 The receiver can use them as they are, and should allow for small rounding differences.
 
 49
-00:04:34.268 --> 00:04:42.331
+00:04:34.652 --> 00:04:42.715
 Breakdowns are useful for receivers who only need an overview, such as a factsheet, and do not want to aggregate every position themselves.
 
 50
-00:04:43.681 --> 00:04:45.552
+00:04:44.065 --> 00:04:45.895
 And funds that hold other funds?
 
 51
-00:04:45.602 --> 00:04:49.155
+00:04:45.945 --> 00:04:49.420
 A position of the kind ShareClass points to the target fund.
 
 52
-00:04:49.205 --> 00:04:54.921
+00:04:49.470 --> 00:04:55.060
 The target fund can be delivered in the same file, as a fund of its own, with its own portfolio.
 
 53
-00:04:54.971 --> 00:05:03.028
+00:04:55.110 --> 00:05:02.991
 And a portfolio can also carry decomposed positions, where fund holdings are replaced by the scaled-down positions of the target funds.
 
 54
-00:05:03.078 --> 00:05:09.874
+00:05:03.041 --> 00:05:09.689
 That is how look-through works in FundsXML: through the fund hierarchy, not through extra fields on each position.
 
 55
-00:05:11.224 --> 00:05:13.987
+00:05:11.039 --> 00:05:13.802
 That was the portfolio and its master data.
 
 56
-00:05:14.037 --> 00:05:18.894
+00:05:13.852 --> 00:05:18.709
 In the next film, you see how transactions and investor flows are recorded.
 
 57
-00:05:18.944 --> 00:05:20.203
+00:05:18.759 --> 00:05:20.018
 Thanks for watching.

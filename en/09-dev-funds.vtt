@@ -1,301 +1,301 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:09.179
+00:00:00.500 --> 00:00:09.072
 In this film you read the fund part of a FundsXML document: the fund, its net asset value and its share classes, and you check an identifier.
 
 2
-00:00:09.229 --> 00:00:10.851
+00:00:09.122 --> 00:00:10.723
 It takes about six minutes.
 
 3
-00:00:11.720 --> 00:00:13.922
+00:00:11.592 --> 00:00:13.669
 Below Funds comes the fund itself.
 
 4
-00:00:13.972 --> 00:00:18.162
+00:00:13.719 --> 00:00:17.673
 It is identified by its LEI, the global Legal Entity Identifier.
 
 5
-00:00:18.212 --> 00:00:21.872
+00:00:17.723 --> 00:00:21.176
 It has an official name, and a fund currency, here euro.
 
 6
-00:00:21.922 --> 00:00:29.822
+00:00:21.226 --> 00:00:28.684
 The fund currency matters: the fund's total values are given in it, and the positions of its portfolio are valued in it.
 
 7
-00:00:30.473 --> 00:00:33.459
+00:00:30.345 --> 00:00:33.331
 The SingleFundFlag decides the structure below.
 
 8
-00:00:33.509 --> 00:00:37.463
+00:00:33.381 --> 00:00:37.335
 True means a single fund, whose share classes follow directly.
 
 9
-00:00:37.513 --> 00:00:43.794
+00:00:37.385 --> 00:00:43.666
 False means an umbrella fund, which contains subfunds, and each subfund has its own share classes.
 
 10
-00:00:44.944 --> 00:00:47.288
+00:00:44.816 --> 00:00:47.160
 Here are the two shapes side by side.
 
 11
-00:00:47.338 --> 00:00:52.272
+00:00:47.210 --> 00:00:52.144
 A single fund has one portfolio and a list of share classes below SingleFund.
 
 12
-00:00:52.322 --> 00:00:56.673
+00:00:52.194 --> 00:00:56.545
 An umbrella, for example a SICAV, lists its subfunds below Subfunds.
 
 13
-00:00:56.723 --> 00:01:02.757
+00:00:56.595 --> 00:01:02.629
 Each subfund has its own static and dynamic data, its own portfolio and its own share classes.
 
 14
-00:01:02.807 --> 00:01:09.035
+00:01:02.679 --> 00:01:08.907
 The building blocks are the same in both shapes, so code that reads a share class works for both.
 
 15
-00:01:10.285 --> 00:01:12.702
+00:01:10.157 --> 00:01:12.574
 FundStaticData holds what rarely changes.
 
 16
-00:01:12.752 --> 00:01:17.517
+00:01:12.624 --> 00:01:17.389
 Here, the domicile, Austria, the legal structure, UCITS, and the inception date.
 
 17
-00:01:17.567 --> 00:01:25.882
+00:01:17.439 --> 00:01:25.754
 Further down follow the companies and managers, and the ongoing charges of one point five eight percent, with the date they were published.
 
 18
-00:01:27.032 --> 00:01:35.714
+00:01:26.904 --> 00:01:35.586
 Static data can hold much more: the fund's legal data and domicile, its managers, its benchmarks, its classification, and its costs.
 
 19
-00:01:35.764 --> 00:01:37.235
+00:01:35.636 --> 00:01:37.107
 Most of it is optional.
 
 20
-00:01:37.285 --> 00:01:43.255
+00:01:37.157 --> 00:01:43.127
 A delivery fills what its receivers need, and sender and receiver agree on that in advance.
 
 21
-00:01:44.505 --> 00:01:47.945
+00:01:44.377 --> 00:01:47.817
 FundDynamicData holds what changes with every valuation.
 
 22
-00:01:47.995 --> 00:01:50.624
+00:01:47.867 --> 00:01:50.496
 Total asset values list one entry per date.
 
 23
-00:01:50.674 --> 00:01:56.544
+00:01:50.546 --> 00:01:56.416
 This one is for the thirty-first of October; its nature is official, as opposed to an estimate.
 
 24
-00:01:56.594 --> 00:02:00.782
+00:01:56.466 --> 00:02:00.654
 The total net asset value is about two hundred seventy-nine million.
 
 25
-00:02:00.832 --> 00:02:04.521
+00:02:00.704 --> 00:02:04.393
 And every amount carries its currency, in the attribute ccy.
 
 26
-00:02:05.670 --> 00:02:08.251
+00:02:05.542 --> 00:02:08.015
 This pattern is used everywhere in FundsXML.
 
 27
-00:02:08.301 --> 00:02:11.897
+00:02:08.065 --> 00:02:11.514
 An amount is a number with its currency in the attribute ccy.
 
 28
-00:02:11.947 --> 00:02:15.484
+00:02:11.564 --> 00:02:14.954
 The same amount may appear several times, once per currency.
 
 29
-00:02:15.534 --> 00:02:21.522
+00:02:15.004 --> 00:02:20.746
 And optional flags mark which one is in the fund currency, and which one in the share class currency.
 
 30
-00:02:21.572 --> 00:02:25.826
+00:02:20.796 --> 00:02:24.875
 So a receiver never has to guess the currency, or convert a value again.
 
 31
-00:02:27.076 --> 00:02:29.383
+00:02:26.125 --> 00:02:28.398
 Further down are the share classes.
 
 32
-00:02:29.433 --> 00:02:33.626
+00:02:28.448 --> 00:02:32.579
 The first one has its own ISIN, a name, and its currency, euro.
 
 33
-00:02:33.676 --> 00:02:36.185
+00:02:32.629 --> 00:02:35.100
 Its type says retail and accumulating.
 
 34
-00:02:36.235 --> 00:02:47.027
+00:02:35.150 --> 00:02:45.785
 Its prices are a daily history, one entry per business day: an action code C, for create, a NAV date, the price currency, the nature official, and the NAV price.
 
 35
-00:02:47.077 --> 00:02:52.549
+00:02:45.835 --> 00:02:51.226
 On the thirty-first of October: one hundred twenty-eight euro and forty-one cents.
 
 36
-00:02:53.199 --> 00:02:56.213
+00:02:52.248 --> 00:02:55.262
 Now the dollar class, hedged against the euro.
 
 37
-00:02:56.263 --> 00:03:05.805
+00:02:55.312 --> 00:03:04.854
 It gives its total net asset value twice: in its own currency, dollar, marked isShareClassCcy, and in the fund currency, euro, marked isFundCcy.
 
 38
-00:03:05.855 --> 00:03:09.935
+00:03:04.904 --> 00:03:08.984
 About four hundred sixty-five thousand shares are outstanding.
 
 39
-00:03:09.985 --> 00:03:13.798
+00:03:09.034 --> 00:03:12.847
 Multiply them by the price, and you get the dollar amount.
 
 40
-00:03:14.449 --> 00:03:18.923
+00:03:13.498 --> 00:03:17.872
 The second share class is for institutional investors, in euro as well.
 
 41
-00:03:18.973 --> 00:03:25.358
+00:03:17.922 --> 00:03:24.166
 It has its own ISIN, its own name, and a much higher price: one thousand one hundred eighty-six euro.
 
 42
-00:03:25.408 --> 00:03:33.515
+00:03:24.216 --> 00:03:32.143
 This fund has four share classes: retail and institutional in euro, and two retail classes hedged into Swiss francs and dollars.
 
 43
-00:03:33.565 --> 00:03:39.632
+00:03:32.193 --> 00:03:38.125
 The same fund, the same portfolio, but different currencies, prices, fees and numbers of shares.
 
 44
-00:03:39.682 --> 00:03:42.372
+00:03:38.175 --> 00:03:40.805
 That is exactly what share classes are for.
 
 45
-00:03:43.521 --> 00:03:56.459
+00:03:42.570 --> 00:03:55.508
 A share class can carry much more: whether it distributes or accumulates income, whether it is currency hedged, minimum investments, the countries where it is registered, its fees, and performance figures.
 
 46
-00:03:56.509 --> 00:04:03.427
+00:03:55.558 --> 00:04:02.476
 Action codes create, modify or delete entries, so a delivery can also update data that a receiver already has.
 
 47
-00:04:04.777 --> 00:04:06.336
+00:04:03.826 --> 00:04:05.385
 Names deserve a word, too.
 
 48
-00:04:06.386 --> 00:04:11.903
+00:04:05.435 --> 00:04:10.952
 Every fund and every share class has an official name, the legal name from the prospectus.
 
 49
-00:04:11.953 --> 00:04:16.295
+00:04:11.002 --> 00:04:15.344
 Short names and marketing names can follow where a receiver needs them.
 
 50
-00:04:16.345 --> 00:04:23.533
+00:04:15.394 --> 00:04:22.582
 And texts can be given in several languages side by side, so one delivery can serve receivers in different countries.
 
 51
-00:04:23.583 --> 00:04:27.986
+00:04:22.632 --> 00:04:27.035
 Do not build your keys on names, though: names change, identifiers stay.
 
 52
-00:04:29.336 --> 00:04:32.956
+00:04:28.385 --> 00:04:31.858
 Identifiers are the key to every match between systems.
 
 53
-00:04:33.006 --> 00:04:35.558
+00:04:31.908 --> 00:04:34.357
 Share classes and securities use ISINs.
 
 54
-00:04:35.608 --> 00:04:40.562
+00:04:34.407 --> 00:04:39.161
 Companies, such as the fund, the management company or an issuer, use LEIs.
 
 55
-00:04:40.612 --> 00:04:44.098
+00:04:39.211 --> 00:04:42.555
 National codes and vendor codes can be given as well.
 
 56
-00:04:44.148 --> 00:04:50.235
+00:04:42.605 --> 00:04:48.448
 Both ISIN and LEI end in check digits, so a typing error can be found without asking anyone.
 
 57
-00:04:51.485 --> 00:04:54.188
+00:04:49.698 --> 00:04:52.247
 Is the ISIN of this share class correct?
 
 58
-00:04:54.238 --> 00:04:58.662
+00:04:52.297 --> 00:04:56.469
 Open the FundsXML panel, and type it into the identifier checker.
 
 59
-00:04:58.712 --> 00:05:03.480
+00:04:56.519 --> 00:05:01.016
 The checker knows the structure and the check digit of ISINs and LEIs.
 
 60
-00:05:03.530 --> 00:05:04.719
+00:05:01.066 --> 00:05:02.185
 This one is valid.
 
 61
-00:05:04.769 --> 00:05:10.224
+00:05:02.235 --> 00:05:07.381
 The letters A T in front stand for Austria; X M P L marks it as an example code.
 
 62
-00:05:10.878 --> 00:05:14.095
+00:05:09.091 --> 00:05:12.308
 Change a single digit, and the check digit no longer fits.
 
 63
-00:05:14.145 --> 00:05:17.757
+00:05:12.358 --> 00:05:15.970
 Typing errors like this are caught before the data goes anywhere.
 
 64
-00:05:18.411 --> 00:05:19.860
+00:05:16.624 --> 00:05:18.019
 The same works for LEIs.
 
 65
-00:05:19.910 --> 00:05:24.420
+00:05:18.069 --> 00:05:22.415
 Paste the LEI of the fund, and the checker confirms its two check digits.
 
 66
-00:05:24.470 --> 00:05:30.978
+00:05:22.465 --> 00:05:28.737
 For a whole document, the button Check Identifiers Online looks up all its codes in the public registers.
 
 67
-00:05:31.028 --> 00:05:38.661
+00:05:28.787 --> 00:05:36.143
 The codes of the example files are made up; FreeXmlToolkit recognises them by the X M P L marker and does not look them up.
 
 68
-00:05:39.813 --> 00:05:42.382
+00:05:38.026 --> 00:05:40.595
 A few tips for code that reads fund data.
 
 69
-00:05:42.432 --> 00:05:47.238
+00:05:40.645 --> 00:05:45.451
 Read both shapes: single funds and umbrellas, decided by the SingleFundFlag.
 
 70
-00:05:47.288 --> 00:05:55.864
+00:05:45.501 --> 00:05:54.077
 Use the date of each entry: every price and total value has its own NAV date, and the content date of the delivery is only the default.
 
 71
-00:05:55.914 --> 00:05:59.442
+00:05:54.127 --> 00:05:57.655
 Always read the currency attribute, and never assume it.
 
 72
-00:05:59.492 --> 00:06:06.087
+00:05:57.705 --> 00:06:04.300
 And expect lists: several dates, several prices, and names in several languages can appear side by side.
 
 73
-00:06:07.437 --> 00:06:09.703
+00:06:05.650 --> 00:06:07.916
 That was the fund part of a delivery.
 
 74
-00:06:09.753 --> 00:06:13.897
+00:06:07.966 --> 00:06:12.110
 In the next film, you read the portfolio and the asset master data.
 
 75
-00:06:13.947 --> 00:06:15.150
+00:06:12.160 --> 00:06:13.363
 Thanks for watching.

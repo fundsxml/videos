@@ -1,309 +1,309 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:02.675
+00:00:00.500 --> 00:00:02.650
 Why does fund data need a standard?
 
 2
-00:00:02.725 --> 00:00:09.987
+00:00:02.700 --> 00:00:09.880
 In this film you see how fund data travels, what goes wrong without a common format, and how FundsXML answers that.
 
 3
-00:00:10.037 --> 00:00:11.894
+00:00:09.930 --> 00:00:11.766
 No knowledge of XML is needed.
 
 4
-00:00:13.144 --> 00:00:16.581
+00:00:13.016 --> 00:00:16.453
 Behind every investment fund, data travels a long way.
 
 5
-00:00:16.631 --> 00:00:21.488
+00:00:16.503 --> 00:00:21.360
 The asset manager, the fund administrator and the custodian bank produce it.
 
 6
-00:00:21.538 --> 00:00:33.369
+00:00:21.410 --> 00:00:33.241
 Distributors and fund platforms, data vendors, insurance companies and regulators need it: prices and net asset values, portfolios, costs, and a growing number of regulatory templates.
 
 7
-00:00:33.419 --> 00:00:37.179
+00:00:33.291 --> 00:00:37.051
 Every one of these parties exchanges data with many others.
 
 8
-00:00:38.529 --> 00:00:40.590
+00:00:38.401 --> 00:00:40.462
 Take a single fund at month-end.
 
 9
-00:00:40.640 --> 00:00:45.339
+00:00:40.512 --> 00:00:45.211
 The fund administrator calculates the net asset value and the positions.
 
 10
-00:00:45.389 --> 00:00:49.560
+00:00:45.261 --> 00:00:49.432
 The asset manager checks the figures and adds its own fund data.
 
 11
-00:00:49.610 --> 00:00:54.178
+00:00:49.482 --> 00:00:54.050
 Prices, costs and ESG data then go to fund platforms and distributors.
 
 12
-00:00:54.228 --> 00:00:59.191
+00:00:54.100 --> 00:00:59.063
 Insurance companies that hold the fund need the full portfolio look-through.
 
 13
-00:00:59.241 --> 00:01:03.940
+00:00:59.113 --> 00:01:03.812
 And data vendors and regulators receive master data, prices and reports.
 
 14
-00:01:03.990 --> 00:01:08.491
+00:01:03.862 --> 00:01:08.363
 One fund, one date, and the same data travels to five places or more.
 
 15
-00:01:09.841 --> 00:01:16.655
+00:01:09.713 --> 00:01:16.527
 Without a common format, every pair of partners agrees on its own files, with their own field names and codes.
 
 16
-00:01:16.705 --> 00:01:21.334
+00:01:16.577 --> 00:01:21.206
 A new partner means a new interface, with mapping and testing from scratch.
 
 17
-00:01:21.384 --> 00:01:26.575
+00:01:21.256 --> 00:01:26.447
 When regulation changes, every one of these interfaces has to be changed on its own.
 
 18
-00:01:26.625 --> 00:01:31.879
+00:01:26.497 --> 00:01:31.751
 And errors surface late, often only at the receiver, when the data is already in use.
 
 19
-00:01:33.229 --> 00:01:35.003
+00:01:33.101 --> 00:01:34.859
 What goes wrong in practice?
 
 20
-00:01:35.053 --> 00:01:36.241
+00:01:34.909 --> 00:01:36.086
 First, identifiers.
 
 21
-00:01:36.291 --> 00:01:43.863
+00:01:36.136 --> 00:01:43.643
 One partner identifies a fund by its ISIN, the next one by a national code, and the third by its own internal number.
 
 22
-00:01:43.913 --> 00:01:44.906
+00:01:43.693 --> 00:01:44.676
 Second, meaning.
 
 23
-00:01:44.956 --> 00:01:54.613
+00:01:44.726 --> 00:01:54.299
 The same word can mean different things: is a price the net asset value, the issue price, or the redemption price, and is a cost figure gross or net?
 
 24
-00:01:54.663 --> 00:01:56.046
+00:01:54.349 --> 00:01:55.720
 Third, versions drift.
 
 25
-00:01:56.096 --> 00:02:02.496
+00:01:55.770 --> 00:02:02.114
 Each partner changes its format on its own schedule, and every change breaks someone else's import.
 
 26
-00:02:02.546 --> 00:02:04.125
+00:02:02.164 --> 00:02:03.729
 And finally, manual work.
 
 27
-00:02:04.175 --> 00:02:13.311
+00:02:03.779 --> 00:02:12.835
 Spreadsheets and e-mails fill the gaps, people re-type numbers, and errors slip through, often unnoticed until a client or a supervisor asks.
 
 28
-00:02:14.661 --> 00:02:15.830
+00:02:14.185 --> 00:02:15.354
 These costs add up.
 
 29
-00:02:15.880 --> 00:02:21.411
+00:02:15.404 --> 00:02:20.935
 Each partner relationship needs its own mapping, its own tests and its own maintenance.
 
 30
-00:02:21.461 --> 00:02:25.452
+00:02:20.985 --> 00:02:24.976
 Data is re-typed and re-formatted by hand, and checked by hand.
 
 31
-00:02:25.502 --> 00:02:30.712
+00:02:25.026 --> 00:02:30.236
 Errors reach investors, insurers and regulators, and every correction costs trust.
 
 32
-00:02:30.762 --> 00:02:36.036
+00:02:30.286 --> 00:02:35.560
 And every new requirement takes months, because it has to be built many times over.
 
 33
-00:02:37.386 --> 00:02:40.919
+00:02:36.910 --> 00:02:40.443
 Over the last decade, regulation has become the main driver.
 
 34
-00:02:40.969 --> 00:02:46.352
+00:02:40.493 --> 00:02:45.876
 MiFID II asks distributors to know the costs and the target market of every fund they sell.
 
 35
-00:02:46.402 --> 00:02:50.831
+00:02:45.926 --> 00:02:50.355
 PRIIPs needs risk, cost and performance data for key information documents.
 
 36
-00:02:50.881 --> 00:02:54.891
+00:02:50.405 --> 00:02:54.415
 The SFDR sends sustainability data from the fund to the distributor.
 
 37
-00:02:54.941 --> 00:02:59.728
+00:02:54.465 --> 00:02:59.252
 And Solvency II asks insurers to look through to the real holdings of every fund.
 
 38
-00:02:59.778 --> 00:03:04.684
+00:02:59.302 --> 00:03:04.208
 All of this is structured data, it changes regularly, and it has to arrive on time.
 
 39
-00:03:06.034 --> 00:03:12.974
+00:03:05.558 --> 00:03:12.485
 For these needs, the industry body FinDatEx defines templates: which fields must be exchanged, and what they mean.
 
 40
-00:03:13.024 --> 00:03:17.328
+00:03:12.535 --> 00:03:16.831
 But a template alone does not say how the data travels between systems.
 
 41
-00:03:17.378 --> 00:03:24.196
+00:03:16.881 --> 00:03:23.686
 That is where FundsXML comes in: it carries these templates, together with all other fund data, in one delivery.
 
 42
-00:03:25.546 --> 00:03:27.032
+00:03:25.036 --> 00:03:26.475
 The arithmetic is simple.
 
 43
-00:03:27.082 --> 00:03:38.645
+00:03:26.525 --> 00:03:37.728
 Ten partners who all exchange data with each other need up to forty five bilateral interfaces: every line in this picture is one, with its own format, its own tests and its own maintenance.
 
 44
-00:03:38.695 --> 00:03:43.192
+00:03:37.778 --> 00:03:42.134
 With a common format, each partner builds one: to read and write FundsXML.
 
 45
-00:03:43.242 --> 00:03:48.292
+00:03:42.184 --> 00:03:47.076
 And a new partner no longer means a new project, because it speaks the same format.
 
 46
-00:03:49.642 --> 00:03:53.503
+00:03:48.426 --> 00:03:52.317
 FundsXML is the answer: one common language for fund data.
 
 47
-00:03:53.553 --> 00:03:58.897
+00:03:52.367 --> 00:03:57.754
 Instead of many bilateral formats, every party writes and reads the same format.
 
 48
-00:03:58.947 --> 00:04:04.426
+00:03:57.804 --> 00:04:03.326
 A sender produces a file once, and every receiver understands it, in the same way.
 
 49
-00:04:05.776 --> 00:04:06.937
+00:04:04.676 --> 00:04:05.793
 So what is FundsXML?
 
 50
-00:04:06.987 --> 00:04:13.901
+00:04:05.843 --> 00:04:12.505
 It is open and free: the schema and its documentation are published, and anyone can use them without a licence fee.
 
 51
-00:04:13.951 --> 00:04:16.323
+00:04:12.555 --> 00:04:14.839
 It was made by the fund industry itself.
 
 52
-00:04:16.373 --> 00:04:23.468
+00:04:14.889 --> 00:04:21.726
 It started in two thousand and one, when fund houses looked for a common format for the data they exchanged every day.
 
 53
-00:04:23.518 --> 00:04:32.188
+00:04:21.776 --> 00:04:30.130
 It is run by a not-for-profit association with open membership, and decisions are prepared in working groups by the people who use the standard.
 
 54
-00:04:32.238 --> 00:04:38.062
+00:04:30.180 --> 00:04:35.791
 And it is built on XML, so every system can read it, and every file can be checked automatically.
 
 55
-00:04:39.412 --> 00:04:40.693
+00:04:37.141 --> 00:04:38.422
 In short, its history.
 
 56
-00:04:40.743 --> 00:04:44.446
+00:04:38.472 --> 00:04:42.175
 It began in two thousand and one, with a group of fund houses.
 
 57
-00:04:44.496 --> 00:04:50.013
+00:04:42.225 --> 00:04:47.742
 In two thousand and three, version one was published under the German fund association, BVI.
 
 58
-00:04:50.063 --> 00:04:55.460
+00:04:47.792 --> 00:04:53.189
 Over the following years, Austria, the Netherlands, France, Denmark and Luxembourg joined.
 
 59
-00:04:55.510 --> 00:05:02.783
+00:04:53.239 --> 00:05:00.512
 Today, version four carries the European regulatory templates, and the standard keeps growing with every new requirement.
 
 60
-00:05:04.133 --> 00:05:07.187
+00:05:01.862 --> 00:05:04.807
 Where does FundsXML fit among other standards?
 
 61
-00:05:07.237 --> 00:05:11.911
+00:05:04.857 --> 00:05:09.365
 ISO 20022 covers messages, for example for fund orders and settlement.
 
 62
-00:05:11.961 --> 00:05:16.770
+00:05:09.415 --> 00:05:14.053
 openfunds is a dictionary of fund attributes, often exchanged as tables.
 
 63
-00:05:16.820 --> 00:05:19.604
+00:05:14.103 --> 00:05:16.788
 FinDatEx defines the regulatory templates.
 
 64
-00:05:19.654 --> 00:05:29.525
+00:05:16.838 --> 00:05:26.360
 FundsXML brings it together in complete fund deliveries: master data, prices, portfolios, transactions and regulatory data, in one structured file.
 
 65
-00:05:29.575 --> 00:05:33.776
+00:05:26.410 --> 00:05:30.462
 These standards work alongside each other; they do not compete.
 
 66
-00:05:35.126 --> 00:05:36.705
+00:05:31.812 --> 00:05:33.391
 What does each party gain?
 
 67
-00:05:36.755 --> 00:05:41.593
+00:05:33.441 --> 00:05:38.279
 Senders produce one format for all their partners, instead of one per partner.
 
 68
-00:05:41.643 --> 00:05:45.040
+00:05:38.329 --> 00:05:41.726
 Receivers load data from every fund house the same way.
 
 69
-00:05:45.090 --> 00:05:49.175
+00:05:41.776 --> 00:05:45.861
 Everyone can check a file automatically, before the data moves on.
 
 70
-00:05:49.225 --> 00:05:56.570
+00:05:45.911 --> 00:05:53.256
 And when regulation changes, the new requirement is built into the standard once, and not into every single interface.
 
 71
-00:05:56.620 --> 00:06:00.643
+00:05:53.306 --> 00:05:57.329
 In short: less effort for everyone, and data that can be trusted.
 
 72
-00:06:01.993 --> 00:06:04.788
+00:05:58.679 --> 00:06:01.474
 This is the key idea: one file, many receivers.
 
 73
-00:06:04.838 --> 00:06:09.448
+00:06:01.524 --> 00:06:06.134
 The same delivery can serve the distributor, the insurer and the data vendor.
 
 74
-00:06:09.498 --> 00:06:14.896
+00:06:06.184 --> 00:06:11.582
 Each one takes the part it needs, and nobody has to build a special file for each partner.
 
 75
-00:06:16.246 --> 00:06:18.950
+00:06:12.932 --> 00:06:15.617
 That was why fund data needs a standard.
 
 76
-00:06:19.000 --> 00:06:23.082
+00:06:15.667 --> 00:06:19.720
 In the next film, you see what a FundsXML delivery contains.
 
 77
-00:06:23.132 --> 00:06:24.459
+00:06:19.770 --> 00:06:21.087
 Thanks for watching.

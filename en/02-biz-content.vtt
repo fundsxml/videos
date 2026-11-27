@@ -1,277 +1,277 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:03.468
+00:00:00.500 --> 00:00:03.411
 What does a FundsXML delivery actually contain?
 
 2
-00:00:03.518 --> 00:00:10.211
+00:00:03.461 --> 00:00:10.027
 In this film you get to know the areas of the standard, in business terms, and you look into a real file.
 
 3
-00:00:10.261 --> 00:00:12.138
+00:00:10.077 --> 00:00:11.917
 No knowledge of XML is needed.
 
 4
-00:00:13.388 --> 00:00:17.775
+00:00:13.167 --> 00:00:17.565
 A FundsXML delivery is like a well-organised folder with fixed sections.
 
 5
-00:00:17.825 --> 00:00:21.225
+00:00:17.615 --> 00:00:21.025
 The envelope says who sent it, when, and for which date.
 
 6
-00:00:21.275 --> 00:00:27.202
+00:00:21.075 --> 00:00:27.017
 The funds section describes the funds and their share classes, their prices and their portfolios.
 
 7
-00:00:27.252 --> 00:00:31.207
+00:00:27.067 --> 00:00:31.033
 The securities section describes every instrument the funds hold.
 
 8
-00:00:31.257 --> 00:00:36.815
+00:00:31.083 --> 00:00:36.655
 And further sections carry transactions, documents, national data and regulatory templates.
 
 9
-00:00:36.865 --> 00:00:39.649
+00:00:36.705 --> 00:00:39.497
 Each delivery uses only the sections it needs.
 
 10
-00:00:40.999 --> 00:00:46.408
+00:00:40.847 --> 00:00:46.256
 One principle runs through the whole standard: static and dynamic data are kept apart.
 
 11
-00:00:46.458 --> 00:00:54.088
+00:00:46.306 --> 00:00:53.936
 Static data changes rarely: the name of a fund, its launch date, its legal form, its share classes and their identifiers.
 
 12
-00:00:54.138 --> 00:01:01.070
+00:00:53.986 --> 00:01:00.918
 Dynamic data changes with every valuation: the net asset value, the prices, the fund volume and the portfolio.
 
 13
-00:01:01.120 --> 00:01:08.877
+00:01:00.968 --> 00:01:08.725
 Receivers load the static data once and update it when it changes, while the dynamic data arrives every day, week or month.
 
 14
-00:01:10.227 --> 00:01:12.075
+00:01:10.075 --> 00:01:11.922
 Let us go through the areas.
 
 15
-00:01:12.125 --> 00:01:13.633
+00:01:11.972 --> 00:01:13.480
 First, the fund itself.
 
 16
-00:01:13.683 --> 00:01:19.326
+00:01:13.530 --> 00:01:19.170
 A FundsXML file can describe a single fund, or an umbrella fund with many sub-funds.
 
 17
-00:01:19.376 --> 00:01:24.680
+00:01:19.220 --> 00:01:24.522
 Each fund or sub-fund has share classes: the units that investors actually buy.
 
 18
-00:01:24.730 --> 00:01:34.099
+00:01:24.572 --> 00:01:33.938
 Share classes of the same fund can differ in currency, in fees, in the minimum investment, and in whether income is paid out or reinvested.
 
 19
-00:01:34.149 --> 00:01:37.149
+00:01:33.988 --> 00:01:36.986
 Each one has its own ISIN, and its own price.
 
 20
-00:01:38.499 --> 00:01:40.684
+00:01:38.336 --> 00:01:40.521
 Second, prices and the net asset value.
 
 21
-00:01:40.734 --> 00:01:49.911
+00:01:40.571 --> 00:01:49.748
 For every valuation date, the delivery carries the total net assets of the fund, and for each share class the price per unit and the number of units outstanding.
 
 22
-00:01:49.961 --> 00:01:59.367
+00:01:49.798 --> 00:01:59.204
 Every amount carries its currency, and an amount can be given in several currencies at once, for example in the fund currency and in the currency of the share class.
 
 23
-00:01:59.417 --> 00:02:01.315
+00:01:59.254 --> 00:02:01.152
 So nobody has to convert it again.
 
 24
-00:02:02.665 --> 00:02:06.493
+00:02:02.502 --> 00:02:06.330
 Third, the portfolio: what the fund holds on the valuation date.
 
 25
-00:02:06.543 --> 00:02:13.401
+00:02:06.380 --> 00:02:13.238
 Each position says how much the fund holds of an instrument, what it is worth, and what weight it has in the fund.
 
 26
-00:02:13.451 --> 00:02:22.369
+00:02:13.288 --> 00:02:22.206
 The description of the instrument itself, its name, its issuer, its type, sits in a separate securities section, and the positions only refer to it.
 
 27
-00:02:22.419 --> 00:02:27.095
+00:02:22.256 --> 00:02:26.932
 Shares, bonds, fund units, derivatives, deposits and accounts are all covered.
 
 28
-00:02:28.445 --> 00:02:32.249
+00:02:28.282 --> 00:02:31.869
 FundsXML relies on common codes instead of free text.
 
 29
-00:02:32.299 --> 00:02:35.667
+00:02:31.919 --> 00:02:35.094
 An ISIN identifies a security or a share class.
 
 30
-00:02:35.717 --> 00:02:40.758
+00:02:35.144 --> 00:02:39.898
 An LEI identifies a company: the fund, the asset manager or an issuer.
 
 31
-00:02:40.808 --> 00:02:44.030
+00:02:39.948 --> 00:02:42.986
 Currencies and countries use their ISO codes.
 
 32
-00:02:44.080 --> 00:02:48.612
+00:02:43.036 --> 00:02:47.310
 And fixed lists describe asset types, cost types or fund types.
 
 33
-00:02:48.662 --> 00:02:54.357
+00:02:47.360 --> 00:02:52.731
 So every receiver interprets a value in exactly the same way, without guessing.
 
 34
-00:02:55.707 --> 00:02:56.782
+00:02:54.081 --> 00:02:55.156
 And there is more.
 
 35
-00:02:56.832 --> 00:03:04.344
+00:02:55.206 --> 00:03:02.718
 Transactions record what moved: subscriptions and redemptions of investors, distributions, and income from the portfolio.
 
 36
-00:03:04.394 --> 00:03:09.718
+00:03:02.768 --> 00:03:08.092
 Documents link prospectuses, key information documents, factsheets and annual reports.
 
 37
-00:03:09.768 --> 00:03:14.468
+00:03:08.142 --> 00:03:12.842
 Country modules add national reporting, for example for Austria and Germany.
 
 38
-00:03:14.518 --> 00:03:21.842
+00:03:12.892 --> 00:03:20.216
 And the regulatory section carries the European templates for distributors and insurers; the next film is about those.
 
 39
-00:03:22.809 --> 00:03:24.541
+00:03:21.183 --> 00:03:22.913
 Let us look at a real file.
 
 40
-00:03:24.591 --> 00:03:30.940
+00:03:22.963 --> 00:03:29.305
 This is one of the realistic FundsXML example files, opened in FreeXmlToolkit, a free XML editor.
 
 41
-00:03:30.990 --> 00:03:41.958
+00:03:29.355 --> 00:03:40.309
 It describes a fictional multi-asset fund at the end of October, with made-up but consistent data: hundreds of securities, four share classes, a month of transactions.
 
 42
-00:03:42.610 --> 00:03:45.014
+00:03:40.984 --> 00:03:43.388
 Folded, the structure is easy to see.
 
 43
-00:03:45.064 --> 00:03:46.938
+00:03:43.438 --> 00:03:45.312
 Control data is the envelope.
 
 44
-00:03:46.988 --> 00:03:50.652
+00:03:45.362 --> 00:03:49.026
 Funds holds the fund, with its prices and its portfolio.
 
 45
-00:03:50.702 --> 00:03:53.836
+00:03:49.076 --> 00:03:52.210
 Asset master data describes every security once.
 
 46
-00:03:53.886 --> 00:03:58.876
+00:03:52.260 --> 00:03:57.250
 And regulatory reportings carry the templates for distributors and insurers.
 
 47
-00:03:59.528 --> 00:04:01.284
+00:03:57.902 --> 00:03:59.658
 Every value has a clear name.
 
 48
-00:04:01.334 --> 00:04:06.640
+00:03:59.708 --> 00:04:05.014
 Here is the fund's total net asset value, about two hundred seventy-nine million euro.
 
 49
-00:04:06.690 --> 00:04:10.190
+00:04:05.064 --> 00:04:08.564
 A machine can process it, and a person can still read it.
 
 50
-00:04:11.340 --> 00:04:13.794
+00:04:09.714 --> 00:04:12.168
 Not every delivery carries everything.
 
 51
-00:04:13.844 --> 00:04:18.538
+00:04:12.218 --> 00:04:16.912
 A daily price feed carries prices and net asset values, and little else.
 
 52
-00:04:18.588 --> 00:04:21.502
+00:04:16.962 --> 00:04:19.876
 A month-end delivery adds the full portfolio.
 
 53
-00:04:21.552 --> 00:04:25.653
+00:04:19.926 --> 00:04:24.027
 A master data update carries new share classes or changed fees.
 
 54
-00:04:25.703 --> 00:04:31.253
+00:04:24.077 --> 00:04:29.627
 And a regulatory delivery carries one or more templates for distributors or insurers.
 
 55
-00:04:31.303 --> 00:04:36.590
+00:04:29.677 --> 00:04:34.964
 All of them use the same standard, so a receiver needs only one way to read them.
 
 56
-00:04:37.940 --> 00:04:41.711
+00:04:36.314 --> 00:04:40.085
 Two more things matter in daily business: dates and corrections.
 
 57
-00:04:41.761 --> 00:04:47.860
+00:04:40.135 --> 00:04:46.234
 Every delivery names its content date, the business date the data refers to, for example the month-end.
 
 58
-00:04:47.910 --> 00:04:54.128
+00:04:46.284 --> 00:04:52.502
 And every price and every portfolio carries its own valuation date, so a file can even hold several days.
 
 59
-00:04:54.178 --> 00:04:58.069
+00:04:52.552 --> 00:04:56.443
 When data was wrong, the sender does not silently send a new file.
 
 60
-00:04:58.119 --> 00:05:04.098
+00:04:56.493 --> 00:05:02.472
 A correction is a delivery of its own, marked as a correction, and it names the delivery it replaces.
 
 61
-00:05:04.148 --> 00:05:09.053
+00:05:02.522 --> 00:05:07.427
 So the receiver can follow every change, from the first delivery to the latest one.
 
 62
-00:05:10.403 --> 00:05:11.570
+00:05:08.777 --> 00:05:09.944
 Who needs which part?
 
 63
-00:05:11.620 --> 00:05:17.768
+00:05:09.994 --> 00:05:16.142
 Distributors and fund platforms need the share classes, their prices, their costs and their target markets.
 
 64
-00:05:17.818 --> 00:05:24.661
+00:05:16.192 --> 00:05:23.035
 Insurers need the full portfolio with the master data of every position, so they can look through to the real holdings.
 
 65
-00:05:24.711 --> 00:05:29.469
+00:05:23.085 --> 00:05:27.843
 Data vendors collect master data and prices from many fund houses and pass them on.
 
 66
-00:05:29.519 --> 00:05:35.841
+00:05:27.893 --> 00:05:34.215
 And supervisors and central banks receive fund volumes, holdings and the national data their country asks for.
 
 67
-00:05:37.191 --> 00:05:40.329
+00:05:35.565 --> 00:05:38.684
 That was what a FundsXML delivery contains.
 
 68
-00:05:40.379 --> 00:05:45.000
+00:05:38.734 --> 00:05:43.326
 In the next film, you see how FundsXML carries regulatory data.
 
 69
-00:05:45.050 --> 00:05:46.483
+00:05:43.376 --> 00:05:44.799
 Thanks for watching.

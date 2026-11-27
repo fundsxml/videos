@@ -11,7 +11,7 @@
           "title": "Why fund data needs a standard",
           "audience": "business",
           "description": "Why the fund industry needs a common data format: how fund data travels between asset managers, administrators, custodians, distributors, insurers, data vendors and regulators; what goes wrong without a standard; how regulation drives the need for structured data; and how FundsXML, an open standard made by the fund industry, answers it.",
-          "duration": 387.8,
+          "duration": 384.4,
           "chapters": [
             {
               "t": 0,
@@ -22,15 +22,15 @@
               "title": "The problem"
             },
             {
-              "t": 157,
+              "t": 156,
               "title": "Regulation as the driver"
             },
             {
-              "t": 245,
+              "t": 244,
               "title": "What FundsXML is"
             },
             {
-              "t": 304,
+              "t": 301,
               "title": "Where it fits"
             }
           ],
@@ -45,7 +45,7 @@
           "title": "What a FundsXML delivery contains",
           "audience": "business",
           "description": "What a FundsXML delivery carries, in business terms: fund and share class master data, net asset values and prices, portfolios and holdings, transactions and distributions, documents, country modules and regulatory data. Why static and dynamic data are kept apart, typical kinds of deliveries, and a look into a real file.",
-          "duration": 348.7,
+          "duration": 347.1,
           "chapters": [
             {
               "t": 0,
@@ -60,11 +60,11 @@
               "title": "The areas"
             },
             {
-              "t": 202,
+              "t": 201,
               "title": "A real file"
             },
             {
-              "t": 251,
+              "t": 249,
               "title": "Kinds of deliveries"
             }
           ],
@@ -79,7 +79,7 @@
           "title": "Regulatory reporting with FundsXML",
           "audience": "business",
           "description": "How FundsXML carries the European regulatory templates: why regulation needs structured fund data, the roles of FinDatEx and FundsXML, the templates EMT (MiFID II), EPT (PRIIPs), EET (SFDR and ESG), TPT (Solvency II look-through) and EFT (feedback from distributors), who sends what to whom, template versions, national reporting and the European Single Access Point.",
-          "duration": 472.5,
+          "duration": 471.2,
           "chapters": [
             {
               "t": 0,
@@ -102,15 +102,15 @@
               "title": "Who sends what"
             },
             {
-              "t": 329,
+              "t": 328,
               "title": "Versions and change"
             },
             {
-              "t": 412,
+              "t": 411,
               "title": "In practice"
             },
             {
-              "t": 438,
+              "t": 437,
               "title": "What it brings"
             }
           ],
@@ -125,7 +125,7 @@
           "title": "Trust in the data: quality and control",
           "audience": "business",
           "description": "How the quality of fund data is secured with FundsXML: why a valid file is not yet correct data, the three levels readable, valid and plausible, what the schema checks and what business rules check, check digits of identifiers, checks on both sides, corrections and versions, and a data-quality report in FreeXmlToolkit.",
-          "duration": 307.5,
+          "duration": 302.3,
           "chapters": [
             {
               "t": 0,
@@ -136,27 +136,27 @@
               "title": "Why quality matters"
             },
             {
-              "t": 36,
+              "t": 35,
               "title": "Three levels"
             },
             {
-              "t": 108,
+              "t": 107,
               "title": "Business rules"
             },
             {
-              "t": 182,
+              "t": 178,
               "title": "In practice"
             },
             {
-              "t": 211,
+              "t": 207,
               "title": "Checks on both sides"
             },
             {
-              "t": 235,
+              "t": 231,
               "title": "Corrections"
             },
             {
-              "t": 255,
+              "t": 251,
               "title": "Measuring quality"
             }
           ],
@@ -171,14 +171,14 @@
           "title": "Introducing FundsXML: a project from A to Z",
           "audience": "business",
           "description": "How a FundsXML project runs, from the first idea to daily operation: scope, mapping, prototype and pilot, testing, go-live and operations; the roles involved, typical pitfalls, what is available free of charge, how versions and the standard evolve, and how to take part.",
-          "duration": 426.8,
+          "duration": 424.8,
           "chapters": [
             {
               "t": 0,
               "title": "Intro"
             },
             {
-              "t": 13,
+              "t": 12,
               "title": "Why start"
             },
             {
@@ -190,27 +190,27 @@
               "title": "Preparation and mapping"
             },
             {
-              "t": 111,
+              "t": 110,
               "title": "Pilot and tests"
             },
             {
-              "t": 182,
+              "t": 181,
               "title": "Go-live and operations"
             },
             {
-              "t": 231,
+              "t": 230,
               "title": "Roles and pitfalls"
             },
             {
-              "t": 272,
+              "t": 271,
               "title": "First steps"
             },
             {
-              "t": 295,
+              "t": 293,
               "title": "What helps"
             },
             {
-              "t": 342,
+              "t": 341,
               "title": "A living standard"
             }
           ],
@@ -225,7 +225,7 @@
           "title": "Taking part in FundsXML",
           "audience": "business",
           "description": "How FundsXML evolves and how to take part: who decides about the standard, the FundsXML Standards Committee and the three working groups (Content & Technique, Promotion, Documentation), associate and full membership, contributing on GitHub, the path of a change request from proposal to a new version, small and large changes, and what makes a good change request.",
-          "duration": 330.9,
+          "duration": 330.1,
           "chapters": [
             {
               "t": 0,
@@ -240,7 +240,7 @@
               "title": "Who decides"
             },
             {
-              "t": 84,
+              "t": 83,
               "title": "The working groups"
             },
             {
@@ -252,7 +252,7 @@
               "title": "Change requests"
             },
             {
-              "t": 244,
+              "t": 245,
               "title": "A good change request"
             }
           ],
@@ -264,8 +264,8 @@
       ],
       "full": {
         "title": "FundsXML for business (all films)",
-        "duration": 2274.2,
-        "url": "https://github.com/fundsxml/videos/releases/download/v4/fundsxml-business-en.mp4"
+        "duration": 2259.9,
+        "url": "https://github.com/fundsxml/videos/releases/download/v5/fundsxml-business-en.mp4"
       }
     },
     {
@@ -278,7 +278,7 @@
           "title": "Set up FreeXmlToolkit for FundsXML",
           "audience": "data",
           "description": "Set up a free working environment for FundsXML: turn on the FundsXML extension of FreeXmlToolkit, choose the schema version, get to know the FundsXML panel and its tools, read the schema's documentation of any element, open the schema itself, and start from an official example file. Also: why FundsXML needs an XSD 1.1 validator, and the two forms in which the schema is published. With an overview of other tools: command line validators, IDEs and the online documentation.",
-          "duration": 226.5,
+          "duration": 227.7,
           "chapters": [
             {
               "t": 0,
@@ -289,27 +289,27 @@
               "title": "The schema"
             },
             {
-              "t": 44,
+              "t": 45,
               "title": "Turn the extension on"
             },
             {
-              "t": 84,
+              "t": 85,
               "title": "The FundsXML panel"
             },
             {
-              "t": 120,
+              "t": 121,
               "title": "The schema explains itself"
             },
             {
-              "t": 142,
+              "t": 143,
               "title": "The schema itself"
             },
             {
-              "t": 171,
+              "t": 172,
               "title": "Start from an example"
             },
             {
-              "t": 187,
+              "t": 188,
               "title": "Other tools"
             }
           ],
@@ -324,7 +324,7 @@
           "title": "Anatomy of a delivery: structure and ControlData",
           "audience": "data",
           "description": "How a FundsXML document is built: the root element FundsXML4, its main blocks (ControlData, Funds, AssetMasterData, Documents, RegulatoryReportings, CountrySpecificData), and ControlData in detail: document ID, timestamps, schema version, content date, data supplier, and the data operations INITIAL, AMEND and DELETE with related document IDs. With common pitfalls. Includes turning a delivery into a correction in FreeXmlToolkit.",
-          "duration": 252.7,
+          "duration": 252.6,
           "chapters": [
             {
               "t": 0,
@@ -358,7 +358,7 @@
           "title": "Funds, share classes and NAV",
           "audience": "data",
           "description": "The fund part of a FundsXML document: fund identifiers and names, SingleFundFlag with single funds and umbrellas, FundStaticData and FundDynamicData, the total net asset value, share classes with prices, shares outstanding and amounts in several currencies (AmountType with ccy), action codes, and checking ISIN and LEI check digits in FreeXmlToolkit.",
-          "duration": 378.9,
+          "duration": 377.1,
           "chapters": [
             {
               "t": 0,
@@ -373,15 +373,15 @@
               "title": "Static and dynamic data"
             },
             {
-              "t": 147,
+              "t": 146,
               "title": "Share classes"
             },
             {
-              "t": 269,
+              "t": 268,
               "title": "Identifiers"
             },
             {
-              "t": 339,
+              "t": 338,
               "title": "Reading tips"
             }
           ],
@@ -396,7 +396,7 @@
           "title": "Portfolios and asset master data",
           "audience": "data",
           "description": "The portfolio part of a FundsXML document: positions with their value and weight, the instrument-specific block (equities, bonds, fund units, options, FX forwards, cash), the link from a position to its asset in AssetMasterData through UniqueID (xs:ID and xs:IDREF), a broken link found by the schema, portfolio breakdowns, and how fund-of-fund look-through is modelled.",
-          "duration": 322.7,
+          "duration": 322.5,
           "chapters": [
             {
               "t": 0,
@@ -415,11 +415,11 @@
               "title": "Master data"
             },
             {
-              "t": 239,
+              "t": 240,
               "title": "A broken link"
             },
             {
-              "t": 255,
+              "t": 256,
               "title": "Breakdowns and look-through"
             }
           ],
@@ -434,14 +434,14 @@
           "title": "Transactions and investor flows",
           "audience": "data",
           "description": "How FundsXML records what moved in a fund: subscriptions and redemptions of investors (Flows on the share class), distributions (Distributions), income from the portfolio (Earnings) and the portfolio's own trades (Transactions), with reporting periods, dates, amounts in several currencies and the links to the assets. Also: how switches are reported, and what the core schema leaves to other standards.",
-          "duration": 225.6,
+          "duration": 224.3,
           "chapters": [
             {
               "t": 0,
               "title": "Intro"
             },
             {
-              "t": 14,
+              "t": 13,
               "title": "Where they live"
             },
             {
@@ -449,15 +449,15 @@
               "title": "Investor flows"
             },
             {
-              "t": 89,
+              "t": 88,
               "title": "Distributions and income"
             },
             {
-              "t": 134,
+              "t": 133,
               "title": "Portfolio trades"
             },
             {
-              "t": 168,
+              "t": 167,
               "title": "Reading tips"
             },
             {
@@ -476,7 +476,7 @@
           "title": "Regulatory templates in XML",
           "audience": "data",
           "description": "How the FinDatEx templates sit in a FundsXML file: RegulatoryReportings with DirectReporting and IndirectReporting, an EMT V4.2 block (data set information, general information, target market, ex-ante costs) and a TPT V7 block for Solvency II (portfolio data, positions with CIC codes and valuations), template versions as their own elements, and how country-specific data and custom attributes extend the standard.",
-          "duration": 284.2,
+          "duration": 282.2,
           "chapters": [
             {
               "t": 0,
@@ -495,11 +495,11 @@
               "title": "TPT"
             },
             {
-              "t": 229,
+              "t": 228,
               "title": "Core and templates"
             },
             {
-              "t": 252,
+              "t": 251,
               "title": "Extensions"
             }
           ],
@@ -514,7 +514,7 @@
           "title": "Documents: link, embed, extract",
           "audience": "data",
           "description": "How FundsXML carries documents such as prospectuses, PRIIPs KIDs and factsheets: the Documents block, document types, languages and countries, the assignment to funds and share classes, format, signature and dates, delivery as a link or embedded as base64, replacing and restricted documents, and the Documents tool of FreeXmlToolkit to save embedded documents and embed new ones.",
-          "duration": 477.3,
+          "duration": 477.4,
           "chapters": [
             {
               "t": 0,
@@ -541,7 +541,7 @@
               "title": "On the receiver's side"
             },
             {
-              "t": 419,
+              "t": 420,
               "title": "Tips"
             }
           ],
@@ -556,7 +556,7 @@
           "title": "Validate and check data quality",
           "audience": "data",
           "description": "Validate a FundsXML delivery in two stages: against the XSD 1.1 schema, reading and fixing its error messages, and against business rules with the FundsXML data-quality checks of FreeXmlToolkit. With the data-quality report, a catalogue of typical schema errors, Schematron rules, and validation on the command line and in build pipelines.",
-          "duration": 303.7,
+          "duration": 303.2,
           "chapters": [
             {
               "t": 0,
@@ -575,7 +575,7 @@
               "title": "Reading error messages"
             },
             {
-              "t": 142,
+              "t": 141,
               "title": "Stage two: business rules"
             },
             {
@@ -583,7 +583,7 @@
               "title": "Rules of your own"
             },
             {
-              "t": 268,
+              "t": 267,
               "title": "Automate it"
             }
           ],
@@ -598,7 +598,7 @@
           "title": "Query, transform and integrate",
           "audience": "engineering",
           "description": "Work with the data in a FundsXML file: XPath paths without a namespace, the ready-made FundsXML queries in the Query Console of FreeXmlToolkit (the ten largest positions as a table), an XSLT stylesheet that turns the positions into CSV, a large file read as a stream in Python with lxml (half a million positions with flat memory, from the FundsXML examples), classes generated from the schema, and the way on to a database.",
-          "duration": 254.3,
+          "duration": 253.0,
           "chapters": [
             {
               "t": 0,
@@ -613,11 +613,11 @@
               "title": "Transform"
             },
             {
-              "t": 120,
+              "t": 119,
               "title": "Into your systems"
             },
             {
-              "t": 216,
+              "t": 215,
               "title": "Summary"
             }
           ],
@@ -629,8 +629,8 @@
       ],
       "full": {
         "title": "FundsXML for developers (all films)",
-        "duration": 2725.9,
-        "url": "https://github.com/fundsxml/videos/releases/download/v4/fundsxml-developers-en.mp4"
+        "duration": 2720.2,
+        "url": "https://github.com/fundsxml/videos/releases/download/v5/fundsxml-developers-en.mp4"
       }
     },
     {
@@ -643,7 +643,7 @@
           "title": "A FundsXML delivery chain",
           "audience": "engineering",
           "description": "How FundsXML runs in production: who sends what to whom, the whole delivery chain on one page (sources, central database, generator, validation, SFTP, API and portals), the chains of sender and receiver, security, rhythms and schema versions, the five building blocks of a production setup, roles, build or buy, two environments, document IDs, and the complete example used in this series, which can be downloaded.",
-          "duration": 440.5,
+          "duration": 439.2,
           "chapters": [
             {
               "t": 0,
@@ -689,42 +689,42 @@
           "title": "FundsXML in a database",
           "audience": "engineering",
           "description": "How FundsXML data is stored in a database, with the complete PostgreSQL example of the FundsXML examples repository: the XML column and shredded tables, layers, a table model in which everything that repeats is a row (several funds per file, umbrellas and subfunds, several NAVs per day and currency, portfolios and positions, look-through), keys and assets without an ISIN, amounts and currencies, code lists, dates, transactions in four places, documents, regulatory templates, history and corrections, views, quality, access and performance. All files can be downloaded.",
-          "duration": 722.5,
+          "duration": 715.7,
           "chapters": [
             {
               "t": 0,
               "title": "Intro"
             },
             {
-              "t": 25,
+              "t": 24,
               "title": "Two ways"
             },
             {
-              "t": 99,
+              "t": 98,
               "title": "A table model"
             },
             {
-              "t": 154,
+              "t": 152,
               "title": "What repeats"
             },
             {
-              "t": 325,
+              "t": 322,
               "title": "Keys"
             },
             {
-              "t": 371,
+              "t": 368,
               "title": "Amounts and codes"
             },
             {
-              "t": 443,
+              "t": 439,
               "title": "Transactions and documents"
             },
             {
-              "t": 533,
+              "t": 527,
               "title": "History and corrections"
             },
             {
-              "t": 680,
+              "t": 674,
               "title": "Download"
             }
           ],
@@ -739,14 +739,14 @@
           "title": "Loading FundsXML files",
           "audience": "engineering",
           "description": "How FundsXML files get into a database safely, with the loader of the complete PostgreSQL example: the steps of a robust loader, a landing folder, cheap checks first, triggers, validation and schema versions, idempotency through the UniqueDocumentID, full and delta deliveries, streaming large files with one handler per repeating element, funds and subfunds, the order of assets and positions, asset keys, transactions, documents and regulatory templates, business rules, speed, six deliveries and four broken files at work, corrections and deletions, reconciliation, code checks, error reports, tests and release. All files can be downloaded.",
-          "duration": 681.9,
+          "duration": 681.4,
           "chapters": [
             {
               "t": 0,
               "title": "Intro"
             },
             {
-              "t": 21,
+              "t": 22,
               "title": "The steps"
             },
             {
@@ -762,7 +762,7 @@
               "title": "Large files"
             },
             {
-              "t": 306,
+              "t": 305,
               "title": "Transactions, documents, templates"
             },
             {
@@ -770,7 +770,7 @@
               "title": "The loader at work"
             },
             {
-              "t": 523,
+              "t": 522,
               "title": "Reconcile"
             },
             {
@@ -789,7 +789,7 @@
           "title": "Generating FundsXML",
           "audience": "engineering",
           "description": "How to produce FundsXML from a database, with the generator of the complete PostgreSQL example: start with the target file, a mapping table, a partner register that says which data goes to whom, templates, XSLT or generated code, ControlData, writing share classes, several funds and dates in one file, element order, empty elements and formats, validation in FreeXmlToolkit, corrections, large deliveries, several schema versions, partner configuration, time windows, golden files, CI and the round trip, handing over, resends and documentation. All files can be downloaded.",
-          "duration": 617.3,
+          "duration": 614.9,
           "chapters": [
             {
               "t": 0,
@@ -800,7 +800,7 @@
               "title": "Start with the target"
             },
             {
-              "t": 49,
+              "t": 48,
               "title": "The mapping"
             },
             {
@@ -808,31 +808,31 @@
               "title": "Three ways"
             },
             {
-              "t": 170,
+              "t": 167,
               "title": "The generator"
             },
             {
-              "t": 311,
+              "t": 309,
               "title": "Check before sending"
             },
             {
-              "t": 328,
+              "t": 325,
               "title": "Corrections"
             },
             {
-              "t": 375,
+              "t": 371,
               "title": "Several versions"
             },
             {
-              "t": 442,
+              "t": 439,
               "title": "Tests"
             },
             {
-              "t": 514,
+              "t": 511,
               "title": "Handing over"
             },
             {
-              "t": 576,
+              "t": 573,
               "title": "Download"
             }
           ],
@@ -847,7 +847,7 @@
           "title": "Running FundsXML in daily operations",
           "audience": "business",
           "description": "What daily operation of a FundsXML chain needs: a day in operations, monitoring and a delivery overview, duty and runbooks, error classes and incident handling with an example, reconciliation, feedback, agreements with partners, onboarding, changes in the partner landscape, security, schema upgrades, the archive, metrics, people, reporting, typical first-year issues, a checklist, and staying involved in the standard.",
-          "duration": 469.1,
+          "duration": 468.6,
           "chapters": [
             {
               "t": 0,
@@ -882,7 +882,7 @@
               "title": "New versions"
             },
             {
-              "t": 335,
+              "t": 334,
               "title": "Getting better"
             },
             {
@@ -898,12 +898,12 @@
       ],
       "full": {
         "title": "FundsXML in production (all films)",
-        "duration": 2931.3,
-        "url": "https://github.com/fundsxml/videos/releases/download/v4/fundsxml-production-en.mp4"
+        "duration": 2919.8,
+        "url": "https://github.com/fundsxml/videos/releases/download/v5/fundsxml-production-en.mp4"
       }
     }
   ],
-  "release": "https://github.com/fundsxml/videos/releases/tag/v4",
+  "release": "https://github.com/fundsxml/videos/releases/tag/v5",
   "disclaimer": "Disclaimer: This video is for training purposes only and is not legal, regulatory or investment advice. The example data is fictitious: companies, funds, securities and identifiers are made up. The official FundsXML documentation and the applicable regulations are binding. Narration and editing are AI-generated; the video shows the real application.",
   "audiences": {
     "business": {

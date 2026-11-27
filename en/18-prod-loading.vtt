@@ -1,553 +1,553 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:02.190
+00:00:00.500 --> 00:00:02.206
 A FundsXML file has arrived.
 
 2
-00:00:02.240 --> 00:00:08.903
+00:00:02.256 --> 00:00:08.981
 How does it get into the database, safely, even when it is large, and even when the same file arrives twice?
 
 3
-00:00:08.953 --> 00:00:18.910
+00:00:09.031 --> 00:00:19.079
 In this film you see the steps of a robust loader, the traps on the way, and the loader of the complete example at work, on six deliveries and four broken files.
 
 4
-00:00:18.960 --> 00:00:20.588
+00:00:19.129 --> 00:00:20.773
 You can download all of it.
 
 5
-00:00:21.838 --> 00:00:28.028
+00:00:22.023 --> 00:00:28.213
 A robust loader works in six steps, and the example follows them for every file in its landing folder.
 
 6
-00:00:28.078 --> 00:00:31.454
+00:00:28.263 --> 00:00:31.639
 Check the file: is it complete, and from a known sender?
 
 7
-00:00:31.504 --> 00:00:33.350
+00:00:31.689 --> 00:00:33.535
 Validate it against the schema.
 
 8
-00:00:33.400 --> 00:00:38.917
+00:00:33.585 --> 00:00:39.102
 Register the delivery with its document ID; a document ID that is already known is skipped.
 
 9
-00:00:38.967 --> 00:00:42.649
+00:00:39.152 --> 00:00:42.834
 Read the data and write it to the tables, in one transaction.
 
 10
-00:00:42.699 --> 00:00:45.524
+00:00:42.884 --> 00:00:45.709
 Reconcile the result, and only then release it.
 
 11
-00:00:45.574 --> 00:00:50.296
+00:00:45.759 --> 00:00:50.481
 A file that fails a check moves to the error folder, with a report next to it.
 
 12
-00:00:50.346 --> 00:00:54.945
+00:00:50.531 --> 00:00:55.130
 The original file is never changed, and every step writes a line to the log.
 
 13
-00:00:56.295 --> 00:00:57.817
+00:00:56.480 --> 00:00:58.002
 The first check is cheap.
 
 14
-00:00:57.867 --> 00:00:59.138
+00:00:58.052 --> 00:00:59.323
 Is the file complete?
 
 15
-00:00:59.188 --> 00:01:06.809
+00:00:59.373 --> 00:01:06.994
 A file cut off during transfer has no closing root element; the example reads only the last bytes of the file to find out.
 
 16
-00:01:06.859 --> 00:01:09.136
+00:01:07.044 --> 00:01:09.321
 Does it come from an expected sender?
 
 17
-00:01:09.186 --> 00:01:14.544
+00:01:09.371 --> 00:01:14.729
 The control data at the top of the file says so, and which schema version it declares.
 
 18
-00:01:14.594 --> 00:01:16.556
+00:01:14.779 --> 00:01:16.741
 Zipped files are unpacked first.
 
 19
-00:01:16.606 --> 00:01:19.071
+00:01:16.791 --> 00:01:19.256
 Only then does the expensive work begin.
 
 20
-00:01:20.421 --> 00:01:21.990
+00:01:20.606 --> 00:01:22.175
 When does the loader start?
 
 21
-00:01:22.040 --> 00:01:27.626
+00:01:22.225 --> 00:01:27.811
 Either a watcher notices every new file and starts at once, or the loader runs at fixed times.
 
 22
-00:01:27.676 --> 00:01:34.401
+00:01:27.861 --> 00:01:34.586
 The best of both: load as soon as a file arrives, and raise an alarm when a file has not arrived by its deadline.
 
 23
-00:01:34.451 --> 00:01:39.917
+00:01:34.636 --> 00:01:40.102
 Then a late delivery is noticed in the morning, not at noon, when someone asks for the data.
 
 24
-00:01:41.267 --> 00:01:42.978
+00:01:41.452 --> 00:01:43.175
 Validate first, load later.
 
 25
-00:01:43.028 --> 00:01:50.215
+00:01:43.225 --> 00:01:50.462
 A file that fails the schema is not loaded at all, not even partly, because half a delivery is worse than none.
 
 26
-00:01:50.265 --> 00:01:54.323
+00:01:50.512 --> 00:01:54.598
 The error report is kept with the file, and the sender is told.
 
 27
-00:01:54.373 --> 00:01:59.996
+00:01:54.648 --> 00:02:00.309
 Remember that FundsXML needs an X S D one point one validator, such as Saxon or Xerces.
 
 28
-00:02:01.346 --> 00:02:03.326
+00:02:01.659 --> 00:02:03.639
 Which schema to validate against?
 
 29
-00:02:03.376 --> 00:02:07.140
+00:02:03.689 --> 00:02:07.453
 Against the version the file declares, as long as you know it.
 
 30
-00:02:07.190 --> 00:02:14.398
+00:02:07.503 --> 00:02:14.711
 When a partner already sends a newer version, validate against that one, load the elements you know, and log the rest.
 
 31
-00:02:14.448 --> 00:02:20.180
+00:02:14.761 --> 00:02:20.493
 The original file is in the archive, so nothing is lost; the new elements can be loaded later.
 
 32
-00:02:21.530 --> 00:02:26.867
+00:02:21.843 --> 00:02:27.180
 Files arrive twice more often than you think: a repeated transfer, a manual upload.
 
 33
-00:02:26.917 --> 00:02:32.449
+00:02:27.230 --> 00:02:32.762
 So the loader registers every document ID, together with a hash and the original file.
 
 34
-00:02:32.499 --> 00:02:35.434
+00:02:32.812 --> 00:02:35.747
 If the same ID comes again, it skips the file.
 
 35
-00:02:35.484 --> 00:02:40.432
+00:02:35.797 --> 00:02:40.745
 If a delivery is a correction, it replaces the data of the delivery it names.
 
 36
-00:02:40.482 --> 00:02:44.391
+00:02:40.795 --> 00:02:44.704
 That way, loading the same file twice never doubles the data.
 
 37
-00:02:45.741 --> 00:02:51.951
+00:02:46.054 --> 00:02:52.264
 Another question to settle with each partner: does a delivery contain the full state, or only the changes?
 
 38
-00:02:52.001 --> 00:02:56.558
+00:02:52.314 --> 00:02:56.871
 A full delivery replaces everything the receiver knows for that fund and date.
 
 39
-00:02:56.608 --> 00:03:00.515
+00:02:56.921 --> 00:03:00.828
 A delta delivery only adds and changes, and needs a complete start.
 
 40
-00:03:00.565 --> 00:03:04.294
+00:03:00.878 --> 00:03:04.607
 Full deliveries are simpler and more robust; deltas save volume.
 
 41
-00:03:04.344 --> 00:03:07.011
+00:03:04.657 --> 00:03:07.324
 Your loader must know which one it is reading.
 
 42
-00:03:08.361 --> 00:03:09.654
+00:03:08.674 --> 00:03:09.967
 How to read the file?
 
 43
-00:03:09.704 --> 00:03:13.106
+00:03:10.017 --> 00:03:13.419
 The simplest way loads the whole document into memory.
 
 44
-00:03:13.156 --> 00:03:15.984
+00:03:13.469 --> 00:03:16.297
 That is fine for prices and small portfolios.
 
 45
-00:03:16.034 --> 00:03:23.656
+00:03:16.347 --> 00:03:23.969
 But a delivery with thousands of positions, regulatory templates and embedded documents can reach hundreds of megabytes.
 
 46
-00:03:23.706 --> 00:03:29.283
+00:03:24.019 --> 00:03:29.596
 Then read it as a stream, element by element: with StAX in Java, or iterparse in Python.
 
 47
-00:03:30.633 --> 00:03:32.171
+00:03:30.946 --> 00:03:32.424
 Streaming has one catch.
 
 48
-00:03:32.221 --> 00:03:37.266
+00:03:32.474 --> 00:03:37.328
 In FundsXML, the asset master data comes after the funds and their positions.
 
 49
-00:03:37.316 --> 00:03:40.972
+00:03:37.378 --> 00:03:40.894
 So while reading a position, its asset is not known yet.
 
 50
-00:03:41.022 --> 00:03:44.214
+00:03:40.944 --> 00:03:44.015
 Two solutions: read the file twice, assets first.
 
 51
-00:03:44.264 --> 00:03:49.574
+00:03:44.065 --> 00:03:49.173
 Or write positions into a staging table and link them to their assets at the end.
 
 52
-00:03:49.624 --> 00:03:51.890
+00:03:49.223 --> 00:03:51.402
 The example loader does the second.
 
 53
-00:03:53.240 --> 00:03:55.544
+00:03:52.752 --> 00:03:55.056
 This is the core of the example loader.
 
 54
-00:03:55.594 --> 00:04:06.226
+00:03:55.106 --> 00:04:05.738
 It walks through the file once and calls one handler for every repeating element: a fund, a subfund, a share class, a position, a trade, an asset, a document, a template record.
 
 55
-00:04:06.276 --> 00:04:10.511
+00:04:05.788 --> 00:04:10.023
 Funds and subfunds have the same parts, so one name covers both levels.
 
 56
-00:04:10.561 --> 00:04:17.391
+00:04:10.073 --> 00:04:16.903
 After each element, its memory is released, so neither the size of the file nor the number of funds in it matters.
 
 57
-00:04:18.741 --> 00:04:22.472
+00:04:18.253 --> 00:04:21.984
 Several funds in one file are no special case for such a loader.
 
 58
-00:04:22.522 --> 00:04:27.080
+00:04:22.034 --> 00:04:26.592
 It keeps a small stack: the umbrella, and inside it the subfund it is reading.
 
 59
-00:04:27.130 --> 00:04:35.291
+00:04:26.642 --> 00:04:34.803
 A share class arrives with all its prices, net assets, flows and distributions, and every price becomes a row with its date and its nature.
 
 60
-00:04:35.341 --> 00:04:41.789
+00:04:34.853 --> 00:04:41.301
 The month-end file of the example, with five funds and more than a thousand records, goes through in one pass.
 
 61
-00:04:43.139 --> 00:04:43.964
+00:04:42.651 --> 00:04:43.476
 Then the keys.
 
 62
-00:04:44.014 --> 00:04:51.838
+00:04:43.526 --> 00:04:51.350
 For each asset, the loader looks for it by its I S I N, or by the key built from sender, type and the sender's own identifier.
 
 63
-00:04:51.888 --> 00:04:53.838
+00:04:51.400 --> 00:04:53.350
 If it is unknown, it creates it.
 
 64
-00:04:53.888 --> 00:04:57.900
+00:04:53.400 --> 00:04:57.412
 If it is known, it updates its master data with the newer values.
 
 65
-00:04:57.950 --> 00:05:05.024
+00:04:57.462 --> 00:05:04.536
 New assets are counted in the log, because a sudden flood of new assets often points to a problem in the delivery.
 
 66
-00:05:06.374 --> 00:05:08.782
+00:05:05.886 --> 00:05:08.261
 The other parts follow the same pattern.
 
 67
-00:05:08.832 --> 00:05:17.506
+00:05:08.311 --> 00:05:16.870
 Trades and income also refer to assets, so they wait until the asset master data has been read; there are few of them, so they wait in memory.
 
 68
-00:05:17.556 --> 00:05:24.141
+00:05:16.920 --> 00:05:23.417
 Embedded documents are decoded, their size is compared with the size the file declares, and they get a hash.
 
 69
-00:05:24.191 --> 00:05:28.749
-And every template record is kept as X M L, with its key fields as columns.
+00:05:23.467 --> 00:05:27.843
+And every template record is kept as XML, with its key fields as columns.
 
 70
-00:05:30.099 --> 00:05:32.829
+00:05:29.193 --> 00:05:31.923
 Here are the three templates of the example.
 
 71
-00:05:32.879 --> 00:05:48.373
+00:05:31.973 --> 00:05:47.467
 Each handler names the template and its version, the share class or portfolio it reports on, and the few fields that are kept as columns: the ongoing costs of the E M T, the S F D R product type of the E E T, the number of positions of the T P T.
 
 72
-00:05:48.423 --> 00:05:52.290
+00:05:47.517 --> 00:05:51.384
 A new template version needs a new line here, not a new table.
 
 73
-00:05:53.640 --> 00:05:56.352
+00:05:52.734 --> 00:05:55.446
 Writing happens in one transaction per file.
 
 74
-00:05:56.402 --> 00:06:01.436
+00:05:55.496 --> 00:06:00.530
 If anything goes wrong, everything is rolled back, and the database is as before.
 
 75
-00:06:01.486 --> 00:06:04.700
+00:06:00.580 --> 00:06:03.794
 For speed, rows are written in bulk, not one by one.
 
 76
-00:06:04.750 --> 00:06:12.671
+00:06:03.844 --> 00:06:11.765
 And after the cause of an error has been fixed, the file is simply loaded again; thanks to the document ID, nothing is doubled.
 
 77
-00:06:14.021 --> 00:06:16.879
+00:06:13.115 --> 00:06:15.973
 Not every problem is a reason to reject a file.
 
 78
-00:06:16.929 --> 00:06:18.426
+00:06:16.023 --> 00:06:17.520
 A schema error always is.
 
 79
-00:06:18.476 --> 00:06:25.419
+00:06:17.570 --> 00:06:24.513
 But a business warning, such as an unusually large price change, may be correct; load the data, flag it, and ask.
 
 80
-00:06:25.469 --> 00:06:33.896
+00:06:24.563 --> 00:06:32.990
 A real business error, such as weights that add up to a hundred and twenty percent, holds the delivery back until the sender corrects it.
 
 81
-00:06:33.946 --> 00:06:36.371
+00:06:33.040 --> 00:06:35.465
 Agree on these rules with your partners.
 
 82
-00:06:37.721 --> 00:06:38.882
+00:06:36.815 --> 00:06:37.976
 How fast can it be?
 
 83
-00:06:38.932 --> 00:06:45.509
+00:06:38.026 --> 00:06:44.603
 With bulk inserts, or the copy command of PostgreSQL, a loader writes thousands of positions per second.
 
 84
-00:06:45.559 --> 00:06:49.843
+00:06:44.653 --> 00:06:48.937
 Large tables load faster when some indexes are built after the load.
 
 85
-00:06:49.893 --> 00:06:55.450
+00:06:48.987 --> 00:06:54.544
 And processing one fund at a time keeps memory small and lets you restart in the middle.
 
 86
-00:06:55.500 --> 00:06:58.573
+00:06:54.594 --> 00:06:57.667
 Speed is rarely the real problem; correctness is.
 
 87
-00:06:59.923 --> 00:07:03.006
+00:06:59.017 --> 00:07:02.100
 Here the example loader runs over the landing folder.
 
 88
-00:07:03.056 --> 00:07:14.948
+00:07:02.150 --> 00:07:14.042
 The month-end file: checked, valid, registered as delivery one, then five funds, eleven share classes, five hundred twenty-two positions, two hundred nine trades and twelve template records in one pass.
 
 89
-00:07:14.998 --> 00:07:22.160
+00:07:14.092 --> 00:07:21.254
 Every position is linked to its asset, the codes are checked, the four portfolios reconcile, and the delivery is released.
 
 90
-00:07:22.210 --> 00:07:24.643
+00:07:21.304 --> 00:07:23.737
 Then the daily prices, then the documents.
 
 91
-00:07:25.993 --> 00:07:27.036
+00:07:25.087 --> 00:07:26.130
 Then a correction.
 
 92
-00:07:27.086 --> 00:07:38.455
+00:07:26.180 --> 00:07:37.549
 The amend names the daily file it corrects; the loader marks all sixty-six prices and one hundred fourteen net asset values of that file as replaced, and loads the complete corrected data.
 
 93
-00:07:38.505 --> 00:07:44.893
+00:07:37.599 --> 00:07:43.987
 A file sent by mistake is taken back by a delete: its rows are marked replaced, and nothing new is loaded.
 
 94
-00:07:44.943 --> 00:07:47.869
+00:07:44.037 --> 00:07:46.963
 Nothing is overwritten; both stay in the history.
 
 95
-00:07:49.219 --> 00:07:50.763
+00:07:48.313 --> 00:07:49.857
 And the four broken files.
 
 96
-00:07:50.813 --> 00:07:55.545
+00:07:49.907 --> 00:07:54.639
 The file cut off during transfer fails the cheap check, before any validation.
 
 97
-00:07:55.595 --> 00:08:00.388
+00:07:54.689 --> 00:07:59.482
 The second copy of the daily file is skipped, because its document ID is known.
 
 98
-00:08:00.438 --> 00:08:03.085
+00:07:59.532 --> 00:08:02.179
 The file from an unknown sender is rejected.
 
 99
-00:08:03.135 --> 00:08:07.192
+00:08:02.229 --> 00:08:06.286
 And the file with two elements in the wrong order fails the schema.
 
 100
-00:08:07.242 --> 00:08:12.403
+00:08:06.336 --> 00:08:11.497
 Six loaded, one skipped, three rejected, and the database is exactly as it should be.
 
 101
-00:08:13.753 --> 00:08:15.684
+00:08:12.847 --> 00:08:14.778
 And what is in the database now?
 
 102
-00:08:15.734 --> 00:08:16.736
+00:08:14.828 --> 00:08:15.830
 A look with psql.
 
 103
-00:08:16.786 --> 00:08:19.769
+00:08:15.880 --> 00:08:18.863
 Six deliveries, five funds, eleven share classes.
 
 104
-00:08:19.819 --> 00:08:30.539
+00:08:18.913 --> 00:08:29.633
 Two hundred eighty-five net asset values and four hundred eighteen prices: that includes the rows replaced by the correction and the deletion, because nothing is overwritten.
 
 105
-00:08:30.589 --> 00:08:39.948
+00:08:29.683 --> 00:08:39.042
 Four portfolios with five hundred twenty-two positions, four hundred thirty assets, two hundred nine trades, nine documents and twelve template records.
 
 106
-00:08:39.998 --> 00:08:41.743
+00:08:39.092 --> 00:08:40.837
 Every number matches the log.
 
 107
-00:08:43.093 --> 00:08:45.500
+00:08:42.187 --> 00:08:44.620
 Before the data is released, reconcile it.
 
 108
-00:08:45.550 --> 00:08:48.659
+00:08:44.670 --> 00:08:47.813
 Do the position values add up to the total net assets?
 
 109
-00:08:48.709 --> 00:08:51.292
+00:08:47.863 --> 00:08:50.474
 Do the weights add up to one hundred percent?
 
 110
-00:08:51.342 --> 00:08:54.626
+00:08:50.524 --> 00:08:53.844
 Are the counts plausible compared with the last delivery?
 
 111
-00:08:54.676 --> 00:08:59.891
+00:08:53.894 --> 00:08:59.165
 The two subfunds and the two single funds of the month-end file all reconcile to the cent.
 
 112
-00:08:59.941 --> 00:09:05.917
+00:08:59.215 --> 00:09:05.255
 The data-quality checks of FreeXmlToolkit do the same on the file; the loader repeats them on the data.
 
 113
-00:09:07.267 --> 00:09:08.886
+00:09:06.605 --> 00:09:08.224
 The loader also checks codes.
 
 114
-00:09:08.936 --> 00:09:15.507
+00:09:08.274 --> 00:09:14.845
 Every listed code, such as a price nature or a document type, is compared with the code list of the schema version.
 
 115
-00:09:15.557 --> 00:09:19.882
+00:09:14.895 --> 00:09:19.220
 A code from a newer version than the sender declares is kept with a warning.
 
 116
-00:09:19.932 --> 00:09:25.638
+00:09:19.270 --> 00:09:24.976
 Any other unknown code is an error, because it usually means a mapping problem on the sender's side.
 
 117
-00:09:25.688 --> 00:09:30.186
+00:09:25.026 --> 00:09:29.524
 Findings are stored with the delivery, and a delivery with errors is held back.
 
 118
-00:09:31.536 --> 00:09:35.369
+00:09:30.874 --> 00:09:34.707
 When a delivery fails, the sender needs a report it can act on.
 
 119
-00:09:35.419 --> 00:09:42.580
+00:09:34.757 --> 00:09:41.918
 It names the file and its document ID, the rule that failed, where in the file, what was found and what was expected.
 
 120
-00:09:42.630 --> 00:09:47.325
+00:09:41.968 --> 00:09:46.663
 And it says what happens now: the file was rejected, or loaded with warnings.
 
 121
-00:09:47.375 --> 00:09:51.763
+00:09:46.713 --> 00:09:51.101
 A precise report gets a correction back in minutes, a vague one in days.
 
 122
-00:09:53.113 --> 00:09:56.106
+00:09:52.451 --> 00:09:55.444
 Test the loader as carefully as the generator.
 
 123
-00:09:56.156 --> 00:10:00.340
+00:09:55.494 --> 00:09:59.678
 Use realistic deliveries, with several funds, dates and natures.
 
 124
-00:10:00.390 --> 00:10:07.419
+00:09:59.728 --> 00:10:06.757
 Add broken ones: a file cut off in the middle, an invalid file, a file from an unknown sender, a duplicate.
 
 125
-00:10:07.469 --> 00:10:11.521
+00:10:06.807 --> 00:10:10.859
 Load the same files twice, then a correction, then a deletion.
 
 126
-00:10:11.571 --> 00:10:13.902
+00:10:10.909 --> 00:10:13.240
 Load the generator's output back in.
 
 127
-00:10:13.952 --> 00:10:18.004
+00:10:13.290 --> 00:10:17.342
 The example does all of this with one script, on every change.
 
 128
-00:10:19.354 --> 00:10:21.174
+00:10:18.692 --> 00:10:20.512
 Only then is the data released.
 
 129
-00:10:21.224 --> 00:10:25.576
+00:10:20.562 --> 00:10:24.914
 A status column on the delivery shows the way: loaded, checked, released.
 
 130
-00:10:25.626 --> 00:10:29.918
+00:10:24.964 --> 00:10:29.256
 A function releases a checked delivery and records who did it, and when.
 
 131
-00:10:29.968 --> 00:10:33.236
+00:10:29.306 --> 00:10:32.574
 Reports and downstream systems read only released data.
 
 132
-00:10:33.286 --> 00:10:39.568
+00:10:32.624 --> 00:10:38.906
 Warnings go to the data team, who decide whether to release anyway or to ask the sender for a correction.
 
 133
-00:10:40.918 --> 00:10:50.764
+00:10:40.256 --> 00:10:50.343
 Everything you saw in this film is in the complete example: the loader, the six deliveries and the four broken files, the queries, and the script that runs it all.
 
 134
-00:10:50.814 --> 00:10:58.170
+00:10:50.393 --> 00:10:57.930
 You find it in the FundsXML examples repository on GitHub, in the folder PostgreSQL end to end, also as a single zip file.
 
 135
-00:10:58.220 --> 00:11:02.784
+00:10:57.980 --> 00:11:02.656
 Start a database, run the script, and watch the same log on your own screen.
 
 136
-00:11:04.134 --> 00:11:12.763
+00:11:04.006 --> 00:11:12.417
 That was loading FundsXML: validate first, never twice, streaming with one handler per repeating element, and reconcile before release.
 
 137
-00:11:12.813 --> 00:11:18.549
+00:11:12.467 --> 00:11:18.058
 In the next film, you see the other direction: generating FundsXML from the same database.
 
 138
-00:11:18.599 --> 00:11:19.835
+00:11:18.108 --> 00:11:19.312
 Thanks for watching.

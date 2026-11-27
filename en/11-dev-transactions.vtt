@@ -1,173 +1,173 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:11.041
+00:00:00.500 --> 00:00:10.635
 In this film you see how FundsXML records what moved in a fund: money from investors, payments to investors, income from the portfolio, and the fund's own trades.
 
 2
-00:00:11.091 --> 00:00:12.871
+00:00:10.685 --> 00:00:12.395
 It takes about four minutes.
 
 3
-00:00:14.121 --> 00:00:16.538
+00:00:13.645 --> 00:00:16.062
 Transactions do not live in one place.
 
 4
-00:00:16.588 --> 00:00:18.615
+00:00:16.112 --> 00:00:18.139
 Each kind sits where it belongs.
 
 5
-00:00:18.665 --> 00:00:23.160
+00:00:18.189 --> 00:00:22.684
 Subscriptions and redemptions of investors are flows of a share class.
 
 6
-00:00:23.210 --> 00:00:26.925
+00:00:22.734 --> 00:00:26.449
 Distributions to investors also belong to the share class.
 
 7
-00:00:26.975 --> 00:00:31.534
+00:00:26.499 --> 00:00:31.058
 Income from the portfolio, such as dividends, belongs to the portfolio.
 
 8
-00:00:31.584 --> 00:00:35.819
+00:00:31.108 --> 00:00:35.343
 And so do the fund's own trades, the buys and sells of securities.
 
 9
-00:00:36.777 --> 00:00:41.306
+00:00:36.301 --> 00:00:40.830
 Here are the flows of the dollar share class of a fictional global equity fund.
 
 10
-00:00:41.356 --> 00:00:44.957
+00:00:40.880 --> 00:00:44.481
 The container names its reporting period, the month of October.
 
 11
-00:00:45.007 --> 00:00:56.085
+00:00:44.531 --> 00:00:55.609
 The first flow is a subscription: transaction type S U B, with trade date, accounting date and settlement date, one thousand ninety-five units, and the total value in the share class currency.
 
 12
-00:00:56.135 --> 00:01:01.938
+00:00:55.659 --> 00:01:01.462
 Optional fields can add the value in the fund currency, the sales channel and the investor's country.
 
 13
-00:01:02.588 --> 00:01:09.504
+00:01:02.112 --> 00:01:09.028
 The third flow is a redemption, transaction type R E D: two thousand one hundred eighty-nine units, paid out of the fund.
 
 14
-00:01:10.654 --> 00:01:11.358
+00:01:10.178 --> 00:01:10.882
 And switches?
 
 15
-00:01:11.408 --> 00:01:19.245
+00:01:10.932 --> 00:01:18.769
 When an investor moves from one share class to another, the flows show a redemption in the first class and a subscription in the second.
 
 16
-00:01:19.295 --> 00:01:21.855
+00:01:18.819 --> 00:01:21.379
 The schema has no element that links the two.
 
 17
-00:01:21.905 --> 00:01:28.118
+00:01:21.429 --> 00:01:27.642
 If your partner needs the link, agree on how to mark it, for example in the free-text subtype of both flows.
 
 18
-00:01:29.368 --> 00:01:32.515
+00:01:28.892 --> 00:01:32.039
 The institutional euro class distributes its income.
 
 19
-00:01:32.565 --> 00:01:34.298
+00:01:32.089 --> 00:01:33.822
 Its distribution is official.
 
 20
-00:01:34.348 --> 00:01:40.385
+00:01:33.872 --> 00:01:39.909
 Then come its dates: announcement, record date, ex-date and payment date, and the payment currency.
 
 21
-00:01:40.435 --> 00:01:46.472
+00:01:39.959 --> 00:01:45.996
 And the amounts per share: eighteen euro forty gross, and thirteen euro thirty-four net, after tax.
 
 22
-00:01:47.123 --> 00:01:51.490
+00:01:46.647 --> 00:01:51.014
 Income from the portfolio is recorded in Earnings, again with a period.
 
 23
-00:01:51.540 --> 00:01:56.279
+00:01:51.064 --> 00:01:55.803
 This one is a dividend from Valemont Materials, a fictional American company.
 
 24
-00:01:56.329 --> 00:02:00.447
+00:01:55.853 --> 00:01:59.971
 The asset unique ID links it to the security, just like a position.
 
 25
-00:02:00.497 --> 00:02:05.734
+00:02:00.021 --> 00:02:05.258
 The entry value is given in dollars and in the fund currency, with the exchange rate.
 
 26
-00:02:05.784 --> 00:02:13.385
+00:02:05.308 --> 00:02:12.909
 And the dividend block holds the details in dollars: the amount per share, gross, net, and fifteen percent withholding tax.
 
 27
-00:02:14.036 --> 00:02:18.250
+00:02:13.560 --> 00:02:17.715
 Finally, the fund's own trades, in Transactions, for the same period.
 
 28
-00:02:18.300 --> 00:02:26.714
+00:02:17.765 --> 00:02:26.063
 Here is a buy: two thousand three hundred eleven shares of a fictional American company, with trade date, value date and number of units.
 
 29
-00:02:26.764 --> 00:02:33.820
+00:02:26.113 --> 00:02:33.070
 Then the price, the market value in dollars and in euro, the settlement amount, the exchange rate and the expenses.
 
 30
-00:02:33.870 --> 00:02:39.813
+00:02:33.120 --> 00:02:38.981
 And the broker as counterparty, with its LEI, and the trading venue, the New York Stock Exchange.
 
 31
-00:02:39.863 --> 00:02:43.149
+00:02:39.031 --> 00:02:42.271
 Further up, a sale of a French share, settled in euro.
 
 32
-00:02:43.199 --> 00:02:46.856
+00:02:42.321 --> 00:02:45.927
 Every trade points to its asset through the asset unique ID.
 
 33
-00:02:48.006 --> 00:02:50.174
+00:02:47.530 --> 00:02:49.698
 A few tips for reading transactions.
 
 34
-00:02:50.224 --> 00:02:58.433
+00:02:49.748 --> 00:02:57.957
 Use the period of each container: from and to say which days the data covers, so you know whether a day without flows really had none.
 
 35
-00:02:58.483 --> 00:03:03.795
+00:02:58.007 --> 00:03:03.319
 Read the action code: C creates an entry, and later deliveries can modify or delete it.
 
 36
-00:03:03.845 --> 00:03:08.972
+00:03:03.369 --> 00:03:08.496
 Expect two currencies: the share class or quotation currency, and the fund currency.
 
 37
-00:03:09.022 --> 00:03:14.396
+00:03:08.546 --> 00:03:13.920
 And follow the links: earnings and trades point to their assets, exactly like positions.
 
 38
-00:03:15.746 --> 00:03:18.055
+00:03:15.270 --> 00:03:17.462
 What does the core schema not cover?
 
 39
-00:03:18.105 --> 00:03:26.968
+00:03:17.512 --> 00:03:25.933
 Orders and their execution, cut-off times and settlement instructions belong to the operational messages of standards such as ISO 20022.
 
 40
-00:03:27.018 --> 00:03:32.736
+00:03:25.983 --> 00:03:31.414
 FundsXML reports what has happened, for a period: it is the record, not the instruction.
 
 41
-00:03:34.086 --> 00:03:36.671
+00:03:32.764 --> 00:03:35.456
 That was transactions and investor flows.
 
 42
-00:03:36.721 --> 00:03:41.686
+00:03:35.506 --> 00:03:40.672
 In the next film, you look at the regulatory templates inside a FundsXML file.
 
 43
-00:03:41.736 --> 00:03:42.972
+00:03:40.722 --> 00:03:42.010
 Thanks for watching.
