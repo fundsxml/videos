@@ -123,6 +123,7 @@
           "id": "biz-quality",
           "number": 4,
           "title": "Trust in the data: quality and control",
+          "audience": "business",
           "description": "How the quality of fund data is secured with FundsXML: why a valid file is not yet correct data, the three levels readable, valid and plausible, what the schema checks and what business rules check, check digits of identifiers, checks on both sides, corrections and versions, and a data-quality report in FreeXmlToolkit.",
           "duration": 307.5,
           "chapters": [
@@ -162,8 +163,7 @@
           "mp4": "en/04-biz-quality.mp4",
           "subtitles": "en/04-biz-quality.vtt",
           "chapters_vtt": "en/04-biz-quality-chapters.vtt",
-          "poster": "posters/04-biz-quality.jpg",
-          "audience": "business"
+          "poster": "posters/04-biz-quality.jpg"
         },
         {
           "id": "biz-project",
