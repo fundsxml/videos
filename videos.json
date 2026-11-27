@@ -512,6 +512,7 @@
           "id": "dev-documents",
           "number": 13,
           "title": "Documents: link, embed, extract",
+          "audience": "data",
           "description": "How FundsXML carries documents such as prospectuses, PRIIPs KIDs and factsheets: the Documents block, document types, languages and countries, the assignment to funds and share classes, format, signature and dates, delivery as a link or embedded as base64, replacing and restricted documents, and the Documents tool of FreeXmlToolkit to save embedded documents and embed new ones.",
           "duration": 477.3,
           "chapters": [
@@ -547,8 +548,7 @@
           "mp4": "en/13-dev-documents.mp4",
           "subtitles": "en/13-dev-documents.vtt",
           "chapters_vtt": "en/13-dev-documents-chapters.vtt",
-          "poster": "posters/13-dev-documents.jpg",
-          "audience": "data"
+          "poster": "posters/13-dev-documents.jpg"
         },
         {
           "id": "dev-validate",
