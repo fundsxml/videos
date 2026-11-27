@@ -641,8 +641,9 @@
           "id": "prod-architecture",
           "number": 16,
           "title": "A FundsXML delivery chain",
-          "description": "How FundsXML runs in production: who sends what to whom, the delivery chain of sender and receiver, data sources and a central database, how files travel (SFTP, API, portals), security, rhythms and schema versions, roles, the five building blocks of a production setup, build or buy, how to start, and the complete example used in this series, which can be downloaded.",
-          "duration": 495.3,
+          "audience": "engineering",
+          "description": "How FundsXML runs in production: who sends what to whom, the whole delivery chain on one page (sources, central database, generator, validation, SFTP, API and portals), the chains of sender and receiver, security, rhythms and schema versions, the five building blocks of a production setup, roles, build or buy, two environments, document IDs, and the complete example used in this series, which can be downloaded.",
+          "duration": 440.5,
           "chapters": [
             {
               "t": 0,
@@ -657,31 +658,30 @@
               "title": "The sender"
             },
             {
-              "t": 147,
+              "t": 154,
               "title": "The receiver"
             },
             {
-              "t": 166,
+              "t": 172,
               "title": "How files travel"
             },
             {
-              "t": 227,
+              "t": 233,
               "title": "Rhythm and versions"
             },
             {
-              "t": 269,
+              "t": 275,
               "title": "Building blocks"
             },
             {
-              "t": 459,
+              "t": 404,
               "title": "The complete example"
             }
           ],
           "mp4": "en/16-prod-architecture.mp4",
           "subtitles": "en/16-prod-architecture.vtt",
           "chapters_vtt": "en/16-prod-architecture-chapters.vtt",
-          "poster": "posters/16-prod-architecture.jpg",
-          "audience": "engineering"
+          "poster": "posters/16-prod-architecture.jpg"
         },
         {
           "id": "prod-database-model",
