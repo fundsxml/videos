@@ -197,113 +197,81 @@ Here is the fund's total net asset value, about two hundred seventy-nine million
 A machine can process it, and a person can still read it.
 
 50
-00:04:10.841 --> 00:04:13.593
-A delivery is also a source for analysis.
-
-51
-00:04:13.643 --> 00:04:18.718
-The Query Console of FreeXmlToolkit comes with ready-made FundsXML queries.
-
-52
-00:04:18.768 --> 00:04:22.339
-This one lists the ten largest positions of the fund.
-
-53
-00:04:22.992 --> 00:04:28.595
-Shown as a table: each position with its name, its market value and its weight in the fund.
-
-54
-00:04:28.645 --> 00:04:32.507
-The same query works on any FundsXML file, from any fund house.
-
-55
-00:04:33.658 --> 00:04:36.112
+00:04:11.340 --> 00:04:13.794
 Not every delivery carries everything.
 
-56
-00:04:36.162 --> 00:04:40.855
+51
+00:04:13.844 --> 00:04:18.538
 A daily price feed carries prices and net asset values, and little else.
 
-57
-00:04:40.905 --> 00:04:43.820
+52
+00:04:18.588 --> 00:04:21.502
 A month-end delivery adds the full portfolio.
 
-58
-00:04:43.870 --> 00:04:47.971
+53
+00:04:21.552 --> 00:04:25.653
 A master data update carries new share classes or changed fees.
 
-59
-00:04:48.021 --> 00:04:53.571
+54
+00:04:25.703 --> 00:04:31.253
 And a regulatory delivery carries one or more templates for distributors or insurers.
 
-60
-00:04:53.621 --> 00:04:58.908
+55
+00:04:31.303 --> 00:04:36.590
 All of them use the same standard, so a receiver needs only one way to read them.
 
-61
-00:05:00.258 --> 00:05:04.029
+56
+00:04:37.940 --> 00:04:41.711
 Two more things matter in daily business: dates and corrections.
 
-62
-00:05:04.079 --> 00:05:10.178
+57
+00:04:41.761 --> 00:04:47.860
 Every delivery names its content date, the business date the data refers to, for example the month-end.
 
-63
-00:05:10.228 --> 00:05:16.446
+58
+00:04:47.910 --> 00:04:54.128
 And every price and every portfolio carries its own valuation date, so a file can even hold several days.
 
-64
-00:05:16.496 --> 00:05:20.386
+59
+00:04:54.178 --> 00:04:58.069
 When data was wrong, the sender does not silently send a new file.
 
-65
-00:05:20.436 --> 00:05:26.416
+60
+00:04:58.119 --> 00:05:04.098
 A correction is a delivery of its own, marked as a correction, and it names the delivery it replaces.
 
-66
-00:05:26.466 --> 00:05:31.371
+61
+00:05:04.148 --> 00:05:09.053
 So the receiver can follow every change, from the first delivery to the latest one.
 
-67
-00:05:32.721 --> 00:05:33.887
+62
+00:05:10.403 --> 00:05:11.570
 Who needs which part?
 
-68
-00:05:33.937 --> 00:05:40.086
+63
+00:05:11.620 --> 00:05:17.768
 Distributors and fund platforms need the share classes, their prices, their costs and their target markets.
 
-69
-00:05:40.136 --> 00:05:46.979
+64
+00:05:17.818 --> 00:05:24.661
 Insurers need the full portfolio with the master data of every position, so they can look through to the real holdings.
 
-70
-00:05:47.029 --> 00:05:51.787
+65
+00:05:24.711 --> 00:05:29.469
 Data vendors collect master data and prices from many fund houses and pass them on.
 
-71
-00:05:51.837 --> 00:05:58.159
+66
+00:05:29.519 --> 00:05:35.841
 And supervisors and central banks receive fund volumes, holdings and the national data their country asks for.
 
-72
-00:05:59.509 --> 00:06:03.297
-And this is the key idea once more: one file, many receivers.
-
-73
-00:06:03.347 --> 00:06:09.778
-The distributor takes the prices and costs, the insurer the portfolio, the data vendor the master data.
-
-74
-00:06:09.828 --> 00:06:13.364
-Each one takes the part it needs, from the same delivery.
-
-75
-00:06:14.714 --> 00:06:17.852
+67
+00:05:37.191 --> 00:05:40.329
 That was what a FundsXML delivery contains.
 
-76
-00:06:17.902 --> 00:06:22.523
+68
+00:05:40.379 --> 00:05:45.000
 In the next film, you see how FundsXML carries regulatory data.
 
-77
-00:06:22.573 --> 00:06:24.006
+69
+00:05:45.050 --> 00:05:46.483
 Thanks for watching.

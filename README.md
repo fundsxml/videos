@@ -8,6 +8,17 @@ Three video series about [FundsXML](https://www.fundsxml.org), the open standard
 - **FundsXML in production**: five films on running FundsXML in real systems, with a complete example to download:
   [fundsxml/examples → PostgreSQL_End_to_End](https://github.com/fundsxml/examples/tree/main/PostgreSQL_End_to_End)
 
+Every film is marked with its audience, by colour and label on the title card and on every slide:
+
+| Audience | Colour | Films |
+|---|---|---|
+| **For business**: management, business and project leads, operations | orange | 1–6, 20 |
+| **For data specialists**: work with the files in tools | blue | 7–14 |
+| **For engineers**: software and data engineers, database developers, architects | violet | 15–19 |
+
+The player page can filter the films by audience. Every MP4 file carries its metadata: title, series, episode,
+audience, description with its topics, licence and a note on the AI-generated narration.
+
 New films are added as they are finished.
 
 Watch them on the player page: <https://fundsxml.github.io/videos/>.
@@ -20,7 +31,7 @@ Watch them on the player page: <https://fundsxml.github.io/videos/>.
 | `en/NN-<id>.vtt` | subtitles (WebVTT) |
 | `en/NN-<id>-chapters.vtt` | chapter marks |
 | `posters/NN-<id>.jpg` | preview images |
-| `videos.json` | the list of series and films with titles, descriptions, durations and chapters |
+| `videos.json` | the list of series and films with titles, audiences, descriptions, durations and chapters |
 | `index.html` | the player page served by GitHub Pages |
 | `wp-widget.html` | the same player as one HTML block for the fundsxml.org WordPress site |
 

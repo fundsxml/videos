@@ -43,8 +43,9 @@
           "id": "biz-content",
           "number": 2,
           "title": "What a FundsXML delivery contains",
-          "description": "What a FundsXML delivery carries, in business terms: fund and share class master data, net asset values and prices, portfolios and holdings, transactions and distributions, documents, country modules and regulatory data. Why static and dynamic data are kept apart, typical kinds of deliveries, and a look into a real file, including a ready-made query for the largest holdings.",
-          "duration": 386.2,
+          "audience": "business",
+          "description": "What a FundsXML delivery carries, in business terms: fund and share class master data, net asset values and prices, portfolios and holdings, transactions and distributions, documents, country modules and regulatory data. Why static and dynamic data are kept apart, typical kinds of deliveries, and a look into a real file.",
+          "duration": 348.7,
           "chapters": [
             {
               "t": 0,
@@ -63,15 +64,14 @@
               "title": "A real file"
             },
             {
-              "t": 273,
+              "t": 251,
               "title": "Kinds of deliveries"
             }
           ],
           "mp4": "en/02-biz-content.mp4",
           "subtitles": "en/02-biz-content.vtt",
           "chapters_vtt": "en/02-biz-content-chapters.vtt",
-          "poster": "posters/02-biz-content.jpg",
-          "audience": "business"
+          "poster": "posters/02-biz-content.jpg"
         },
         {
           "id": "biz-regulatory",
@@ -264,8 +264,8 @@
       ],
       "full": {
         "title": "FundsXML for business (all films)",
-        "duration": 2377.5,
-        "url": "https://github.com/fundsxml/videos/releases/download/v3/fundsxml-business-en.mp4"
+        "duration": 2274.2,
+        "url": "https://github.com/fundsxml/videos/releases/download/v4/fundsxml-business-en.mp4"
       }
     },
     {
@@ -629,8 +629,8 @@
       ],
       "full": {
         "title": "FundsXML for developers (all films)",
-        "duration": 2731.4,
-        "url": "https://github.com/fundsxml/videos/releases/download/v3/fundsxml-developers-en.mp4"
+        "duration": 2725.9,
+        "url": "https://github.com/fundsxml/videos/releases/download/v4/fundsxml-developers-en.mp4"
       }
     },
     {
@@ -898,12 +898,12 @@
       ],
       "full": {
         "title": "FundsXML in production (all films)",
-        "duration": 2946.1,
-        "url": "https://github.com/fundsxml/videos/releases/download/v3/fundsxml-production-en.mp4"
+        "duration": 2931.3,
+        "url": "https://github.com/fundsxml/videos/releases/download/v4/fundsxml-production-en.mp4"
       }
     }
   ],
-  "release": "https://github.com/fundsxml/videos/releases/tag/v3",
+  "release": "https://github.com/fundsxml/videos/releases/tag/v4",
   "disclaimer": "Disclaimer: This video is for training purposes only and is not legal, regulatory or investment advice. The example data is fictitious: companies, funds, securities and identifiers are made up. The official FundsXML documentation and the applicable regulations are binding. Narration and editing are AI-generated; the video shows the real application.",
   "audiences": {
     "business": {
