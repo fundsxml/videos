@@ -285,89 +285,97 @@ The documentation is on fundsxml dot org.
 And free tools, such as FreeXmlToolkit, open, check and explore FundsXML files.
 
 72
-00:05:11.333 --> 00:05:12.899
-A few tips from practice.
+00:05:11.333 --> 00:05:13.157
+How can this look in practice?
 
 73
-00:05:12.949 --> 00:05:16.519
-Start small: one data area and one partner, then extend.
+00:05:13.207 --> 00:05:18.028
+Here is a typical first project of a mid-sized fund house, as an illustration.
 
 74
-00:05:16.569 --> 00:05:23.048
-Agree on the details: which optional fields you fill, which codes you use, and when the data arrives.
+00:05:18.078 --> 00:05:22.150
+It starts small: daily prices and the EMT, for three distributors.
 
 75
-00:05:23.098 --> 00:05:28.866
-Check on both sides: the sender validates before sending, and the receiver before loading.
+00:05:22.200 --> 00:05:25.336
+Two weeks to agree the scope, four for the mapping.
 
 76
-00:05:28.916 --> 00:05:35.459
-And keep a set of test files, good ones and bad ones, so that every change can be tested against them.
+00:05:25.386 --> 00:05:30.020
+After about nine weeks, the first real file is accepted by one distributor.
 
 77
-00:05:36.809 --> 00:05:38.362
-How do new versions fit in?
+00:05:30.070 --> 00:05:37.327
+Testing with good and bad files takes three more weeks, and in week thirteen the deliveries go live, fully automated.
 
 78
-00:05:38.412 --> 00:05:42.460
-Every file names the version it was written for, in its control data.
+00:05:37.377 --> 00:05:41.574
+The other two distributors follow in operation, with the same files.
 
 79
-00:05:42.510 --> 00:05:48.101
-New releases mostly add elements, and these are usually optional, so existing files stay valid.
+00:05:42.924 --> 00:05:44.477
+How do new versions fit in?
 
 80
-00:05:48.151 --> 00:05:52.673
-Partners agree on the version they exchange, and move on when they are ready.
+00:05:44.527 --> 00:05:48.575
+Every file names the version it was written for, in its control data.
 
 81
-00:05:52.723 --> 00:05:57.127
-And every change is documented in the changelog that comes with the schema.
+00:05:48.625 --> 00:05:54.216
+New releases mostly add elements, and these are usually optional, so existing files stay valid.
 
 82
-00:05:58.477 --> 00:06:00.342
-FundsXML is a living standard.
+00:05:54.266 --> 00:05:58.788
+Partners agree on the version they exchange, and move on when they are ready.
 
 83
-00:06:00.392 --> 00:06:04.364
-New versions follow new regulation and the needs of the market.
+00:05:58.838 --> 00:06:03.242
+And every change is documented in the changelog that comes with the schema.
 
 84
-00:06:04.414 --> 00:06:13.237
-Changes are discussed and agreed by the people who use the standard every day: asset managers, administrators, banks and service providers.
+00:06:04.592 --> 00:06:06.457
+FundsXML is a living standard.
 
 85
-00:06:13.287 --> 00:06:20.898
-And your voice counts: you can report issues and propose changes on GitHub, and every proposal is discussed in the open.
+00:06:06.507 --> 00:06:10.479
+New versions follow new regulation and the needs of the market.
 
 86
-00:06:22.248 --> 00:06:24.188
-And the standard keeps moving.
+00:06:10.529 --> 00:06:19.352
+Changes are discussed and agreed by the people who use the standard every day: asset managers, administrators, banks and service providers.
 
 87
-00:06:24.238 --> 00:06:32.612
-Data is increasingly exchanged through interfaces and APIs, not only as files, and FundsXML documents fit well into that world.
+00:06:19.402 --> 00:06:27.013
+And your voice counts: you can report issues and propose changes on GitHub, and every proposal is discussed in the open.
 
 88
-00:06:32.662 --> 00:06:35.265
-New regulation will bring new templates.
+00:06:28.363 --> 00:06:30.303
+And the standard keeps moving.
 
 89
-00:06:35.315 --> 00:06:41.368
-And new tools, including AI-based ones, help with mapping, checking and analysing fund data.
+00:06:30.353 --> 00:06:38.727
+Data is increasingly exchanged through interfaces and APIs, not only as files, and FundsXML documents fit well into that world.
 
 90
-00:06:41.418 --> 00:06:45.945
-A clean, standard structure is the best starting point for all of it.
+00:06:38.777 --> 00:06:41.380
+New regulation will bring new templates.
 
 91
-00:06:47.295 --> 00:06:49.840
-That was a FundsXML project from A to Z.
+00:06:41.430 --> 00:06:47.483
+And new tools, including AI-based ones, help with mapping, checking and analysing fund data.
 
 92
-00:06:49.890 --> 00:06:57.299
-In the next film, the last one for business readers, you see how FundsXML evolves, and how you can take part in it.
+00:06:47.533 --> 00:06:52.060
+A clean, standard structure is the best starting point for all of it.
 
 93
-00:06:57.349 --> 00:06:58.596
+00:06:53.410 --> 00:06:55.955
+That was a FundsXML project from A to Z.
+
+94
+00:06:56.005 --> 00:07:03.414
+In the next film, the last one for business readers, you see how FundsXML evolves, and how you can take part in it.
+
+95
+00:07:03.464 --> 00:07:04.711
 Thanks for watching.

@@ -169,8 +169,9 @@
           "id": "biz-project",
           "number": 5,
           "title": "Introducing FundsXML: a project from A to Z",
+          "audience": "business",
           "description": "How a FundsXML project runs, from the first idea to daily operation: scope, mapping, prototype and pilot, testing, go-live and operations; the roles involved, typical pitfalls, what is available free of charge, how versions and the standard evolve, and how to take part.",
-          "duration": 420.6,
+          "duration": 426.8,
           "chapters": [
             {
               "t": 0,
@@ -209,15 +210,14 @@
               "title": "What helps"
             },
             {
-              "t": 336,
+              "t": 342,
               "title": "A living standard"
             }
           ],
           "mp4": "en/05-biz-project.mp4",
           "subtitles": "en/05-biz-project.vtt",
           "chapters_vtt": "en/05-biz-project-chapters.vtt",
-          "poster": "posters/05-biz-project.jpg",
-          "audience": "business"
+          "poster": "posters/05-biz-project.jpg"
         },
         {
           "id": "biz-participate",
