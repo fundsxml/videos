@@ -109,317 +109,321 @@ And missing deliveries.
 Each class has its own handling and its own owner: operations, I T, or the data team.
 
 28
-00:02:00.871 --> 00:02:04.419
+00:02:00.871 --> 00:02:04.388
 When an error occurs, follow the same steps every time.
 
 29
-00:02:04.469 --> 00:02:05.597
+00:02:04.438 --> 00:02:05.556
 The alert arrives.
 
 30
-00:02:05.647 --> 00:02:06.382
-Classify it.
+00:02:05.606 --> 00:02:08.734
+Classify it: technical, schema, business or data.
 
 31
-00:02:06.432 --> 00:02:10.503
-Inform the people affected, inside the company and the partner.
+00:02:08.784 --> 00:02:12.561
+A business error holds the data back until it is corrected.
 
 32
-00:02:10.553 --> 00:02:13.774
-Fix the cause, or ask the sender for a correction.
+00:02:12.611 --> 00:02:16.647
+Inform the people affected, inside the company and the partner.
 
 33
-00:02:13.824 --> 00:02:14.493
-Load again.
+00:02:16.697 --> 00:02:19.890
+Fix the cause, or ask the sender for a correction.
 
 34
-00:02:14.543 --> 00:02:20.512
-And close the case with a short note, so that the same error is recognised faster next time.
+00:02:19.940 --> 00:02:20.604
+Load again.
 
 35
-00:02:21.862 --> 00:02:22.519
-An example.
+00:02:20.654 --> 00:02:26.571
+And close the case with a short note, so that the same error is recognised faster next time.
 
 36
-00:02:22.569 --> 00:02:30.299
-At ten past seven, the reconciliation raises an alert: the weights of a portfolio add up to a hundred and twenty percent.
+00:02:27.921 --> 00:02:28.578
+An example.
 
 37
-00:02:30.349 --> 00:02:35.442
-At twenty past, it is classified as a business error, and the data is held back.
+00:02:28.628 --> 00:02:36.358
+At ten past seven, the reconciliation raises an alert: the weights of a portfolio add up to a hundred and twenty percent.
 
 38
-00:02:35.492 --> 00:02:39.043
-At half past, the partner is told, with the document ID.
+00:02:36.408 --> 00:02:41.501
+At twenty past, it is classified as a business error, and the data is held back.
 
 39
-00:02:39.093 --> 00:02:46.244
-At nine, the correction arrives as an amend delivery, and five minutes later it is loaded, checked and released.
+00:02:41.551 --> 00:02:45.102
+At half past, the partner is told, with the document ID.
 
 40
-00:02:47.594 --> 00:02:49.894
-Reconciliation is the daily safety net.
+00:02:45.152 --> 00:02:52.303
+At nine, the correction arrives as an amend delivery, and five minutes later it is loaded, checked and released.
 
 41
-00:02:49.944 --> 00:02:52.787
-Do the positions add up to the total net assets?
+00:02:53.653 --> 00:02:55.953
+Reconciliation is the daily safety net.
 
 42
-00:02:52.837 --> 00:02:55.258
-Do the weights reach one hundred percent?
+00:02:56.003 --> 00:02:58.846
+Do the positions add up to the total net assets?
 
 43
-00:02:55.308 --> 00:02:59.235
-Did the net asset value move more than usual since the day before?
+00:02:58.896 --> 00:03:01.317
+Do the weights reach one hundred percent?
 
 44
-00:02:59.285 --> 00:03:02.429
-Are the identifiers valid, with correct check digits?
+00:03:01.367 --> 00:03:05.294
+Did the net asset value move more than usual since the day before?
 
 45
-00:03:02.479 --> 00:03:07.190
-FreeXmlToolkit's data-quality checks are a good starting point for these rules.
+00:03:05.344 --> 00:03:08.488
+Are the identifiers valid, with correct check digits?
 
 46
-00:03:08.540 --> 00:03:16.739
-When something is wrong, tell the sender, quickly and precisely: which file, by its document ID, which element, and what was expected.
+00:03:08.538 --> 00:03:13.249
+FreeXmlToolkit's data-quality checks are a good starting point for these rules.
 
 47
-00:03:16.789 --> 00:03:19.571
-The sender answers with a correction delivery.
+00:03:14.599 --> 00:03:22.798
+When something is wrong, tell the sender, quickly and precisely: which file, by its document ID, which element, and what was expected.
 
 48
-00:03:19.621 --> 00:03:26.342
-For feedback from distributors there is even a template of its own, the E F T, which FundsXML carries as well.
+00:03:22.848 --> 00:03:25.630
+The sender answers with a correction delivery.
 
 49
-00:03:27.692 --> 00:03:31.662
-Many problems are avoided with a clear agreement between partners.
+00:03:25.680 --> 00:03:32.401
+For feedback from distributors there is even a template of its own, the E F T, which FundsXML carries as well.
 
 50
-00:03:31.712 --> 00:03:36.169
-It says which data is delivered, when, and in which version and templates.
+00:03:33.751 --> 00:03:37.721
+Many problems are avoided with a clear agreement between partners.
 
 51
-00:03:36.219 --> 00:03:43.842
-It names cut-off times and contacts on both sides, and it describes how errors are reported and how corrections are delivered.
+00:03:37.771 --> 00:03:42.228
+It says which data is delivered, when, and in which version and templates.
 
 52
-00:03:43.892 --> 00:03:45.365
-One page is often enough.
+00:03:42.278 --> 00:03:49.901
+It names cut-off times and contacts on both sides, and it describes how errors are reported and how corrections are delivered.
 
 53
-00:03:46.715 --> 00:03:48.932
-A new partner follows a fixed path.
+00:03:49.951 --> 00:03:51.424
+One page is often enough.
 
 54
-00:03:48.982 --> 00:03:51.847
-Agree on the scope: data, versions, schedule.
+00:03:52.774 --> 00:03:54.991
+A new partner follows a fixed path.
 
 55
-00:03:51.897 --> 00:03:55.863
-Exchange test files, ideally built from the official examples.
+00:03:55.041 --> 00:03:57.906
+Agree on the scope: data, versions, schedule.
 
 56
-00:03:55.913 --> 00:03:57.482
-Both sides validate them.
+00:03:57.956 --> 00:04:01.922
+Exchange test files, ideally built from the official examples.
 
 57
-00:03:57.532 --> 00:04:02.923
-Then a parallel run of a few weeks, where the new delivery runs next to the old way.
+00:04:01.972 --> 00:04:03.541
+Both sides validate them.
 
 58
-00:04:02.973 --> 00:04:05.708
-And only then the switch to live operation.
+00:04:03.591 --> 00:04:08.982
+Then a parallel run of a few weeks, where the new delivery runs next to the old way.
 
 59
-00:04:07.058 --> 00:04:09.114
-The partner landscape keeps moving.
+00:04:09.032 --> 00:04:11.767
+And only then the switch to live operation.
 
 60
-00:04:09.164 --> 00:04:15.009
-New funds and share classes must be added to the right deliveries, closed or merged funds removed.
+00:04:13.117 --> 00:04:15.173
+The partner landscape keeps moving.
 
 61
-00:04:15.059 --> 00:04:18.318
-A partner changes its systems and needs new test files.
+00:04:15.223 --> 00:04:21.068
+New funds and share classes must be added to the right deliveries, closed or merged funds removed.
 
 62
-00:04:18.368 --> 00:04:25.237
-And when a partnership ends, the deliveries are stopped, the archive is kept, and both sides confirm it in writing.
+00:04:21.118 --> 00:04:24.377
+A partner changes its systems and needs new test files.
 
 63
-00:04:25.287 --> 00:04:30.290
-Each of these is a small change in the register, if the register is kept up to date.
+00:04:24.427 --> 00:04:31.296
+And when a partnership ends, the deliveries are stopped, the archive is kept, and both sides confirm it in writing.
 
 64
-00:04:31.640 --> 00:04:34.067
-Security is part of daily operation too.
+00:04:31.346 --> 00:04:36.349
+Each of these is a small change in the register, if the register is kept up to date.
 
 65
-00:04:34.117 --> 00:04:37.659
-Rotate the keys and passwords for the transfers regularly.
+00:04:37.699 --> 00:04:40.126
+Security is part of daily operation too.
 
 66
-00:04:37.709 --> 00:04:41.127
-Review who has access to the data, at least once a year.
+00:04:40.176 --> 00:04:43.718
+Rotate the keys and passwords for the transfers regularly.
 
 67
-00:04:41.177 --> 00:04:44.100
-Watch for failed logins on the transfer servers.
+00:04:43.768 --> 00:04:47.186
+Review who has access to the data, at least once a year.
 
 68
-00:04:44.150 --> 00:04:51.470
-And test now and then that files can really be restored from the archive; an archive that cannot be read is no archive.
+00:04:47.236 --> 00:04:50.159
+Watch for failed logins on the transfer servers.
 
 69
-00:04:52.820 --> 00:04:54.891
-New schema versions come regularly.
+00:04:50.209 --> 00:04:57.529
+And test now and then that files can really be restored from the archive; an archive that cannot be read is no archive.
 
 70
-00:04:54.941 --> 00:05:00.284
-Read the changelog, update the schema in your tools, and test with the official examples.
+00:04:58.879 --> 00:05:00.950
+New schema versions come regularly.
 
 71
-00:05:00.334 --> 00:05:06.526
-Agree a date with your partners, switch over, and keep the old version running for a transition period.
+00:05:01.000 --> 00:05:06.343
+Read the changelog, update the schema in your tools, and test with the official examples.
 
 72
-00:05:06.576 --> 00:05:10.586
-Because new elements are usually optional, most upgrades are small.
+00:05:06.393 --> 00:05:12.585
+Agree a date with your partners, switch over, and keep the old version running for a transition period.
 
 73
-00:05:11.936 --> 00:05:17.692
-Keep an archive of every file, sent and received, together with its validation result and its status.
+00:05:12.635 --> 00:05:16.645
+Because new elements are usually optional, most upgrades are small.
 
 74
-00:05:17.742 --> 00:05:20.452
-Keep it as long as your retention rules require.
+00:05:17.995 --> 00:05:23.751
+Keep an archive of every file, sent and received, together with its validation result and its status.
 
 75
-00:05:20.502 --> 00:05:27.753
-When a partner or an auditor asks months later what was delivered on a certain day, the document ID leads straight to the file.
+00:05:23.801 --> 00:05:26.511
+Keep it as long as your retention rules require.
 
 76
-00:05:29.103 --> 00:05:30.128
-Finally, measure.
+00:05:26.561 --> 00:05:33.812
+When a partner or an auditor asks months later what was delivered on a certain day, the document ID leads straight to the file.
 
 77
-00:05:30.178 --> 00:05:32.404
-How many deliveries arrived on time?
+00:05:35.162 --> 00:05:36.187
+Finally, measure.
 
 78
-00:05:32.454 --> 00:05:34.491
-How many had errors, per partner?
+00:05:36.237 --> 00:05:38.463
+How many deliveries arrived on time?
 
 79
-00:05:34.541 --> 00:05:36.388
-How long did corrections take?
+00:05:38.513 --> 00:05:40.550
+How many had errors, per partner?
 
 80
-00:05:36.438 --> 00:05:43.912
-Watched over months, these numbers show where the chain is weak, and they make the conversation with partners concrete.
+00:05:40.600 --> 00:05:42.447
+How long did corrections take?
 
 81
-00:05:43.962 --> 00:05:47.074
-Good data quality is not a project; it is a habit.
+00:05:42.497 --> 00:05:49.971
+Watched over months, these numbers show where the chain is weak, and they make the conversation with partners concrete.
 
 82
-00:05:48.424 --> 00:05:50.065
-Operations depends on people.
+00:05:50.021 --> 00:05:53.133
+Good data quality is not a project; it is a habit.
 
 83
-00:05:50.115 --> 00:05:56.361
-Make sure at least two people know each partner and each delivery, so that holidays and illness are no risk.
+00:05:54.483 --> 00:05:56.124
+Operations depends on people.
 
 84
-00:05:56.411 --> 00:05:58.576
-Keep the runbooks written and current.
+00:05:56.174 --> 00:06:02.420
+Make sure at least two people know each partner and each delivery, so that holidays and illness are no risk.
 
 85
-00:05:58.626 --> 00:06:03.473
-And let new colleagues learn in the test environment, where a mistake costs nothing.
+00:06:02.470 --> 00:06:04.635
+Keep the runbooks written and current.
 
 86
-00:06:04.823 --> 00:06:17.308
-Once a month, a short report for management helps: how many deliveries went out and came in, how many errors and corrections there were, which issues with partners are open, and which changes and new versions are coming.
+00:06:04.685 --> 00:06:09.532
+And let new colleagues learn in the test environment, where a mistake costs nothing.
 
 87
-00:06:17.358 --> 00:06:22.151
-It shows that the chain works, and it makes the case for the time and money it needs.
+00:06:10.882 --> 00:06:23.367
+Once a month, a short report for management helps: how many deliveries went out and came in, how many errors and corrections there were, which issues with partners are open, and which changes and new versions are coming.
 
 88
-00:06:23.501 --> 00:06:25.449
-What goes wrong in the first year?
+00:06:23.417 --> 00:06:28.210
+It shows that the chain works, and it makes the case for the time and money it needs.
 
 89
-00:06:25.499 --> 00:06:38.377
-Experience shows a familiar list: time zones around midnight, decimal separators from a server with other language settings, cash and derivatives without identifiers, and partners who change their systems without notice.
+00:06:29.560 --> 00:06:31.508
+What goes wrong in the first year?
 
 90
-00:06:38.427 --> 00:06:43.254
-Most of these show up in the parallel run, which is why it should never be skipped.
+00:06:31.558 --> 00:06:44.436
+Experience shows a familiar list: time zones around midnight, decimal separators from a server with other language settings, cash and derivatives without identifiers, and partners who change their systems without notice.
 
 91
-00:06:44.604 --> 00:06:47.188
-To close, a checklist for production.
+00:06:44.486 --> 00:06:49.313
+Most of these show up in the parallel run, which is why it should never be skipped.
 
 92
-00:06:47.238 --> 00:06:48.967
-Validation on both sides.
+00:06:50.663 --> 00:06:53.247
+To close, a checklist for production.
 
 93
-00:06:49.017 --> 00:06:51.245
-Loading that never doubles data.
+00:06:53.297 --> 00:06:55.026
+Validation on both sides.
 
 94
-00:06:51.295 --> 00:06:53.025
-An archive of every file.
+00:06:55.076 --> 00:06:57.304
+Loading that never doubles data.
 
 95
-00:06:53.075 --> 00:06:54.662
-Monitoring with alerts.
+00:06:57.354 --> 00:06:59.084
+An archive of every file.
 
 96
-00:06:54.712 --> 00:06:56.157
-Reconciliation rules.
+00:06:59.134 --> 00:07:00.721
+Monitoring with alerts.
 
 97
-00:06:56.207 --> 00:06:59.502
-A register of partners, versions and templates.
+00:07:00.771 --> 00:07:02.216
+Reconciliation rules.
 
 98
-00:06:59.552 --> 00:07:01.780
-And a plan for the next upgrade.
+00:07:02.266 --> 00:07:05.561
+A register of partners, versions and templates.
 
 99
-00:07:01.830 --> 00:07:08.827
-With these in place, FundsXML runs quietly in the background, and that is exactly how it should be.
+00:07:05.611 --> 00:07:07.839
+And a plan for the next upgrade.
 
 100
-00:07:10.177 --> 00:07:11.237
-And stay involved.
+00:07:07.889 --> 00:07:14.886
+With these in place, FundsXML runs quietly in the background, and that is exactly how it should be.
 
 101
-00:07:11.287 --> 00:07:13.704
-Read the changelog of every new version.
+00:07:16.236 --> 00:07:17.296
+And stay involved.
 
 102
-00:07:13.754 --> 00:07:17.588
-Report problems you find in the standard, and share what works.
+00:07:17.346 --> 00:07:19.763
+Read the changelog of every new version.
 
 103
-00:07:17.638 --> 00:07:26.283
-The working groups of FundsXML welcome people from operations, because they know best where the standard helps, and where it could help more.
+00:07:19.813 --> 00:07:23.647
+Report problems you find in the standard, and share what works.
 
 104
-00:07:27.633 --> 00:07:31.263
-That was the last film of the series FundsXML in production.
+00:07:23.697 --> 00:07:32.342
+The working groups of FundsXML welcome people from operations, because they know best where the standard helps, and where it could help more.
 
 105
-00:07:31.313 --> 00:07:39.727
-You find the complete example in the FundsXML examples repository on GitHub, and the community and the working groups on fundsxml dot org.
+00:07:33.692 --> 00:07:37.322
+That was the last film of the series FundsXML in production.
 
 106
-00:07:39.777 --> 00:07:40.954
+00:07:37.372 --> 00:07:45.786
+You find the complete example in the FundsXML examples repository on GitHub, and the community and the working groups on fundsxml dot org.
+
+107
+00:07:45.836 --> 00:07:47.013
 Thanks for watching.

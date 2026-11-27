@@ -845,8 +845,9 @@
           "id": "prod-operations",
           "number": 20,
           "title": "Running FundsXML in daily operations",
+          "audience": "business",
           "description": "What daily operation of a FundsXML chain needs: a day in operations, monitoring and a delivery overview, duty and runbooks, error classes and incident handling with an example, reconciliation, feedback, agreements with partners, onboarding, changes in the partner landscape, security, schema upgrades, the archive, metrics, people, reporting, typical first-year issues, a checklist, and staying involved in the standard.",
-          "duration": 463.0,
+          "duration": 469.1,
           "chapters": [
             {
               "t": 0,
@@ -865,35 +866,34 @@
               "title": "Error classes"
             },
             {
-              "t": 167,
+              "t": 173,
               "title": "Reconciliation"
             },
             {
-              "t": 188,
+              "t": 194,
               "title": "Feedback"
             },
             {
-              "t": 226,
+              "t": 232,
               "title": "New partners"
             },
             {
-              "t": 292,
+              "t": 298,
               "title": "New versions"
             },
             {
-              "t": 329,
+              "t": 335,
               "title": "Getting better"
             },
             {
-              "t": 404,
+              "t": 410,
               "title": "Checklist"
             }
           ],
           "mp4": "en/20-prod-operations.mp4",
           "subtitles": "en/20-prod-operations.vtt",
           "chapters_vtt": "en/20-prod-operations-chapters.vtt",
-          "poster": "posters/20-prod-operations.jpg",
-          "audience": "business"
+          "poster": "posters/20-prod-operations.jpg"
         }
       ],
       "full": {
