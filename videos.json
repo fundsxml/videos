@@ -77,8 +77,9 @@
           "id": "biz-regulatory",
           "number": 3,
           "title": "Regulatory reporting with FundsXML",
+          "audience": "business",
           "description": "How FundsXML carries the European regulatory templates: why regulation needs structured fund data, the roles of FinDatEx and FundsXML, the templates EMT (MiFID II), EPT (PRIIPs), EET (SFDR and ESG), TPT (Solvency II look-through) and EFT (feedback from distributors), who sends what to whom, template versions, national reporting and the European Single Access Point.",
-          "duration": 442.3,
+          "duration": 472.5,
           "chapters": [
             {
               "t": 0,
@@ -101,23 +102,22 @@
               "title": "Who sends what"
             },
             {
-              "t": 299,
+              "t": 329,
               "title": "Versions and change"
             },
             {
-              "t": 382,
+              "t": 412,
               "title": "In practice"
             },
             {
-              "t": 408,
+              "t": 438,
               "title": "What it brings"
             }
           ],
           "mp4": "en/03-biz-regulatory.mp4",
           "subtitles": "en/03-biz-regulatory.vtt",
           "chapters_vtt": "en/03-biz-regulatory-chapters.vtt",
-          "poster": "posters/03-biz-regulatory.jpg",
-          "audience": "business"
+          "poster": "posters/03-biz-regulatory.jpg"
         },
         {
           "id": "biz-quality",

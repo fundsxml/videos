@@ -205,105 +205,129 @@ Distributors send EFT feedback back.
 And because all of it travels in FundsXML, one delivery can carry several templates together with the fund's prices and portfolio.
 
 52
-00:04:59.561 --> 00:05:02.308
-Templates change over time, as the rules change.
+00:04:59.561 --> 00:05:02.576
+What does this look like for a real share class?
 
 53
-00:05:02.358 --> 00:05:10.582
-Each template version gets its own place in the FundsXML schema, so an old version and a new one can be used side by side during a transition.
+00:05:02.626 --> 00:05:08.003
+Here is the retail class of a fictional multi-asset fund, from the FundsXML examples.
 
 54
-00:05:10.632 --> 00:05:15.710
-Sender and receiver agree on the version they exchange, and move on when both are ready.
+00:05:08.053 --> 00:05:15.601
+Its EMT data says the ongoing costs are one point five eight percent a year, and that the class suits retail investors.
 
 55
-00:05:15.760 --> 00:05:22.644
-And when a new version is published, it is built into the standard once, and not into every interface of every partner.
+00:05:15.651 --> 00:05:19.559
+Its EET data says it is an article six product under the SFDR.
 
 56
-00:05:23.994 --> 00:05:26.375
-Each template also has its own rhythm.
+00:05:19.609 --> 00:05:24.348
+And its TPT data lists forty-five positions for the insurer's look-through.
 
 57
-00:05:26.425 --> 00:05:31.812
-EMT data is updated when costs or the target market change, and at least once a year.
+00:05:24.398 --> 00:05:28.434
+Three templates, one share class, and all of it in one delivery.
 
 58
-00:05:31.862 --> 00:05:37.377
-EET data follows changes in sustainability data, for example with the periodic reports.
+00:05:29.784 --> 00:05:32.531
+Templates change over time, as the rules change.
 
 59
-00:05:37.427 --> 00:05:41.279
-EPT data follows the updates of the key information document.
+00:05:32.581 --> 00:05:40.805
+Each template version gets its own place in the FundsXML schema, so an old version and a new one can be used side by side during a transition.
 
 60
-00:05:41.329 --> 00:05:46.589
-And TPT data is needed for every reporting date of the insurer, often each quarter.
+00:05:40.855 --> 00:05:45.933
+Sender and receiver agree on the version they exchange, and move on when both are ready.
 
 61
-00:05:46.639 --> 00:05:51.706
-Sender and receiver agree on these dates, so the data arrives when it is needed.
+00:05:45.983 --> 00:05:52.867
+And when a new version is published, it is built into the standard once, and not into every interface of every partner.
 
 62
-00:05:53.056 --> 00:05:57.478
-Beyond the European templates, FundsXML also serves national reporting.
+00:05:54.217 --> 00:05:56.598
+Each template also has its own rhythm.
 
 63
-00:05:57.528 --> 00:06:07.492
-Country modules carry data that only one country asks for, for example statistics for a national central bank, or tax data for investors in Austria or Germany.
+00:05:56.648 --> 00:06:02.035
+EMT data is updated when costs or the target market change, and at least once a year.
 
 64
-00:06:07.542 --> 00:06:20.971
-And as the European Single Access Point, ESAP, is being set up, fund documents and disclosures will become available in one place across the EU; structured data like FundsXML makes such reporting easier to produce.
+00:06:02.085 --> 00:06:07.600
+EET data follows changes in sustainability data, for example with the periodic reports.
 
 65
-00:06:22.321 --> 00:06:23.790
-A few tips from practice.
+00:06:07.650 --> 00:06:11.502
+EPT data follows the updates of the key information document.
 
 66
-00:06:23.840 --> 00:06:28.955
-Know your receivers: which templates, which versions, and which dates each one needs.
+00:06:11.552 --> 00:06:16.812
+And TPT data is needed for every reporting date of the insurer, often each quarter.
 
 67
-00:06:29.005 --> 00:06:34.485
-Fill the mandatory fields first, and then the optional ones that your receivers really use.
+00:06:16.862 --> 00:06:21.929
+Sender and receiver agree on these dates, so the data arrives when it is needed.
 
 68
-00:06:34.535 --> 00:06:39.771
-Check every file before it leaves the house, against the schema and the business rules.
+00:06:23.279 --> 00:06:27.701
+Beyond the European templates, FundsXML also serves national reporting.
 
 69
-00:06:39.821 --> 00:06:47.306
-And keep the history: send corrections as amend deliveries that refer to the original, instead of silently overwriting data.
+00:06:27.751 --> 00:06:37.715
+Country modules carry data that only one country asks for, for example statistics for a national central bank, or tax data for investors in Austria or Germany.
 
 70
-00:06:48.656 --> 00:06:50.613
-What does this mean in practice?
+00:06:37.765 --> 00:06:51.194
+And as the European Single Access Point, ESAP, is being set up, fund documents and disclosures will become available in one place across the EU; structured data like FundsXML makes such reporting easier to produce.
 
 71
-00:06:50.663 --> 00:06:57.637
-A fund house produces its regulatory data once, in one format, and serves every distributor and insurer from it.
+00:06:52.544 --> 00:06:54.013
+A few tips from practice.
 
 72
-00:06:57.687 --> 00:07:01.149
-Receivers load the data of all fund houses the same way.
+00:06:54.063 --> 00:06:59.178
+Know your receivers: which templates, which versions, and which dates each one needs.
 
 73
-00:07:01.199 --> 00:07:04.786
-Every file can be checked automatically before it is sent.
+00:06:59.228 --> 00:07:04.708
+Fill the mandatory fields first, and then the optional ones that your receivers really use.
 
 74
-00:07:04.836 --> 00:07:09.427
-And when the next rule arrives, the industry adds it to the standard once.
+00:07:04.758 --> 00:07:09.994
+Check every file before it leaves the house, against the schema and the business rules.
 
 75
-00:07:10.777 --> 00:07:13.586
-That was regulatory reporting with FundsXML.
+00:07:10.044 --> 00:07:17.529
+And keep the history: send corrections as amend deliveries that refer to the original, instead of silently overwriting data.
 
 76
-00:07:13.636 --> 00:07:17.875
-In the next film, you see how the quality of fund data is checked.
+00:07:18.879 --> 00:07:20.836
+What does this mean in practice?
 
 77
-00:07:17.925 --> 00:07:19.175
+00:07:20.886 --> 00:07:27.860
+A fund house produces its regulatory data once, in one format, and serves every distributor and insurer from it.
+
+78
+00:07:27.910 --> 00:07:31.372
+Receivers load the data of all fund houses the same way.
+
+79
+00:07:31.422 --> 00:07:35.009
+Every file can be checked automatically before it is sent.
+
+80
+00:07:35.059 --> 00:07:39.650
+And when the next rule arrives, the industry adds it to the standard once.
+
+81
+00:07:41.000 --> 00:07:43.809
+That was regulatory reporting with FundsXML.
+
+82
+00:07:43.859 --> 00:07:48.098
+In the next film, you see how the quality of fund data is checked.
+
+83
+00:07:48.148 --> 00:07:49.398
 Thanks for watching.
