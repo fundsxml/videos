@@ -223,8 +223,9 @@
           "id": "biz-participate",
           "number": 6,
           "title": "Taking part in FundsXML",
-          "description": "How FundsXML evolves and how to take part: the FundsXML Standards Committee, the secretariat and the three working groups (Content & Technique, Promotion, Documentation), associate and full membership, contributing on GitHub, the path of a change request from proposal to a new version, small and large changes, and what makes a good change request.",
-          "duration": 438.7,
+          "audience": "business",
+          "description": "How FundsXML evolves and how to take part: who decides about the standard, the FundsXML Standards Committee and the three working groups (Content & Technique, Promotion, Documentation), associate and full membership, contributing on GitHub, the path of a change request from proposal to a new version, small and large changes, and what makes a good change request.",
+          "duration": 330.9,
           "chapters": [
             {
               "t": 0,
@@ -239,27 +240,26 @@
               "title": "Who decides"
             },
             {
-              "t": 101,
+              "t": 84,
               "title": "The working groups"
             },
             {
-              "t": 173,
+              "t": 109,
               "title": "How to join"
             },
             {
-              "t": 247,
+              "t": 183,
               "title": "Change requests"
             },
             {
-              "t": 330,
+              "t": 244,
               "title": "A good change request"
             }
           ],
           "mp4": "en/06-biz-participate.mp4",
           "subtitles": "en/06-biz-participate.vtt",
           "chapters_vtt": "en/06-biz-participate-chapters.vtt",
-          "poster": "posters/06-biz-participate.jpg",
-          "audience": "business"
+          "poster": "posters/06-biz-participate.jpg"
         }
       ],
       "full": {
