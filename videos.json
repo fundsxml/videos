@@ -687,8 +687,9 @@
           "id": "prod-database-model",
           "number": 17,
           "title": "FundsXML in a database",
+          "audience": "engineering",
           "description": "How FundsXML data is stored in a database, with the complete PostgreSQL example of the FundsXML examples repository: the XML column and shredded tables, layers, a table model in which everything that repeats is a row (several funds per file, umbrellas and subfunds, several NAVs per day and currency, portfolios and positions, look-through), keys and assets without an ISIN, amounts and currencies, code lists, dates, transactions in four places, documents, regulatory templates, history and corrections, views, quality, access and performance. All files can be downloaded.",
-          "duration": 709.3,
+          "duration": 722.5,
           "chapters": [
             {
               "t": 0,
@@ -699,39 +700,38 @@
               "title": "Two ways"
             },
             {
-              "t": 120,
+              "t": 99,
               "title": "A table model"
             },
             {
-              "t": 172,
+              "t": 154,
               "title": "What repeats"
             },
             {
-              "t": 319,
+              "t": 325,
               "title": "Keys"
             },
             {
-              "t": 365,
+              "t": 371,
               "title": "Amounts and codes"
             },
             {
-              "t": 437,
+              "t": 443,
               "title": "Transactions and documents"
             },
             {
-              "t": 519,
+              "t": 533,
               "title": "History and corrections"
             },
             {
-              "t": 666,
+              "t": 680,
               "title": "Download"
             }
           ],
           "mp4": "en/17-prod-database-model.mp4",
           "subtitles": "en/17-prod-database-model.vtt",
           "chapters_vtt": "en/17-prod-database-model-chapters.vtt",
-          "poster": "posters/17-prod-database-model.jpg",
-          "audience": "engineering"
+          "poster": "posters/17-prod-database-model.jpg"
         },
         {
           "id": "prod-loading",
