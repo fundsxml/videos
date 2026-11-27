@@ -787,8 +787,9 @@
           "id": "prod-generating",
           "number": 19,
           "title": "Generating FundsXML",
+          "audience": "engineering",
           "description": "How to produce FundsXML from a database, with the generator of the complete PostgreSQL example: start with the target file, a mapping table, a partner register that says which data goes to whom, templates, XSLT or generated code, ControlData, writing share classes, several funds and dates in one file, element order, empty elements and formats, validation in FreeXmlToolkit, corrections, large deliveries, several schema versions, partner configuration, time windows, golden files, CI and the round trip, handing over, resends and documentation. All files can be downloaded.",
-          "duration": 615.1,
+          "duration": 617.3,
           "chapters": [
             {
               "t": 0,
@@ -827,19 +828,18 @@
               "title": "Tests"
             },
             {
-              "t": 511,
+              "t": 514,
               "title": "Handing over"
             },
             {
-              "t": 574,
+              "t": 576,
               "title": "Download"
             }
           ],
           "mp4": "en/19-prod-generating.mp4",
           "subtitles": "en/19-prod-generating.vtt",
           "chapters_vtt": "en/19-prod-generating-chapters.vtt",
-          "poster": "posters/19-prod-generating.jpg",
-          "audience": "engineering"
+          "poster": "posters/19-prod-generating.jpg"
         },
         {
           "id": "prod-operations",

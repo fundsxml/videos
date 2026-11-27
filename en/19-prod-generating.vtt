@@ -361,89 +361,93 @@ In the example, every change runs through the same steps on GitHub: start the da
 A change that breaks the output is noticed before it reaches a partner.
 
 91
-00:08:09.287 --> 00:08:15.866
+00:08:09.287 --> 00:08:15.856
 One more test is cheap and finds a lot: load the generated file again, with the loader of the last film.
 
 92
-00:08:15.916 --> 00:08:24.024
+00:08:15.906 --> 00:08:24.004
 Every asset must be found again: by its I S I N, or, for assets without one, by the key the generator wrote as other identifier.
 
 93
-00:08:24.074 --> 00:08:30.526
-In the example, the round trip creates no new asset, and every portfolio still reconciles to the cent.
+00:08:24.054 --> 00:08:29.541
+In the log, the four hundred thirty assets are all known: not one new asset is created.
 
 94
-00:08:31.876 --> 00:08:34.379
-After the checks, the file is handed over.
+00:08:29.591 --> 00:08:32.660
+And every portfolio still reconciles to the cent.
 
 95
-00:08:34.429 --> 00:08:39.851
-It gets the agreed name, is compressed if it is large, and goes out on the agreed channel.
+00:08:34.010 --> 00:08:36.513
+After the checks, the file is handed over.
 
 96
-00:08:39.901 --> 00:08:43.134
-Where possible, the receiver confirms that it arrived.
+00:08:36.563 --> 00:08:41.985
+It gets the agreed name, is compressed if it is large, and goes out on the agreed channel.
 
 97
-00:08:43.184 --> 00:08:50.977
-And the file goes into the archive, together with its validation result, so that it can always be found again by its document ID.
+00:08:42.035 --> 00:08:45.268
+Where possible, the receiver confirms that it arrived.
 
 98
-00:08:52.327 --> 00:08:54.693
-Sometimes a partner asks for a file again.
+00:08:45.318 --> 00:08:53.111
+And the file goes into the archive, together with its validation result, so that it can always be found again by its document ID.
 
 99
-00:08:54.743 --> 00:08:58.375
-Send the archived file, unchanged and with the same document ID.
+00:08:54.461 --> 00:08:56.827
+Sometimes a partner asks for a file again.
 
 100
-00:08:58.425 --> 00:09:07.062
-Do not generate it again from the database, because the data may have changed since, and the partner would receive different numbers under the same ID.
+00:08:56.877 --> 00:09:00.509
+Send the archived file, unchanged and with the same document ID.
 
 101
-00:09:07.112 --> 00:09:10.859
-If the content has to change, that is a correction, with a new ID.
+00:09:00.559 --> 00:09:09.196
+Do not generate it again from the database, because the data may have changed since, and the partner would receive different numbers under the same ID.
 
 102
-00:09:12.209 --> 00:09:14.057
-Finally, document the generator.
+00:09:09.246 --> 00:09:12.993
+If the content has to change, that is a correction, with a new ID.
 
 103
-00:09:14.107 --> 00:09:17.914
-Keep the mapping table next to the code and change both together.
+00:09:14.343 --> 00:09:16.191
+Finally, document the generator.
 
 104
-00:09:17.964 --> 00:09:23.194
-Keep a short change log for your partners: what changed in the deliveries, and from when.
+00:09:16.241 --> 00:09:20.048
+Keep the mapping table next to the code and change both together.
 
 105
-00:09:23.244 --> 00:09:28.415
-And keep one example file for every kind of delivery; the golden files are exactly that.
+00:09:20.098 --> 00:09:25.328
+Keep a short change log for your partners: what changed in the deliveries, and from when.
 
 106
-00:09:28.465 --> 00:09:32.806
-When a partner asks how a field is filled, the answer is found in minutes.
+00:09:25.378 --> 00:09:30.549
+And keep one example file for every kind of delivery; the golden files are exactly that.
 
 107
-00:09:34.156 --> 00:09:44.239
-Everything you saw in this film is in the complete example: the generator, the partner register, the mapping table, and the files it writes for the three partners.
+00:09:30.599 --> 00:09:34.940
+When a partner asks how a field is filled, the answer is found in minutes.
 
 108
-00:09:44.289 --> 00:09:51.822
-You find it in the FundsXML examples repository on GitHub, in the folder PostgreSQL end to end, also as a single zip file.
+00:09:36.290 --> 00:09:46.373
+Everything you saw in this film is in the complete example: the generator, the partner register, the mapping table, and the files it writes for the three partners.
 
 109
-00:09:51.872 --> 00:09:55.801
-Change the register, run the script, and compare your own files.
+00:09:46.423 --> 00:09:53.956
+You find it in the FundsXML examples repository on GitHub, in the folder PostgreSQL end to end, also as a single zip file.
 
 110
-00:09:57.151 --> 00:10:06.827
-That was generating FundsXML: the target first, a clear mapping, a partner register, careful formats, and automatic tests with golden files and a round trip.
+00:09:54.006 --> 00:09:57.935
+Change the register, run the script, and compare your own files.
 
 111
-00:10:06.877 --> 00:10:11.845
-In the last film of this series, you see how to run all this in daily operations.
+00:09:59.285 --> 00:10:08.961
+That was generating FundsXML: the target first, a clear mapping, a partner register, careful formats, and automatic tests with golden files and a round trip.
 
 112
-00:10:11.895 --> 00:10:13.084
+00:10:09.011 --> 00:10:13.979
+In the last film of this series, you see how to run all this in daily operations.
+
+113
+00:10:14.029 --> 00:10:15.218
 Thanks for watching.
