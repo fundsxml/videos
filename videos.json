@@ -432,6 +432,7 @@
           "id": "dev-transactions",
           "number": 11,
           "title": "Transactions and investor flows",
+          "audience": "data",
           "description": "How FundsXML records what moved in a fund: subscriptions and redemptions of investors (Flows on the share class), distributions (Distributions), income from the portfolio (Earnings) and the portfolio's own trades (Transactions), with reporting periods, dates, amounts in several currencies and the links to the assets. Also: how switches are reported, and what the core schema leaves to other standards.",
           "duration": 225.6,
           "chapters": [
@@ -467,8 +468,7 @@
           "mp4": "en/11-dev-transactions.mp4",
           "subtitles": "en/11-dev-transactions.vtt",
           "chapters_vtt": "en/11-dev-transactions-chapters.vtt",
-          "poster": "posters/11-dev-transactions.jpg",
-          "audience": "data"
+          "poster": "posters/11-dev-transactions.jpg"
         },
         {
           "id": "dev-regulatory",
